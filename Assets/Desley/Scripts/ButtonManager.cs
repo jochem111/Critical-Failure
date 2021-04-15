@@ -9,11 +9,12 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] CanvasGroup mainCanvasGroup;
     [SerializeField] CanvasGroup settingsCanvasGroup;
 
-    [Space, SerializeField] float fadeTime;
+    [Space, SerializeField] float introTime;
+    [SerializeField] float fadeTime;
 
     private void Start()
     {
-        StartCoroutine(FadeIn(fadeTime, mainCanvasGroup));
+        StartCoroutine(WaitForTimeline(introTime));
     }
 
     public void StartGame()
@@ -54,6 +55,15 @@ public class ButtonManager : MonoBehaviour
         Debug.Log("QuitThatShit");
 
         Application.Quit();
+    }
+
+    IEnumerator WaitForTimeline(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        StartCoroutine(FadeIn(fadeTime, mainCanvasGroup));
+
+        StopCoroutine(nameof(WaitForTimeline));
     }
 
     IEnumerator FadeIn(float time, CanvasGroup canvasGroup)
