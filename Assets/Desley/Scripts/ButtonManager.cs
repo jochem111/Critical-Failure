@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class ButtonManager : MonoBehaviour
 {
+    [SerializeField] Camera cam;
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject settingsMenu;
     [SerializeField] CanvasGroup mainCanvasGroup;
     [SerializeField] CanvasGroup settingsCanvasGroup;
 
     [Space, SerializeField] float introTime;
+    [SerializeField] float transitionTime;
     [SerializeField] float fadeTime;
 
     private void Start()
@@ -22,10 +25,9 @@ public class ButtonManager : MonoBehaviour
         StopAllCoroutines();
 
         StartCoroutine(FadeOut(fadeTime, mainCanvasGroup));
+        StartCoroutine(DisableCinemachineBrain(transitionTime));
 
         mainCanvasGroup.blocksRaycasts = false;
-
-        //start cinematic
     }
 
     public void Settings()
@@ -52,8 +54,6 @@ public class ButtonManager : MonoBehaviour
     {
         StopAllCoroutines();
 
-        Debug.Log("QuitThatShit");
-
         Application.Quit();
     }
 
@@ -62,8 +62,6 @@ public class ButtonManager : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         StartCoroutine(FadeIn(fadeTime, mainCanvasGroup));
-
-        StopCoroutine(nameof(WaitForTimeline));
     }
 
     IEnumerator FadeIn(float time, CanvasGroup canvasGroup)
@@ -88,5 +86,12 @@ public class ButtonManager : MonoBehaviour
             canvasGroup.alpha = alpha;
             yield return null;
         }
+    }
+
+    IEnumerator DisableCinemachineBrain(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        cam.GetComponent<CinemachineBrain>().enabled = false;
     }
 }

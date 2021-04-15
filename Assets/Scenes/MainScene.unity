@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 146258709}
   - component: {fileID: 146258708}
   m_Layer: 0
-  m_Name: ReferencePlayer
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -378,10 +378,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146258706}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 43, y: -58.841522, z: -491}
+  m_LocalPosition: {x: 360.65155, y: 267, z: -132.58505}
   m_LocalScale: {x: 90, y: 100, z: 100}
-  m_Children: []
-  m_Father: {fileID: 490566296}
+  m_Children:
+  - {fileID: 963194228}
+  m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &146258708
@@ -1153,7 +1154,6 @@ Transform:
   - {fileID: 697003141}
   - {fileID: 1074043549}
   - {fileID: 2131406883}
-  - {fileID: 146258707}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1701,7 +1701,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &848935062
 GameObject:
@@ -1797,7 +1797,7 @@ RectTransform:
   - {fileID: 616055267}
   - {fileID: 176419415}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1922,7 +1922,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -2001,11 +2001,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 362, y: 283, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.014982774, y: 0.16, z: 1.3458505}
+  m_LocalScale: {x: 0.01111111, y: 0.01, z: 0.01}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 146258707}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
 --- !u!114 &963194229
@@ -2327,11 +2327,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ac485ca84b07d44ab8f2621c5710253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 963194227}
   mainMenu: {fileID: 616055266}
   settingsMenu: {fileID: 176419414}
   mainCanvasGroup: {fileID: 616055270}
   settingsCanvasGroup: {fileID: 176419418}
   introTime: 3
+  transitionTime: 3
   fadeTime: 1
 --- !u!4 &1672776744
 Transform:
