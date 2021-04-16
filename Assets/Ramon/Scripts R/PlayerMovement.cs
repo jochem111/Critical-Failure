@@ -14,10 +14,9 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector3 direction;
     public Vector3 moveDirection;
+    public Vector3 newPosition;
 
     public Transform cam;
-
-    public CharacterController controller;
 
     void Update()
     {
@@ -37,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDirection.normalized * movementSpeed * Time.deltaTime);
+            transform.position += (moveDirection.normalized * movementSpeed * Time.deltaTime);
         }
     }
 }
