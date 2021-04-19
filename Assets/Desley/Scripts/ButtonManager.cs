@@ -5,19 +5,15 @@ using Cinemachine;
 
 public class ButtonManager : MonoBehaviour
 {
-    [SerializeField] Camera cam;
-    [SerializeField] GameObject mainMenu;
-    [SerializeField] GameObject settingsMenu;
     [SerializeField] CanvasGroup mainCanvasGroup;
     [SerializeField] CanvasGroup settingsCanvasGroup;
+    [SerializeField] Cinematics cinematics;
 
-    [Space, SerializeField] float introTime;
-    [SerializeField] float transitionTime;
-    [SerializeField] float fadeTime;
+    [Space, SerializeField] float fadeTime;
 
     private void Start()
     {
-        StartCoroutine(WaitForTimeline(introTime));
+        StartCoroutine(WaitForCinematic(cinematics.introTime));
     }
 
     public void StartGame()
@@ -25,7 +21,7 @@ public class ButtonManager : MonoBehaviour
         StopAllCoroutines();
 
         StartCoroutine(FadeOut(fadeTime, mainCanvasGroup));
-        StartCoroutine(DisableCinemachineBrain(transitionTime));
+        cinematics.ResumeCinematic();
 
         mainCanvasGroup.blocksRaycasts = false;
     }
@@ -57,11 +53,13 @@ public class ButtonManager : MonoBehaviour
         Application.Quit();
     }
 
-    IEnumerator WaitForTimeline(float time)
+    IEnumerator WaitForCinematic(float time)
     {
         yield return new WaitForSeconds(time);
 
         StartCoroutine(FadeIn(fadeTime, mainCanvasGroup));
+
+        mainCanvasGroup.blocksRaycasts = true;
     }
 
     IEnumerator FadeIn(float time, CanvasGroup canvasGroup)
@@ -73,7 +71,7 @@ public class ButtonManager : MonoBehaviour
             alpha += Time.deltaTime / time;
             canvasGroup.alpha = alpha;
             yield return null;
-        }
+         }
     }
 
     IEnumerator FadeOut(float time, CanvasGroup canvasGroup)
@@ -85,13 +83,6 @@ public class ButtonManager : MonoBehaviour
             alpha -= Time.deltaTime / time;
             canvasGroup.alpha = alpha;
             yield return null;
-        }
-    }
-
-    IEnumerator DisableCinemachineBrain(float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        cam.GetComponent<CinemachineBrain>().enabled = false;
+         }
     }
 }
