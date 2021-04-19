@@ -5,43 +5,76 @@ using UnityEngine;
 public class DrinkGameManager : MonoBehaviour
 {
     DrinkUi UiManager;
-    DrinkMug Mug;
+    public DrinkMug mugScript;
+    public GameObject mug;
 
+    //always make sure that if lets say index "1" is 'Blue' then that the drink ID on the 'Blue' keg also "1" is  
     public string[] drinkTypes;
-    [HideInInspector] public int currentRequestedDrinkIndex;
+
+    //make sure that this is the same size as the DrinkMug "currentHeldDrinkIndexes"
+    public int[] currentRequestedDrinkIndexes;
 
     public int scoreNeeded;
     public int currentScore;
 
+    public int currentAmountDroppedMugs = 0;
+    public int maxAmountDroppedMugs = 5; //this is currently just used for spawning some mugs on the ground after the minigame as a little gag
+
 
     private void Awake()
     {
-        Mug = gameObject.GetComponent<DrinkMug>();
         UiManager = gameObject.GetComponent<DrinkUi>();
+
+        //RequestDrink();
     }
 
     void StartGame()
     {
-        //start the timer
-        UiManager.RequestDrink(Random.Range(0, drinkTypes.Length - 1));
-        
+        //start the timer & request drink
+        RequestDrink();
+    }
+
+    public void RequestDrink()
+    {
+        for (int i = 0; i < currentRequestedDrinkIndexes.Length; i++)
+        {
+            int requestID = Random.Range(1, drinkTypes.Length);
+            currentRequestedDrinkIndexes[i] = requestID;
+            //update Ui to show what is requested
+        }
     }
 
     void GiveDrink()
     {
-        if (Mug.currentHeldDrinkIndex == currentRequestedDrinkIndex)
+        if (mugScript.mugIsFull)
         {
-            currentScore++;
-            if (currentScore == scoreNeeded)
+            if (mugScript.currentHeldDrinkIndexes == currentRequestedDrinkIndexes)
             {
-                //win 
-            }
-            //update score, play happy sound & request new drink
+                currentScore++;
+                //update score, play happy sound
 
+                if (currentScore == scoreNeeded)
+                {
+                    //stop timer & no new drink request
+                    UiManager.winScreen.SetActive(true);
+                }
+                else
+                {
+                    RequestDrink();
+                }
+
+            }
+            else
+            {
+                //play mad sound
+                RequestDrink();
+            }
         }
         else
         {
-            //play mad sound & request new drink
+            //play 'oh, no drink? sound' 
         }
+
+        
     }
 }

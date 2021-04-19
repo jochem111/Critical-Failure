@@ -10,6 +10,7 @@ public class DrinkUi : MonoBehaviour
     public GameObject timer;
     public GameObject tutorialPanel;
     public TMP_Text requestText;
+    public GameObject winScreen;
 
 
     private void Awake()
@@ -26,14 +27,5 @@ public class DrinkUi : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        
-    }
 
-    public void RequestDrink(int index)
-    {
-        requestText.text = manager.drinkTypes[index];
-        manager.currentRequestedDrinkIndex = index;
-    }
 }
