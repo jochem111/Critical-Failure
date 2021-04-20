@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector3 direction;
     public Vector3 moveDirection;
-    public Vector3 newPosition;
 
     public Transform cam;
 
