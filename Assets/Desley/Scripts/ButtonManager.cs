@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -21,6 +20,7 @@ public class ButtonManager : MonoBehaviour
         StopAllCoroutines();
 
         StartCoroutine(FadeOut(fadeTime, mainCanvasGroup));
+        StartCoroutine(FadeOut(fadeTime, settingsCanvasGroup));
         cinematics.ResumeCinematic();
 
         mainCanvasGroup.blocksRaycasts = false;

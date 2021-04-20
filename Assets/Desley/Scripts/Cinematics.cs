@@ -9,30 +9,15 @@ public class Cinematics : MonoBehaviour
     [SerializeField] GameObject mainCamera;
     [SerializeField] CinemachineDollyCart dollyCart;
     [SerializeField] GameObject lookat;
-    [SerializeField] Image blackImage;
 
     [Space, SerializeField] float originalCartSpeed;
-    [SerializeField] float fadeTime;
     public float introTime;
 
     void Start()
     {
         originalCartSpeed = dollyCart.m_Speed;
 
-        StartCoroutine(FadeFromBlack(fadeTime));
         StartCoroutine(PauseCinematic(introTime));
-    }
-
-    IEnumerator FadeFromBlack(float time)
-    {
-        Color alpha = blackImage.color;
-
-        while(blackImage.color.a > 0)
-         {
-            alpha.a -= Time.deltaTime / time;
-            blackImage.color = alpha;
-            yield return null;
-         }
     }
 
     IEnumerator PauseCinematic(float time)
