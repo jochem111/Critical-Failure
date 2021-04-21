@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Interact : MonoBehaviour
 {
@@ -59,6 +60,6 @@ public class Interact : MonoBehaviour
 
     void StartInteraction(GameObject interactable)
     {
-        //start the interaction
+        SceneManager.LoadScene("Sander/Test_Sander");
     }
 }

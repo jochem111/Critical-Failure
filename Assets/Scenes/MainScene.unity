@@ -2157,7 +2157,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 777042705, guid: e10d10962fc89ef45a6004403484ecbd, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 8028882952955002740, guid: e10d10962fc89ef45a6004403484ecbd, type: 3}
       propertyPath: m_RootOrder
