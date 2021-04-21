@@ -16585,6 +16585,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4ab5b9605a75fef4884d5966ad7eb31f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b7e4fdcee604ee42b97e2dca3aea922, type: 2}
     - target: {fileID: 919132149155446097, guid: 4ab5b9605a75fef4884d5966ad7eb31f, type: 3}
       propertyPath: m_Name
       value: LemonPaper
@@ -16647,6 +16651,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2872152c16471bc4ab8ed3bc9e7e1d7d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 329b42164ac56ef468a874267e17ce28, type: 2}
     - target: {fileID: 919132149155446097, guid: 2872152c16471bc4ab8ed3bc9e7e1d7d, type: 3}
       propertyPath: m_Name
       value: KegFeet (1)
@@ -16709,6 +16717,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2872152c16471bc4ab8ed3bc9e7e1d7d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 329b42164ac56ef468a874267e17ce28, type: 2}
     - target: {fileID: 919132149155446097, guid: 2872152c16471bc4ab8ed3bc9e7e1d7d, type: 3}
       propertyPath: m_Name
       value: KegFeet (2)
@@ -16915,6 +16927,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ad3e5839e6b5d3d469777e742dc1934a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c288a2241ae62743ae49cbffc5e2c73, type: 2}
     - target: {fileID: 919132149155446097, guid: ad3e5839e6b5d3d469777e742dc1934a, type: 3}
       propertyPath: m_Name
       value: BeerTapHandle (2)
@@ -17039,6 +17055,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6a536f449cab6db45bdc3a0250f4c8a1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abd165b0210803248900c6d02333b50b, type: 2}
     - target: {fileID: 919132149155446097, guid: 6a536f449cab6db45bdc3a0250f4c8a1, type: 3}
       propertyPath: m_Name
       value: BlackBerryPaper
@@ -17163,6 +17183,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ad3e5839e6b5d3d469777e742dc1934a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c288a2241ae62743ae49cbffc5e2c73, type: 2}
     - target: {fileID: 919132149155446097, guid: ad3e5839e6b5d3d469777e742dc1934a, type: 3}
       propertyPath: m_Name
       value: BeerTapHandle (1)
@@ -17225,6 +17249,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2872152c16471bc4ab8ed3bc9e7e1d7d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 329b42164ac56ef468a874267e17ce28, type: 2}
     - target: {fileID: 919132149155446097, guid: 2872152c16471bc4ab8ed3bc9e7e1d7d, type: 3}
       propertyPath: m_Name
       value: KegFeet
@@ -17411,6 +17439,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ad3e5839e6b5d3d469777e742dc1934a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c288a2241ae62743ae49cbffc5e2c73, type: 2}
     - target: {fileID: 919132149155446097, guid: ad3e5839e6b5d3d469777e742dc1934a, type: 3}
       propertyPath: m_Name
       value: BeerTapHandle
@@ -17473,6 +17505,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 43f40e9a99aa81b48b17677c5fe89460, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7bf309f46bd913b41aa03d15ae140d0f, type: 2}
     - target: {fileID: 919132149155446097, guid: 43f40e9a99aa81b48b17677c5fe89460, type: 3}
       propertyPath: m_Name
       value: BeerTapBase (1)
@@ -17721,6 +17757,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 43f40e9a99aa81b48b17677c5fe89460, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7bf309f46bd913b41aa03d15ae140d0f, type: 2}
     - target: {fileID: 919132149155446097, guid: 43f40e9a99aa81b48b17677c5fe89460, type: 3}
       propertyPath: m_Name
       value: BeerTapBase
@@ -18031,6 +18071,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f262b6b4e4668754d8bb033e0f1adc38, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7030c43917d94c4fb5cc71b40d11f65, type: 2}
     - target: {fileID: 919132149155446097, guid: f262b6b4e4668754d8bb033e0f1adc38, type: 3}
       propertyPath: m_Name
       value: BananaPaper
@@ -24745,6 +24789,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 43f40e9a99aa81b48b17677c5fe89460, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7bf309f46bd913b41aa03d15ae140d0f, type: 2}
     - target: {fileID: 919132149155446097, guid: 43f40e9a99aa81b48b17677c5fe89460, type: 3}
       propertyPath: m_Name
       value: BeerTapBase (2)
