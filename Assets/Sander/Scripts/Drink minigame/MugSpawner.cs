@@ -6,7 +6,12 @@ public class MugSpawner : MonoBehaviour
 {
     DrinkGameManager gameManager;
     public GameObject drinkMug;
+    [HideInInspector] public GameObject currentMug;
+    public bool isHoldingMug = false;
+
+    [Tooltip("spawnpoint is mainly used for the right Z")]
     public GameObject mugSpawnPoint;
+
 
     Vector3 screenPoint;
 
@@ -17,25 +22,30 @@ public class MugSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonUp("Fire1")) //add bool to check if there is a mug
+        if (Input.GetButtonUp("Fire1") && currentMug != null) 
         {
-            gameManager.mug.GetComponent<Rigidbody>().useGravity = true;
+            currentMug.GetComponent<Rigidbody>().useGravity = true;
         }
     }
 
     private void OnMouseDown()
     {
-        gameManager.mug = Instantiate(drinkMug, mugSpawnPoint.transform);
-        gameManager.mugScript = gameManager.mug.GetComponent<DrinkMug>();
-
-        screenPoint = Camera.main.WorldToScreenPoint(gameManager.mug.transform.position);
+        if (gameManager.gameHasStarted)
+        {
+            currentMug = Instantiate(drinkMug, mugSpawnPoint.transform);
+            gameManager.mugScript = currentMug.GetComponent<DrinkMug>();
+            screenPoint = Camera.main.WorldToScreenPoint(currentMug.transform.position);
+            isHoldingMug = true;
+        }
     }
 
     private void OnMouseDrag()
     {
-        Vector3 cursorScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
-        Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorScreenPoint);
-        gameManager.mug.transform.position = cursorPosition;
-        gameManager.mug.GetComponent<Rigidbody>().useGravity = false;
+        if (isHoldingMug)
+        {
+            Vector3 cursorScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+            Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorScreenPoint);
+            currentMug.transform.position = cursorPosition;
+        }
     }
 }

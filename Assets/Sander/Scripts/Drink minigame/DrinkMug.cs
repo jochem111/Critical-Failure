@@ -10,30 +10,34 @@ public class DrinkMug : MonoBehaviour
 
     int mugIndexToFill = 0;
     public bool mugIsFull;
-
-
-    private void Start()
-    {
-        //StartCoroutine(FillMug(50));
-    }
+    bool didFill = false;
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Drink Tap")
+        if (other.tag == "Drink Tap" && !didFill)
         {
             if (!mugIsFull)
             {
-                StartCoroutine(FillMug(1)); // other.<tapscript>.drinkindex instead of 1
+                StartCoroutine(FillMug(other.GetComponent<TapScript>().drinkId)); 
             }
-            
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        StopAllCoroutines(); //Used StopAll because stop didnt work
-        print("FillMug stopped!");
+        if (other.tag == "Drink Tap" && !mugIsFull)
+        {
+            if (!didFill)
+            {
+                StopAllCoroutines();  //Used StopAll because stop didnt work
+                print("FillMug stopped!");
+            }
+            else
+            {
+                didFill = false;
+            }
+        }
     }
 
     private IEnumerator FillMug(int drinkIndexFromTap)
@@ -44,6 +48,8 @@ public class DrinkMug : MonoBehaviour
 
         currentHeldDrinkIndexes[mugIndexToFill] = drinkIndexFromTap;
         mugIndexToFill++;
+        didFill = true;
+
         if (mugIndexToFill == currentHeldDrinkIndexes.Length)
         {
             mugIsFull = true;

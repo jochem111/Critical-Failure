@@ -5,27 +5,35 @@ using TMPro;
 
 public class DrinkUi : MonoBehaviour
 {
-    DrinkGameManager manager;
+    DrinkGameManager gameManager;
 
     public GameObject timer;
     public GameObject tutorialPanel;
-    public TMP_Text requestText;
     public GameObject winScreen;
+    public TMP_Text scoreText;
+    public TMP_Text[] requestTexts;
 
 
     private void Awake()
     {
-        manager = gameObject.GetComponent<DrinkGameManager>();
+        gameManager = gameObject.GetComponent<DrinkGameManager>();
     }
 
     void Start()
     {
-        
-        if (!tutorialPanel.activeSelf)
-        {
-            tutorialPanel.SetActive(true);
-        }
+        scoreText.text = "0 / " + gameManager.maxScore.ToString();
+        winScreen.SetActive(false);
+        tutorialPanel.SetActive(true);
     }
 
+    public void UpdateRequest(int index, string drinkType)
+    {
+        requestTexts[index].text = drinkType;
+    }
+
+    public void UpdateScore(int score)
+    {
+        scoreText.text = score.ToString() + " / " + gameManager.maxScore.ToString();
+    }
 
 }

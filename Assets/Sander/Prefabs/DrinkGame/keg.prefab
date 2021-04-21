@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 1476044359619869417}
   - component: {fileID: 5565758788123720804}
   - component: {fileID: 4943673484484826527}
+  - component: {fileID: 8593601738303653028}
   m_Layer: 0
   m_Name: tap
   m_TagString: Drink Tap
@@ -140,6 +141,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.99999994, y: 1.0000001, z: 1.0000006}
   m_Center: {x: -0.00000011920929, y: -0.00000011920932, z: 0.000000022351728}
+--- !u!114 &8593601738303653028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6332039550191854226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed207d2f899165445be049edafa27155, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drinkId: 1
 --- !u!1 &7949038116134839886
 GameObject:
   m_ObjectHideFlags: 0
