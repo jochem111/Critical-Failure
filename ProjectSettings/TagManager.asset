@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Drink Tap
   - DrinkMug
+  - Interactable
   layers:
   - Default
   - TransparentFX
