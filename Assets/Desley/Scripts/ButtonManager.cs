@@ -24,6 +24,8 @@ public class ButtonManager : MonoBehaviour
         cinematics.ResumeCinematic();
 
         mainCanvasGroup.blocksRaycasts = false;
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void Settings()

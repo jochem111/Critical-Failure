@@ -54,12 +54,14 @@ public class Interact : MonoBehaviour
 
         if(closestDistance <= maxInteractDistance)
         {
-            StartInteraction(closestObject);
+            StartInteraction();
         }
     }
 
-    void StartInteraction(GameObject interactable)
+    void StartInteraction()
     {
+        Cursor.lockState = CursorLockMode.None;
+
         SceneManager.LoadScene("Sander/Test_Sander");
     }
 }
