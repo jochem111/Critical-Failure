@@ -6,6 +6,7 @@ using Cinemachine;
 
 public class Cinematics : MonoBehaviour
 {
+    [SerializeField] PlayerMovement playerMove;
     [SerializeField] GameObject mainCamera;
     [SerializeField] CinemachineDollyCart dollyCart;
     [SerializeField] GameObject lookat;
@@ -35,8 +36,7 @@ public class Cinematics : MonoBehaviour
 
     public void DisableCinematic()
     {
-        mainCamera.GetComponent<CinemachineBrain>().enabled = false;
-        //activate movement
+        playerMove.enabled = true;
         gameObject.SetActive(false);
     }
 }
