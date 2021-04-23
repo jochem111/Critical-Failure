@@ -25,7 +25,6 @@ public class PoemMinigameStart : MonoBehaviour
         if (npc.canDoPoem == true)
         {
             CanDoPoem();
-            QuitPoem();
         }
     }
 
@@ -46,6 +45,7 @@ public class PoemMinigameStart : MonoBehaviour
         }
     }
 
+    /*
     void QuitPoem()
     {
         if (poemIsActive == true && Input.GetButtonDown("Cancel"))
@@ -55,4 +55,5 @@ public class PoemMinigameStart : MonoBehaviour
             poemIsActive = false;
         }
     }
+    */
 }
