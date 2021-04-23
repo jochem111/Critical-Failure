@@ -64,9 +64,6 @@
             "m_Id": "7bbd2b1f31334ebe82cda8e33aac0e2f"
         },
         {
-            "m_Id": "4818edd1bcae411eb666ddc1a45a2bcb"
-        },
-        {
             "m_Id": "c71b57caa9a14078bd6dadd0bcd4f324"
         },
         {
@@ -98,6 +95,9 @@
         },
         {
             "m_Id": "4b2b1d2b7b674ba092d2a2840b433eac"
+        },
+        {
+            "m_Id": "87ae166e6c584f1cbb54e1db72d263a0"
         }
     ],
     "m_GroupDatas": [],
@@ -115,20 +115,6 @@
                     "m_Id": "fbc8658220cc4dd09006032d418d84b6"
                 },
                 "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "4818edd1bcae411eb666ddc1a45a2bcb"
-                },
-                "m_SlotId": 0
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "b87d99f9c3534ac9a45fbc851b26fcba"
-                },
-                "m_SlotId": 1
             }
         },
         {
@@ -197,6 +183,20 @@
             "m_InputSlot": {
                 "m_Node": {
                     "m_Id": "c71b57caa9a14078bd6dadd0bcd4f324"
+                },
+                "m_SlotId": 1
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "87ae166e6c584f1cbb54e1db72d263a0"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "b87d99f9c3534ac9a45fbc851b26fcba"
                 },
                 "m_SlotId": 1
             }
@@ -492,7 +492,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "12e93f5757e74150b3d19a0e903a7431",
     "m_Id": 0,
-    "m_DisplayName": "RippleSlimness",
+    "m_DisplayName": "RippleThickness",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -959,41 +959,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
-    "m_ObjectId": "4818edd1bcae411eb666ddc1a45a2bcb",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "Property",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": -1548.0,
-            "y": -234.40000915527345,
-            "width": 144.0,
-            "height": 33.59999084472656
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "63f9a5e4b69d4aff8514692c0e0bbd78"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_Property": {
-        "m_Id": "53cf6459b89946cb9c16cab93e0faee6"
-    }
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "485050e6684548649fbc24de57ed182f",
     "m_Id": 1,
@@ -1156,7 +1121,7 @@
     "m_Guid": {
         "m_GuidSerialized": "49f812a9-0588-473e-bb66-bc140c7b721a"
     },
-    "m_Name": "RippleSpeed",
+    "m_Name": "RippleOffset",
     "m_DefaultReferenceName": "Vector1_53cf6459b89946cb9c16cab93e0faee6",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
@@ -1288,21 +1253,6 @@
         "z": 0.0,
         "w": 0.0
     }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "63f9a5e4b69d4aff8514692c0e0bbd78",
-    "m_Id": 0,
-    "m_DisplayName": "RippleSpeed",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Out",
-    "m_StageCapability": 3,
-    "m_Value": 0.0,
-    "m_DefaultValue": 0.0,
-    "m_Labels": []
 }
 
 {
@@ -1550,6 +1500,41 @@
     "m_WorkflowMode": 1,
     "m_NormalDropOffSpace": 0,
     "m_ClearCoat": false
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "87ae166e6c584f1cbb54e1db72d263a0",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -1548.820068359375,
+            "y": -216.66000366210938,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "dc8c7837b5c147048fbdc3aa9d6a3a15"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "53cf6459b89946cb9c16cab93e0faee6"
+    }
 }
 
 {
@@ -2398,7 +2383,7 @@
     "m_Guid": {
         "m_GuidSerialized": "97281c5f-c971-4259-be1b-c1d8a8c4d9b9"
     },
-    "m_Name": "RippleSlimness",
+    "m_Name": "RippleThickness",
     "m_DefaultReferenceName": "Vector1_d531726404a844989299ed41c02712ca",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
@@ -2449,6 +2434,21 @@
     },
     "m_Labels": [],
     "m_Channel": 0
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "dc8c7837b5c147048fbdc3aa9d6a3a15",
+    "m_Id": 0,
+    "m_DisplayName": "RippleOffset",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
 }
 
 {
