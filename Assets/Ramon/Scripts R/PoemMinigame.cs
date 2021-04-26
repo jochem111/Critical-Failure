@@ -9,52 +9,73 @@ public class PoemMinigame : MonoBehaviour
 {
     public GameObject poem;
     public GameObject exit;
-    public bool inExitScreen;
+    public GameObject win;
 
-    void Start()
-    {
-        inExitScreen = false;
-    }
+    public TextMeshProUGUI answersList;
+    public TextMeshProUGUI correctAnswersList;
+
+    public float answers;
+    public float correctAnswers;
+    public float maxAnswers;
+
+    public string returnToScene;
 
     void Update()
     {
         ExitPoemMinigame();
+
+        ListAnswers();
+    }
+
+    public void CheckAnswers()
+    {
+        ListCorrectAnswers();
+
+        if (correctAnswers == maxAnswers)
+        {
+            poem.SetActive(false);
+            win.SetActive(true);
+        }
+    }
+
+    public void ListCorrectAnswers()
+    {
+        correctAnswersList.text = correctAnswers.ToString();
+    }
+
+    public void ListAnswers()
+    {
+        answersList.text = answers.ToString();
     }
 
     public void ExitPoemMinigame()
     {
-        if (inExitScreen == false)
+        if (Input.GetButtonDown("Cancel"))
         {
-            if (Input.GetButtonDown("Cancel"))
-            {
-                print("Cancel Button Pressed");
-                inExitScreen = true;
-                poem.SetActive(!poem.activeSelf);
-                exit.SetActive(!exit.activeSelf);
-            }
+            Debug.Log("ExitPoemMinigame");
+            poem.SetActive(false);
+            exit.SetActive(true);
         }
     }
 
     public void YesExitButton()
     {
-        if (inExitScreen == true)
-        {
-            print("Yes Button Pressed");
-            exit.SetActive(!exit.activeSelf);
-            poem.SetActive(!poem.activeSelf);
-            inExitScreen = false;
-            SceneManager.LoadScene("Test_Ramon");
-        }
+        Debug.Log("YesExitButton");
+        exit.SetActive(false);
+        poem.SetActive(true);
+        SceneManager.LoadScene(returnToScene);
     }
 
     public void NoExitButton()
     {
-        if (inExitScreen == true)
-        {
-            print("No Button Pressed");
-            exit.SetActive(!exit.activeSelf);
-            poem.SetActive(!poem.activeSelf);
-            inExitScreen = false;
-        }
+        Debug.Log("NoExitButton");
+        exit.SetActive(false);
+        poem.SetActive(true);
+    }
+
+    public void MinigameWon()
+    {
+        Debug.Log("MinigameWon");
+        SceneManager.LoadScene(returnToScene);
     }
 }
