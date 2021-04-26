@@ -27,25 +27,34 @@ public class PoemMinigame : MonoBehaviour
         {
             if (Input.GetButtonDown("Cancel"))
             {
+                print("Cancel Button Pressed");
                 inExitScreen = true;
-                poem.SetActive(poem.activeSelf);
-                exit.SetActive(exit.activeSelf);
+                poem.SetActive(!poem.activeSelf);
+                exit.SetActive(!exit.activeSelf);
             }
         }
     }
 
     public void YesExitButton()
     {
-        exit.SetActive(exit.activeSelf);
-        poem.SetActive(poem.activeSelf);
-        inExitScreen = false;
-        SceneManager.LoadScene("Test_Ramon");
+        if (inExitScreen == true)
+        {
+            print("Yes Button Pressed");
+            exit.SetActive(!exit.activeSelf);
+            poem.SetActive(!poem.activeSelf);
+            inExitScreen = false;
+            SceneManager.LoadScene("Test_Ramon");
+        }
     }
 
     public void NoExitButton()
     {
-        exit.SetActive(exit.activeSelf);
-        poem.SetActive(poem.activeSelf);
-        inExitScreen = false;
+        if (inExitScreen == true)
+        {
+            print("No Button Pressed");
+            exit.SetActive(!exit.activeSelf);
+            poem.SetActive(!poem.activeSelf);
+            inExitScreen = false;
+        }
     }
 }
