@@ -5838,19 +5838,18 @@ MonoBehaviour:
   - {fileID: 192526541}
   - {fileID: 335110584}
   - {fileID: 320367520}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1418542463}
+  - {fileID: 1504245543}
+  - {fileID: 1862585698}
+  - {fileID: 1795803615}
+  - {fileID: 1009666859}
+  - {fileID: 1504902953}
+  - {fileID: 1176584991}
   answers: 0
   correctAnswers: 0
   answersRequired: 8
   pauseLength: 5
   youNeeded: 0
-  cross: 0
   returnToScene: Test_Ramon
 --- !u!4 &1380880084
 Transform:
