@@ -18,11 +18,14 @@ public class ObjectSlot : MonoBehaviour, IDropHandler
 
             poemMinigame.answers += point;
 
-            if (eventData.pointerDrag.GetComponent<WordNumber>().wordNumber == slotNumber)
+            if (eventData.pointerDrag.GetComponent<DragObject>().wordNumber == slotNumber)
             {
                 poemMinigame.correctAnswers += point;
-                eventData.pointerDrag.GetComponent<CanvasGroup>().blocksRaycasts = false;
+
+                eventData.pointerDrag.GetComponent<DragObject>().inCorrectSlot = true;
             }
+
+            eventData.pointerDrag.GetComponent<DragObject>().inSlot = true;
         }
     }
 }

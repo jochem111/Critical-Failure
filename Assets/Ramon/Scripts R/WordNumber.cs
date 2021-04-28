@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class WordNumber : MonoBehaviour
 {
-    public float wordNumber;
+    
 }

@@ -9,6 +9,20 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
+    public PoemMinigame poemMinigame;
+
+    public float point;
+    public float wordNumber;
+
+    public bool inSlot;
+    public bool inCorrectSlot;
+
+    private void Start()
+    {
+        inSlot = false;
+        inCorrectSlot = false;
+    }
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -19,6 +33,18 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     {
         Debug.Log("OnBeginDrag");
         canvasGroup.blocksRaycasts = false;
+
+        if (inSlot == true)
+        {
+            poemMinigame.answers -= point;
+
+            if (inCorrectSlot == true)
+            {
+                poemMinigame.correctAnswers -= point;
+            }
+
+            inSlot = false;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)

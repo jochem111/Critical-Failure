@@ -1068,6 +1068,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1719988210}
+  poemMinigame: {fileID: 1380880083}
+  point: 1
+  wordNumber: 9
+  inSlot: 0
+  inCorrectSlot: 0
 --- !u!225 &192526546
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1092,7 +1097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordNumber: 4
 --- !u!1 &320367520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,6 +1247,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1719988210}
+  poemMinigame: {fileID: 1380880083}
+  point: 1
+  wordNumber: 3
+  inSlot: 0
+  inCorrectSlot: 0
 --- !u!225 &320367525
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1267,7 +1276,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordNumber: 6
 --- !u!1 &329887659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,6 +1517,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1719988210}
+  poemMinigame: {fileID: 1380880083}
+  point: 1
+  wordNumber: 1
+  inSlot: 0
+  inCorrectSlot: 0
 --- !u!225 &335110589
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1533,7 +1546,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordNumber: 5
 --- !u!1 &391338278
 GameObject:
   m_ObjectHideFlags: 0
@@ -3152,6 +3164,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1719988210}
+  poemMinigame: {fileID: 1380880083}
+  point: 1
+  wordNumber: 0
+  inSlot: 0
+  inCorrectSlot: 0
 --- !u!225 &923481313
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3176,7 +3193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordNumber: 0
 --- !u!1 &1009666859
 GameObject:
   m_ObjectHideFlags: 0
@@ -3327,6 +3343,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1719988210}
+  poemMinigame: {fileID: 1380880083}
+  point: 1
+  wordNumber: 11
+  inSlot: 0
+  inCorrectSlot: 0
 --- !u!225 &1009666864
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3351,7 +3372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordNumber: 11
 --- !u!1 &1022116779
 GameObject:
   m_ObjectHideFlags: 0
@@ -3775,6 +3795,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1719988210}
+  poemMinigame: {fileID: 1380880083}
+  point: 1
+  wordNumber: 13
+  inSlot: 0
+  inCorrectSlot: 0
 --- !u!225 &1176584996
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3799,7 +3824,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordNumber: 13
 --- !u!1 &1322419778
 GameObject:
   m_ObjectHideFlags: 0
@@ -4477,6 +4501,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1719988210}
+  poemMinigame: {fileID: 1380880083}
+  point: 1
+  wordNumber: 5
+  inSlot: 0
+  inCorrectSlot: 0
 --- !u!225 &1418542468
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4501,7 +4530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordNumber: 7
 --- !u!1 &1484011528
 GameObject:
   m_ObjectHideFlags: 0
@@ -5009,6 +5037,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1719988210}
+  poemMinigame: {fileID: 1380880083}
+  point: 1
+  wordNumber: 6
+  inSlot: 0
+  inCorrectSlot: 0
 --- !u!225 &1504245548
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5033,7 +5066,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordNumber: 8
 --- !u!1 &1504902953
 GameObject:
   m_ObjectHideFlags: 0
@@ -5184,6 +5216,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1719988210}
+  poemMinigame: {fileID: 1380880083}
+  point: 1
+  wordNumber: 12
+  inSlot: 0
+  inCorrectSlot: 0
 --- !u!225 &1504902958
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5208,7 +5245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordNumber: 12
 --- !u!1 &1527800311
 GameObject:
   m_ObjectHideFlags: 0
@@ -5815,6 +5851,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1719988210}
+  poemMinigame: {fileID: 1380880083}
+  point: 1
+  wordNumber: 8
+  inSlot: 0
+  inCorrectSlot: 0
 --- !u!225 &1792832623
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5839,7 +5880,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordNumber: 2
 --- !u!1 &1795803615
 GameObject:
   m_ObjectHideFlags: 0
@@ -5990,6 +6030,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1719988210}
+  poemMinigame: {fileID: 1380880083}
+  point: 1
+  wordNumber: 10
+  inSlot: 0
+  inCorrectSlot: 0
 --- !u!225 &1795803620
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6014,7 +6059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordNumber: 10
 --- !u!1 &1817304066
 GameObject:
   m_ObjectHideFlags: 0
@@ -6299,6 +6343,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1719988210}
+  poemMinigame: {fileID: 1380880083}
+  point: 1
+  wordNumber: 7
+  inSlot: 0
+  inCorrectSlot: 0
 --- !u!225 &1862585703
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6323,7 +6372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordNumber: 9
 --- !u!1 &1875520762
 GameObject:
   m_ObjectHideFlags: 0
@@ -6474,6 +6522,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1719988210}
+  poemMinigame: {fileID: 1380880083}
+  point: 1
+  wordNumber: 4
+  inSlot: 0
+  inCorrectSlot: 0
 --- !u!225 &1875520767
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6498,7 +6551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordNumber: 1
 --- !u!1 &1916628248
 GameObject:
   m_ObjectHideFlags: 0
@@ -6740,6 +6792,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1719988210}
+  poemMinigame: {fileID: 1380880083}
+  point: 1
+  wordNumber: 2
+  inSlot: 0
+  inCorrectSlot: 0
 --- !u!225 &1945221492
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6764,7 +6821,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordNumber: 3
 --- !u!1 &2005751489
 GameObject:
   m_ObjectHideFlags: 0
