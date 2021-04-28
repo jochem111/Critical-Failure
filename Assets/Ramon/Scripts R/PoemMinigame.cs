@@ -18,20 +18,15 @@ public class PoemMinigame : MonoBehaviour
     public TextMeshProUGUI correctAnswersList;
     public TextMeshProUGUI youNeededMore;
 
+    public List<GameObject> list;
+
     public float answers;
     public float correctAnswers;
     public float answersRequired;
     public float pauseLength;
     public float youNeeded;
 
-    public bool cross;
-
     public string returnToScene;
-
-    void Start()
-    {
-        cross = false;   
-    }
 
     void Update()
     {
@@ -50,7 +45,10 @@ public class PoemMinigame : MonoBehaviour
     {
         ListCorrectAnswers();
         areYouSure.SetActive(false);
-        cross = true;
+        foreach (GameObject dragObject in list)
+        {
+            dragObject.GetComponent<DragObject>().WrongAnswer();
+        }
         StartCoroutine(Pause(pauseLength));
         youNeeded = answersRequired - correctAnswers;
         youNeededMore.text = youNeeded.ToString();

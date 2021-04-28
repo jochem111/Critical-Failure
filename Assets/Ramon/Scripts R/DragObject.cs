@@ -32,11 +32,6 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
-    private void Update()
-    {
-        WrongAnswer();
-    }
-
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("OnBeginDrag");
@@ -69,13 +64,10 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void WrongAnswer()
     {
-        if (poemMinigame.cross == true)
+        if (inCorrectSlot == false)
         {
-            if (inCorrectSlot == false)
-            {
-                Debug.Log("WrongAnswer");
-                cross.SetActive(true);
-            }
+            Debug.Log("WrongAnswer");
+            cross.SetActive(true);
         }
     }
 }
