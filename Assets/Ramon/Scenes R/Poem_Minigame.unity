@@ -151,15 +151,15 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 923481309}
-  - {fileID: 335110585}
-  - {fileID: 1945221488}
-  - {fileID: 320367521}
   - {fileID: 1875520763}
+  - {fileID: 1792832619}
+  - {fileID: 1945221488}
+  - {fileID: 192526542}
+  - {fileID: 335110585}
+  - {fileID: 320367521}
   - {fileID: 1418542464}
   - {fileID: 1504245544}
   - {fileID: 1862585699}
-  - {fileID: 1792832619}
-  - {fileID: 192526542}
   - {fileID: 1795803616}
   - {fileID: 1009666860}
   - {fileID: 1504902954}
@@ -933,7 +933,7 @@ GameObject:
   - component: {fileID: 192526546}
   - component: {fileID: 192526547}
   m_Layer: 5
-  m_Name: Word (9)
+  m_Name: Word (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -951,7 +951,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 51441821}
-  m_RootOrder: 9
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1070,7 +1070,7 @@ MonoBehaviour:
   canvas: {fileID: 1719988210}
   poemMinigame: {fileID: 1380880083}
   point: 1
-  wordNumber: 9
+  wordNumber: 4
   inSlot: 0
   inCorrectSlot: 0
 --- !u!225 &192526546
@@ -1112,7 +1112,7 @@ GameObject:
   - component: {fileID: 320367525}
   - component: {fileID: 320367526}
   m_Layer: 5
-  m_Name: Word (3)
+  m_Name: Word (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1130,7 +1130,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 51441821}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1249,7 +1249,7 @@ MonoBehaviour:
   canvas: {fileID: 1719988210}
   poemMinigame: {fileID: 1380880083}
   point: 1
-  wordNumber: 3
+  wordNumber: 6
   inSlot: 0
   inCorrectSlot: 0
 --- !u!225 &320367525
@@ -1382,7 +1382,7 @@ GameObject:
   - component: {fileID: 335110589}
   - component: {fileID: 335110590}
   m_Layer: 5
-  m_Name: Word (1)
+  m_Name: Word (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1400,7 +1400,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 51441821}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1519,7 +1519,7 @@ MonoBehaviour:
   canvas: {fileID: 1719988210}
   poemMinigame: {fileID: 1380880083}
   point: 1
-  wordNumber: 1
+  wordNumber: 5
   inSlot: 0
   inCorrectSlot: 0
 --- !u!225 &335110589
@@ -4366,7 +4366,7 @@ GameObject:
   - component: {fileID: 1418542468}
   - component: {fileID: 1418542469}
   m_Layer: 5
-  m_Name: Word (5)
+  m_Name: Word (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4384,7 +4384,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 51441821}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4503,7 +4503,7 @@ MonoBehaviour:
   canvas: {fileID: 1719988210}
   poemMinigame: {fileID: 1380880083}
   point: 1
-  wordNumber: 5
+  wordNumber: 7
   inSlot: 0
   inCorrectSlot: 0
 --- !u!225 &1418542468
@@ -4902,7 +4902,7 @@ GameObject:
   - component: {fileID: 1504245548}
   - component: {fileID: 1504245549}
   m_Layer: 5
-  m_Name: Word (6)
+  m_Name: Word (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4920,7 +4920,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 51441821}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5039,7 +5039,7 @@ MonoBehaviour:
   canvas: {fileID: 1719988210}
   poemMinigame: {fileID: 1380880083}
   point: 1
-  wordNumber: 6
+  wordNumber: 8
   inSlot: 0
   inCorrectSlot: 0
 --- !u!225 &1504245548
@@ -5716,7 +5716,7 @@ GameObject:
   - component: {fileID: 1792832623}
   - component: {fileID: 1792832624}
   m_Layer: 5
-  m_Name: Word (8)
+  m_Name: Word (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5734,7 +5734,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 51441821}
-  m_RootOrder: 8
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5853,7 +5853,7 @@ MonoBehaviour:
   canvas: {fileID: 1719988210}
   poemMinigame: {fileID: 1380880083}
   point: 1
-  wordNumber: 8
+  wordNumber: 2
   inSlot: 0
   inCorrectSlot: 0
 --- !u!225 &1792832623
@@ -6208,7 +6208,7 @@ GameObject:
   - component: {fileID: 1862585703}
   - component: {fileID: 1862585704}
   m_Layer: 5
-  m_Name: Word (7)
+  m_Name: Word (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6226,7 +6226,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 51441821}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6345,7 +6345,7 @@ MonoBehaviour:
   canvas: {fileID: 1719988210}
   poemMinigame: {fileID: 1380880083}
   point: 1
-  wordNumber: 7
+  wordNumber: 9
   inSlot: 0
   inCorrectSlot: 0
 --- !u!225 &1862585703
@@ -6387,7 +6387,7 @@ GameObject:
   - component: {fileID: 1875520767}
   - component: {fileID: 1875520768}
   m_Layer: 5
-  m_Name: Word (4)
+  m_Name: Word (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6405,7 +6405,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 51441821}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6524,7 +6524,7 @@ MonoBehaviour:
   canvas: {fileID: 1719988210}
   poemMinigame: {fileID: 1380880083}
   point: 1
-  wordNumber: 4
+  wordNumber: 1
   inSlot: 0
   inCorrectSlot: 0
 --- !u!225 &1875520767
@@ -6657,7 +6657,7 @@ GameObject:
   - component: {fileID: 1945221492}
   - component: {fileID: 1945221493}
   m_Layer: 5
-  m_Name: Word (2)
+  m_Name: Word (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6675,7 +6675,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 51441821}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6794,7 +6794,7 @@ MonoBehaviour:
   canvas: {fileID: 1719988210}
   poemMinigame: {fileID: 1380880083}
   point: 1
-  wordNumber: 2
+  wordNumber: 3
   inSlot: 0
   inCorrectSlot: 0
 --- !u!225 &1945221492
