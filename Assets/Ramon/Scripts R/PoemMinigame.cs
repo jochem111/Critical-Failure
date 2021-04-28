@@ -10,15 +10,28 @@ public class PoemMinigame : MonoBehaviour
     public GameObject poem;
     public GameObject exit;
     public GameObject win;
+    public GameObject lose;
+    public GameObject checkAnswers;
+    public GameObject areYouSure;
 
     public TextMeshProUGUI answersList;
     public TextMeshProUGUI correctAnswersList;
+    public TextMeshProUGUI youNeededMore;
 
     public float answers;
     public float correctAnswers;
-    public float maxAnswers;
+    public float answersRequired;
+    public float pauseLength;
+    public float youNeeded;
+
+    public bool cross;
 
     public string returnToScene;
+
+    void Start()
+    {
+        cross = false;   
+    }
 
     void Update()
     {
@@ -29,13 +42,24 @@ public class PoemMinigame : MonoBehaviour
 
     public void CheckAnswers()
     {
-        ListCorrectAnswers();
+        checkAnswers.SetActive(false);
+        areYouSure.SetActive(true);
+    }
 
-        if (correctAnswers == maxAnswers)
-        {
-            poem.SetActive(false);
-            win.SetActive(true);
-        }
+    public void CheckAnswersYes()
+    {
+        ListCorrectAnswers();
+        areYouSure.SetActive(false);
+        cross = true;
+        StartCoroutine(Pause(pauseLength));
+        youNeeded = answersRequired - correctAnswers;
+        youNeededMore.text = youNeeded.ToString();
+    }
+
+    public void CheckAnswersNo()
+    {
+        areYouSure.SetActive(false);
+        checkAnswers.SetActive(true);
     }
 
     public void ListCorrectAnswers()
@@ -77,5 +101,28 @@ public class PoemMinigame : MonoBehaviour
     {
         Debug.Log("MinigameWon");
         SceneManager.LoadScene(returnToScene);
+    }
+
+    public void MinigameLost()
+    {
+        Debug.Log("MinigameLost");
+        SceneManager.LoadScene(returnToScene);
+    }
+
+    IEnumerator Pause(float time)
+    {
+        Debug.Log("Pause Start");
+        yield return new WaitForSeconds(time);
+        Debug.Log("Pause End");
+
+        poem.SetActive(false);
+        if (correctAnswers >= answersRequired)
+        {
+            win.SetActive(true);
+        }
+        else
+        {
+            lose.SetActive(true);
+        }
     }
 }

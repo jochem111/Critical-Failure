@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] private Canvas canvas;
 
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
+
+    public GameObject cross;
 
     public PoemMinigame poemMinigame;
 
@@ -27,6 +30,11 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+    }
+
+    private void Update()
+    {
+        WrongAnswer();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -57,5 +65,17 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     {
         Debug.Log("OnEndDrag");
         canvasGroup.blocksRaycasts = true;
+    }
+
+    public void WrongAnswer()
+    {
+        if (poemMinigame.cross == true)
+        {
+            if (inCorrectSlot == false)
+            {
+                Debug.Log("WrongAnswer");
+                cross.SetActive(true);
+            }
+        }
     }
 }
