@@ -7,7 +7,6 @@ using Cinemachine;
 public class Cinematics : MonoBehaviour
 {
     [SerializeField] PlayerMovement playerMove;
-    [SerializeField] GameObject mainCamera;
     [SerializeField] CinemachineDollyCart dollyCart;
     [SerializeField] GameObject lookat;
 

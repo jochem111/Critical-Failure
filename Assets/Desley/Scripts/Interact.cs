@@ -31,15 +31,13 @@ public class Interact : MonoBehaviour
     void Update()
     {
         if (Input.GetButtonDown("Interact") && canInteract)
-        {
             CheckForDistance();
-        }
     }
 
     void CheckForDistance()
     {
         float closestDistance = Mathf.Infinity;
-        GameObject closestObject = null;
+        GameObject closestObject;
 
         foreach(Transform obj in interactables)
         {
