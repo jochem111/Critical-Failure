@@ -9,6 +9,7 @@ TagManager:
   - Interactable
   - PoemMinigameNPC
   - Poem
+  - FadeManager
   layers:
   - Default
   - TransparentFX

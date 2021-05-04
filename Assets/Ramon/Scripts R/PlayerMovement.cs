@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,9 +18,12 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform cam;
 
+    bool canMove;
+
     void Update()
     {
-        MovementInput();
+        if(canMove)
+            MovementInput();
     }
 
     public void MovementInput()
@@ -37,5 +41,11 @@ public class PlayerMovement : MonoBehaviour
             moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             transform.position += (moveDirection.normalized * movementSpeed * Time.deltaTime);
         }
+    }
+
+    public void AllowMovement(bool index)
+    {
+        canMove = index;
+        GetComponentInChildren<CinemachineFreeLook>().enabled = index;
     }
 }

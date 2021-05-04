@@ -9,12 +9,15 @@ public class Cinematics : MonoBehaviour
     [SerializeField] PlayerMovement playerMove;
     [SerializeField] CinemachineDollyCart dollyCart;
     [SerializeField] GameObject lookat;
+    [SerializeField] GameObject mainMenu, settingsMenu;
 
     [Space, SerializeField] float originalCartSpeed;
     public float introTime;
 
     void Start()
     {
+        playerMove.AllowMovement(false);
+
         originalCartSpeed = dollyCart.m_Speed;
 
         StartCoroutine(PauseCinematic(introTime));
@@ -35,7 +38,10 @@ public class Cinematics : MonoBehaviour
 
     public void DisableCinematic()
     {
-        playerMove.enabled = true;
+        playerMove.AllowMovement(true);
         gameObject.SetActive(false);
+
+        mainMenu.SetActive(false);
+        settingsMenu.SetActive(false);
     }
 }

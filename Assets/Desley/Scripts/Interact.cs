@@ -9,9 +9,14 @@ public class Interact : MonoBehaviour
     [SerializeField] float maxInteractDistance;
 
     [Space, SerializeField] List<Transform> interactables;
+    GameObject interactingWith;
+
+    PlayerMovement playerMove;
 
     void Start()
     {
+        playerMove = GetComponent<PlayerMovement>();
+
         GetInteractables();
     }
 
@@ -32,12 +37,15 @@ public class Interact : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact") && canInteract)
             CheckForDistance();
+
+        if (Input.GetButtonDown("Jump"))
+            StopIntercation();
     }
 
     void CheckForDistance()
     {
         float closestDistance = Mathf.Infinity;
-        GameObject closestObject;
+        GameObject closestObject = null;
 
         foreach(Transform obj in interactables)
         {
@@ -52,6 +60,8 @@ public class Interact : MonoBehaviour
 
         if(closestDistance <= maxInteractDistance)
         {
+            interactingWith = closestObject;
+
             StartInteraction();
         }
     }
@@ -59,7 +69,16 @@ public class Interact : MonoBehaviour
     void StartInteraction()
     {
         Cursor.lockState = CursorLockMode.None;
+        playerMove.AllowMovement(false);
 
-        SceneManager.LoadScene("Sander/Test_Sander");
+        interactingWith.GetComponent<InteractCinematic>().StartCinematic();
+    }
+
+    public void StopIntercation()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        playerMove.AllowMovement(true);
+
+        interactingWith.GetComponent<InteractCinematic>().DisableCinematic();
     }
 }
