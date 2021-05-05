@@ -71,8 +71,6 @@ public class DialogueManager : MonoBehaviour
 
         responses.SetActive(true);
 
-        player.canMove = false;
-
         DisplayGoodSentence();
     }
 
@@ -157,8 +155,6 @@ public class DialogueManager : MonoBehaviour
         dialogueBox.SetActive(false);
 
         //Make Minigame Available?
-
-        player.canMove = true;
 
         Debug.Log("Good End of Conversation");
     }
