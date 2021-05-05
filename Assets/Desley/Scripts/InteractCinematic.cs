@@ -5,7 +5,7 @@ using UnityEngine;
 public class InteractCinematic : MonoBehaviour
 {
     [SerializeField] GameObject cinematic;
-    public FadeManager fadeManager;
+    FadeManager fadeManager;
 
     void Start()
     {
