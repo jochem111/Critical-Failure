@@ -20,13 +20,13 @@ public class DrinkGameManager : MonoBehaviour
     public int currentScore;
 
     //this is currently just used for spawning some mugs on the ground after the minigame as a little gag
-    public int currentAmountDroppedMugs = 0;
-    public int maxAmountDroppedMugs = 5; 
+    [HideInInspector] public int currentAmountDroppedMugs = 0;
+    [HideInInspector] public int maxAmountDroppedMugs = 5; 
 
 
     private void Awake()
     {
-        uiManager = gameObject.GetComponent<DrinkUi>();
+        uiManager = FindObjectOfType<DrinkUi>();
         mugSpawner = FindObjectOfType<MugSpawner>();
     }
 
@@ -34,8 +34,14 @@ public class DrinkGameManager : MonoBehaviour
     {
         //start the timer
         gameHasStarted = true;
-        uiManager.tutorialPanel.SetActive(false);
+        uiManager.drinkGameUi.SetActive(false);
         RequestDrink();
+    }
+
+    public void StopGame()
+    {
+        //spawn the dropped mugs
+        // stop the game stuff and turn back to the player
     }
 
     public void RequestDrink()
@@ -48,7 +54,7 @@ public class DrinkGameManager : MonoBehaviour
         }
     }
 
-    private bool ArraysAreTheSame ()
+    private bool ArraysAreTheSame()
     {
         if (mugScript.currentHeldDrinkIndexes.Length != currentRequestedDrinkIndexes.Length) return false;
         for (int i = 0; i < currentRequestedDrinkIndexes.Length; i++)

@@ -8,7 +8,7 @@ public class DrinkUi : MonoBehaviour
     DrinkGameManager gameManager;
 
     public GameObject timer;
-    public GameObject tutorialPanel;
+    public GameObject drinkGameUi;
     public GameObject winScreen;
     public TMP_Text scoreText;
     public TMP_Text[] requestTexts;
@@ -17,13 +17,18 @@ public class DrinkUi : MonoBehaviour
     private void Awake()
     {
         gameManager = gameObject.GetComponent<DrinkGameManager>();
+        scoreText.text = "0 / " + gameManager.maxScore.ToString();
     }
 
-    void Start()
+    public void TurnOnUi()
     {
-        scoreText.text = "0 / " + gameManager.maxScore.ToString();
-        winScreen.SetActive(false);
-        tutorialPanel.SetActive(true);
+        //turn on all but win Ui
+        
+    }
+
+    public void TurnOffUi()
+    {
+        //turn off All drink game Ui
     }
 
     public void UpdateRequest(int index, string drinkType)
