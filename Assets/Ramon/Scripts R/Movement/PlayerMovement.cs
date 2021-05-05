@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform cam;
 
-    bool canMove;
+    public bool canMove;
 
     void Update()
     {
