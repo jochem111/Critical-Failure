@@ -24,7 +24,7 @@ public class MugSpawner : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (gameManager.gameHasStarted)
+        if (gameManager.gameIsRunning)
         {
             currentMug = Instantiate(drinkMug, mugSpawnPoint.transform.position, Quaternion.identity);
             gameManager.mugScript = currentMug.GetComponent<DrinkMug>();

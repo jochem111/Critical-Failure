@@ -7,8 +7,9 @@ public class DrinkUi : MonoBehaviour
 {
     DrinkGameManager gameManager;
 
-    public GameObject timer;
     public GameObject drinkGameUi;
+    public GameObject timer;
+    public GameObject tutorialUi;
     public GameObject winScreen;
     public TMP_Text scoreText;
     public TMP_Text[] requestTexts;
