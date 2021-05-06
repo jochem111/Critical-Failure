@@ -7,6 +7,7 @@ public class DrinkGameManager : MonoBehaviour
     DrinkUi uiManager;
     [HideInInspector]public DrinkMug mugScript;
     MugSpawner mugSpawner;
+    public GameObject gameViewCamera;
 
     [HideInInspector]public bool gameIsRunning = false;
 
@@ -30,12 +31,13 @@ public class DrinkGameManager : MonoBehaviour
         mugSpawner = FindObjectOfType<MugSpawner>();
     }
 
-    public void StartGame()
+    public void OpenMinigame()
     {
-        //start the timer
-        gameIsRunning = true;
-        uiManager.tutorialUi.SetActive(false);
-        RequestDrink();
+        currentScore = 0;
+        currentAmountDroppedMugs = 0;
+        uiManager.TurnOnUi();
+        //turn off player(cam)
+        gameViewCamera.SetActive(true);
     }
 
     public void CloseMinigame()
@@ -43,6 +45,14 @@ public class DrinkGameManager : MonoBehaviour
         // spawn the dropped mugs
         // check if the player has won 
         // stop the game stuff and turn back to the player
+    }
+
+    public void StartGame()
+    {
+        //start the timer
+        gameIsRunning = true;
+        uiManager.tutorialUi.SetActive(false);
+        RequestDrink();
     }
 
     public void RequestDrink()

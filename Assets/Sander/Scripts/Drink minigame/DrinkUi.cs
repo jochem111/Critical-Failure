@@ -23,13 +23,13 @@ public class DrinkUi : MonoBehaviour
 
     public void TurnOnUi()
     {
-        //turn on all but win Ui
+        drinkGameUi.SetActive(true);
         
     }
 
     public void TurnOffUi()
     {
-        //turn off All drink game Ui
+        drinkGameUi.SetActive(false);
     }
 
     public void UpdateRequest(int index, string drinkType)
