@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Playables;
 
 public class Interact : MonoBehaviour
 {
@@ -10,10 +10,15 @@ public class Interact : MonoBehaviour
 
     [Space, SerializeField] List<Transform> interactables;
     GameObject interactingWith;
-
-    PlayerMovement playerMove;
+    GameObject cinematic;
 
     [Space, SerializeField] StarManager starManager;
+    [SerializeField] FadeManager fadeManager;
+    PlayerMovement playerMove;
+
+    [Space, SerializeField] GameObject vCam;
+
+    int index;
 
     void Start()
     {
@@ -73,16 +78,30 @@ public class Interact : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         playerMove.AllowMovement(false);
 
-        interactingWith.GetComponent<InteractCinematic>().StartCinematic();
+        cinematic = interactingWith.GetComponentInChildren<PlayableDirector>().gameObject;
+        fadeManager.StartFade(cinematic, true);
     }
 
     public void StopIntercation()
     {
+        index++;
+        if (index == 2)
+        {
+            FinishInteraction();
+            return;
+        }
+
+        fadeManager.StartFade(vCam, true);
+    }
+
+    void FinishInteraction()
+    {
         Cursor.lockState = CursorLockMode.Locked;
         playerMove.AllowMovement(true);
 
-        interactingWith.GetComponent<InteractCinematic>().DisableCinematic();
-
         starManager.AddStar();
+
+        vCam.SetActive(false);
+        index = 0;
     }
 }

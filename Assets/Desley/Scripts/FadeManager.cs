@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 
 public class FadeManager : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class FadeManager : MonoBehaviour
         StartCoroutine(FadeFromBlack(fadeTime));
     }
 
-    public void StartFade() 
+    public void StartFade(GameObject cam, bool active) 
     {
         StopAllCoroutines();
 
@@ -21,12 +22,12 @@ public class FadeManager : MonoBehaviour
         alpha.a = 0;
         blackImage.color = alpha;
 
-        StartCoroutine(Fade(fadeTime)); 
+        StartCoroutine(Fade(fadeTime, cam, active)); 
     }
 
-    IEnumerator Fade(float time)
+    IEnumerator Fade(float time, GameObject cam, bool active)
     {
-        StartCoroutine(FadeToBlack(time));
+        StartCoroutine(FadeToBlack(time, cam, active));
 
         yield return new WaitForSeconds(time);
 
@@ -49,7 +50,7 @@ public class FadeManager : MonoBehaviour
         StopCoroutine(nameof(FadeFromBlack));
     }
 
-    IEnumerator FadeToBlack(float time)
+    IEnumerator FadeToBlack(float time, GameObject cam, bool active)
     {
         Color alpha = blackImage.color;
 
@@ -59,6 +60,16 @@ public class FadeManager : MonoBehaviour
             blackImage.color = alpha;
             yield return null;
          }
+
+        if (cam)
+        {
+            if (cam.GetComponent<PlayableDirector>())
+                cam.GetComponent<PlayableDirector>().Play();
+            else
+                cam.SetActive(active);
+
+            cam = null;
+        }
 
         StopCoroutine(nameof(FadeToBlack));
     }

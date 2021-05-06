@@ -22,11 +22,7 @@ public class StarManager : MonoBehaviour
     public void AddStar()
     {
         if(currentStars < maxStars)
-        {
-            fadeManager.StartFade();
-
             StartCoroutine(RevealStar(transitionTime));
-        }
     }
 
     IEnumerator RevealStar(float time)
