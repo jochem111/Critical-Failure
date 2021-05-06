@@ -77,6 +77,7 @@ public class Interact : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         playerMove.AllowMovement(false);
+        canInteract = false;
 
         cinematic = interactingWith.GetComponentInChildren<PlayableDirector>().gameObject;
         fadeManager.StartFade(cinematic, true);
@@ -98,6 +99,7 @@ public class Interact : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         playerMove.AllowMovement(true);
+        canInteract = true;
 
         starManager.AddStar();
 
