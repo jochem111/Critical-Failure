@@ -13,6 +13,8 @@ public class Interact : MonoBehaviour
 
     PlayerMovement playerMove;
 
+    [Space, SerializeField] StarManager starManager;
+
     void Start()
     {
         playerMove = GetComponent<PlayerMovement>();
@@ -80,5 +82,7 @@ public class Interact : MonoBehaviour
         playerMove.AllowMovement(true);
 
         interactingWith.GetComponent<InteractCinematic>().DisableCinematic();
+
+        starManager.AddStar();
     }
 }

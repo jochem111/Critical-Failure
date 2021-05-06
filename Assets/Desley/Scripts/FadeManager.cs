@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class FadeManager : MonoBehaviour
 {
     [SerializeField] Image blackImage;
-    [SerializeField] float fadeTime;
+    public float fadeTime;
 
     void Start()
     {
