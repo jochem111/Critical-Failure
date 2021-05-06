@@ -8,7 +8,7 @@ public class DrinkGameManager : MonoBehaviour
     [HideInInspector]public DrinkMug mugScript;
     MugSpawner mugSpawner;
 
-    [HideInInspector]public bool gameHasStarted = false;
+    [HideInInspector]public bool gameIsRunning = false;
 
     //always make sure that if lets say index "1" is 'Blue' then that the drink ID on the 'Blue' keg also "1" is  
     public string[] drinkTypes;
@@ -17,7 +17,7 @@ public class DrinkGameManager : MonoBehaviour
     public int[] currentRequestedDrinkIndexes;
 
     public int maxScore;
-    public int currentScore;
+    [HideInInspector] public int currentScore;
 
     //this is currently just used for spawning some mugs on the ground after the minigame as a little gag
     [HideInInspector] public int currentAmountDroppedMugs = 0;
@@ -33,14 +33,15 @@ public class DrinkGameManager : MonoBehaviour
     public void StartGame()
     {
         //start the timer
-        gameHasStarted = true;
-        uiManager.drinkGameUi.SetActive(false);
+        gameIsRunning = true;
+        uiManager.tutorialUi.SetActive(false);
         RequestDrink();
     }
 
-    public void StopGame()
+    public void CloseMinigame()
     {
-        //spawn the dropped mugs
+        // spawn the dropped mugs
+        // check if the player has won 
         // stop the game stuff and turn back to the player
     }
 
@@ -76,9 +77,9 @@ public class DrinkGameManager : MonoBehaviour
 
                 if (currentScore == maxScore)
                 {
-                    //stop timer
+                    //stop timer and add star
                     uiManager.winScreen.SetActive(true);
-                    gameHasStarted = false;
+                    gameIsRunning = false;
                 }
                 else
                 {
