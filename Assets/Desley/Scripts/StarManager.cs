@@ -6,23 +6,21 @@ public class StarManager : MonoBehaviour
 {
     [SerializeField] FadeManager fadeManager;
     [SerializeField] GameObject vCam;
+    [SerializeField] Interact interact;
 
     [Space, SerializeField] GameObject[] stars;
     int currentStars;
-    int maxStars;
 
     [Space, SerializeField] float transitionTime;
     [SerializeField] float intensityTime;
 
-    void Start()
-    {
-        maxStars = stars.Length;
-    }
 
     public void AddStar()
     {
-        if(currentStars < maxStars)
+        if (currentStars < stars.Length)
             StartCoroutine(RevealStar(transitionTime));
+        else
+            interact.FinishInteraction();
     }
 
     IEnumerator RevealStar(float time)
@@ -48,6 +46,8 @@ public class StarManager : MonoBehaviour
 
         currentStars++;
         vCam.SetActive(false);
+
+        interact.FinishInteraction();
 
         StopCoroutine(nameof(RevealStar));
     }

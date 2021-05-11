@@ -88,20 +88,18 @@ public class Interact : MonoBehaviour
         index++;
         if (index == 2)
         {
-            FinishInteraction();
+            starManager.AddStar();
             return;
         }
 
         fadeManager.StartFade(vCam, true);
     }
 
-    void FinishInteraction()
+    public void FinishInteraction()
     {
         Cursor.lockState = CursorLockMode.Locked;
         playerMove.AllowMovement(true);
         canInteract = true;
-
-        starManager.AddStar();
 
         vCam.SetActive(false);
         index = 0;
