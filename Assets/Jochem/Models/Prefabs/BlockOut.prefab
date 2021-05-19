@@ -8159,7 +8159,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: cc1f72a5eb45fe446a84b84bfd513a60, type: 2}
     - target: {fileID: 919132149155446097, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Name
       value: ShortPiece (1)
@@ -8557,7 +8557,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: cc1f72a5eb45fe446a84b84bfd513a60, type: 2}
     - target: {fileID: 919132149155446097, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Name
       value: ShortPiece
@@ -8981,7 +8981,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: cc1f72a5eb45fe446a84b84bfd513a60, type: 2}
     - target: {fileID: 919132149155446097, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Name
       value: ShortPiece (3)
@@ -9281,7 +9281,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 843626714aa568f43bd1a9edf2309038, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Name
       value: LongPiece (6)
@@ -9421,7 +9421,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 35a6c9789029c77479931b298b2ce6dc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 599a5be6230fa044697a679c5728e181, type: 2}
     - target: {fileID: 919132149155446097, guid: 35a6c9789029c77479931b298b2ce6dc, type: 3}
       propertyPath: m_Name
       value: ClockPartRailingLeft (2)
@@ -9631,7 +9631,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: cc1f72a5eb45fe446a84b84bfd513a60, type: 2}
     - target: {fileID: 919132149155446097, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Name
       value: ShortPiece (2)
@@ -9701,7 +9701,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 537b7b88007b4914a9302cab65b6b6b0, type: 2}
     - target: {fileID: 919132149155446097, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Name
       value: RailingCorner (3)
@@ -9993,7 +9993,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 537b7b88007b4914a9302cab65b6b6b0, type: 2}
     - target: {fileID: 919132149155446097, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Name
       value: RailingCorner
@@ -10063,7 +10063,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 537b7b88007b4914a9302cab65b6b6b0, type: 2}
     - target: {fileID: 919132149155446097, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Name
       value: RailingCorner (2)
@@ -10133,7 +10133,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 843626714aa568f43bd1a9edf2309038, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Name
       value: LongPiece (5)
@@ -10212,6 +10212,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9a4657aeb2cf2bd4f81f31911acd5893, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 076d4c5e38741ba4dbf1926e5e8c5373, type: 2}
     - target: {fileID: 919132149155446097, guid: 9a4657aeb2cf2bd4f81f31911acd5893, type: 3}
       propertyPath: m_Name
       value: RightStairWall
@@ -10491,7 +10495,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 537b7b88007b4914a9302cab65b6b6b0, type: 2}
     - target: {fileID: 919132149155446097, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Name
       value: RailingCorner (1)
@@ -10631,7 +10635,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 843626714aa568f43bd1a9edf2309038, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Name
       value: LongPiece (3)
@@ -10701,7 +10705,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 843626714aa568f43bd1a9edf2309038, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Name
       value: LongPiece (2)
@@ -10771,7 +10775,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 843626714aa568f43bd1a9edf2309038, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Name
       value: LongPiece (4)
@@ -10993,7 +10997,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 537b7b88007b4914a9302cab65b6b6b0, type: 2}
     - target: {fileID: 919132149155446097, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Name
       value: RailingCorner (5)
@@ -11137,7 +11141,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 843626714aa568f43bd1a9edf2309038, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Name
       value: LongPiece (7)
@@ -12685,7 +12689,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 35a6c9789029c77479931b298b2ce6dc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 599a5be6230fa044697a679c5728e181, type: 2}
     - target: {fileID: 919132149155446097, guid: 35a6c9789029c77479931b298b2ce6dc, type: 3}
       propertyPath: m_Name
       value: ClockPartRailingLeft (4)
@@ -12829,7 +12833,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 537b7b88007b4914a9302cab65b6b6b0, type: 2}
     - target: {fileID: 919132149155446097, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Name
       value: RailingCorner (7)
@@ -13839,7 +13843,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 843626714aa568f43bd1a9edf2309038, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Name
       value: LongPiece (12)
@@ -14689,7 +14693,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: cc1f72a5eb45fe446a84b84bfd513a60, type: 2}
     - target: {fileID: 919132149155446097, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Name
       value: ShortPiece (9)
@@ -15231,7 +15235,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 843626714aa568f43bd1a9edf2309038, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Name
       value: LongPiece (8)
@@ -15614,6 +15618,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ff665b5d2c3aaae4b813c4dad953fd3b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d59044fd3629a7f40b635541b84b787a, type: 2}
     - target: {fileID: 919132149155446097, guid: ff665b5d2c3aaae4b813c4dad953fd3b, type: 3}
       propertyPath: m_Name
       value: BalconyBorder
@@ -17367,7 +17375,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: cc1f72a5eb45fe446a84b84bfd513a60, type: 2}
     - target: {fileID: 919132149155446097, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Name
       value: ShortPiece (5)
@@ -17975,7 +17983,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 35a6c9789029c77479931b298b2ce6dc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 599a5be6230fa044697a679c5728e181, type: 2}
     - target: {fileID: 919132149155446097, guid: 35a6c9789029c77479931b298b2ce6dc, type: 3}
       propertyPath: m_Name
       value: ClockPartRailingLeft
@@ -18218,6 +18226,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e5b97b57f0fabc74e80c319ec1c7957c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 080151742d3e60c49b9152868dec7d78, type: 2}
     - target: {fileID: 919132149155446097, guid: e5b97b57f0fabc74e80c319ec1c7957c, type: 3}
       propertyPath: m_Name
       value: LeftStairWall
@@ -18369,7 +18381,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 843626714aa568f43bd1a9edf2309038, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Name
       value: LongPiece (9)
@@ -18911,7 +18923,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 537b7b88007b4914a9302cab65b6b6b0, type: 2}
     - target: {fileID: 919132149155446097, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Name
       value: RailingCorner (8)
@@ -20389,7 +20401,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: cc1f72a5eb45fe446a84b84bfd513a60, type: 2}
     - target: {fileID: 919132149155446097, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Name
       value: ShortPiece (8)
@@ -20459,7 +20471,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: cc1f72a5eb45fe446a84b84bfd513a60, type: 2}
     - target: {fileID: 919132149155446097, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Name
       value: ShortPiece (10)
@@ -22155,7 +22167,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 843626714aa568f43bd1a9edf2309038, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Name
       value: LongPiece (14)
@@ -22307,7 +22319,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 843626714aa568f43bd1a9edf2309038, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Name
       value: LongPiece (1)
@@ -25615,7 +25627,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 843626714aa568f43bd1a9edf2309038, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Name
       value: LongPiece (15)
@@ -25685,7 +25697,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 843626714aa568f43bd1a9edf2309038, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Name
       value: LongPiece (10)
@@ -27187,7 +27199,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 35a6c9789029c77479931b298b2ce6dc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 599a5be6230fa044697a679c5728e181, type: 2}
     - target: {fileID: 919132149155446097, guid: 35a6c9789029c77479931b298b2ce6dc, type: 3}
       propertyPath: m_Name
       value: ClockPartRailingLeft (5)
@@ -27823,7 +27835,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: cc1f72a5eb45fe446a84b84bfd513a60, type: 2}
     - target: {fileID: 919132149155446097, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Name
       value: ShortPiece (4)
@@ -28681,7 +28693,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 843626714aa568f43bd1a9edf2309038, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Name
       value: LongPiece (11)
@@ -28833,7 +28845,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: cc1f72a5eb45fe446a84b84bfd513a60, type: 2}
     - target: {fileID: 919132149155446097, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Name
       value: ShortPiece (7)
@@ -29371,7 +29383,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 35a6c9789029c77479931b298b2ce6dc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 599a5be6230fa044697a679c5728e181, type: 2}
     - target: {fileID: 919132149155446097, guid: 35a6c9789029c77479931b298b2ce6dc, type: 3}
       propertyPath: m_Name
       value: ClockPartRailingLeft (3)
@@ -30315,7 +30327,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 537b7b88007b4914a9302cab65b6b6b0, type: 2}
     - target: {fileID: 919132149155446097, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Name
       value: RailingCorner (6)
@@ -31453,7 +31465,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 843626714aa568f43bd1a9edf2309038, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Name
       value: LongPiece (13)
@@ -31749,7 +31761,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: cc1f72a5eb45fe446a84b84bfd513a60, type: 2}
     - target: {fileID: 919132149155446097, guid: 4de27216fea3f92498c5cd3b93c832a9, type: 3}
       propertyPath: m_Name
       value: ShortPiece (6)
@@ -33293,7 +33305,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 35a6c9789029c77479931b298b2ce6dc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 599a5be6230fa044697a679c5728e181, type: 2}
     - target: {fileID: 919132149155446097, guid: 35a6c9789029c77479931b298b2ce6dc, type: 3}
       propertyPath: m_Name
       value: ClockPartRailingLeft (1)
@@ -33659,7 +33671,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 843626714aa568f43bd1a9edf2309038, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d60f5a42056b4d4eb55c015a091ab6d, type: 3}
       propertyPath: m_Name
       value: LongPiece
@@ -33885,7 +33897,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fd73987fd941c7b4d9e742a5baa32daa, type: 2}
+      objectReference: {fileID: 2100000, guid: 537b7b88007b4914a9302cab65b6b6b0, type: 2}
     - target: {fileID: 919132149155446097, guid: 431b023c837d1fa4faf7ba32522f9c6d, type: 3}
       propertyPath: m_Name
       value: RailingCorner (4)
