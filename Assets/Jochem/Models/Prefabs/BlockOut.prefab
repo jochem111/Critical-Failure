@@ -15692,6 +15692,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c26b03dd22c44cc4d987d610e18a8666, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bcfa6896e19c2a24cb84b00a332b2b62, type: 2}
     - target: {fileID: 919132149155446097, guid: c26b03dd22c44cc4d987d610e18a8666, type: 3}
       propertyPath: m_Name
       value: LeftStairOutwardBorder
@@ -31976,6 +31980,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 125cd7d0ea61234438ec65b0f04aabf6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 83bbf41bacf8cb541870faebf7444a2d, type: 2}
     - target: {fileID: 919132149155446097, guid: 125cd7d0ea61234438ec65b0f04aabf6, type: 3}
       propertyPath: m_Name
       value: RightBalconyBorder
