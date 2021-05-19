@@ -5,6 +5,7 @@ using UnityEngine;
 public class StarManager : MonoBehaviour
 {
     [SerializeField] FadeManager fadeManager;
+    [SerializeField] AudioSource audioSource;
     [SerializeField] GameObject vCam;
     [SerializeField] Interact interact;
 
@@ -13,28 +14,29 @@ public class StarManager : MonoBehaviour
 
     [Space, SerializeField] float transitionTime;
     [SerializeField] float intensityTime;
+    [SerializeField] float soundTime;
 
 
     public void AddStar()
     {
         if (currentStars < stars.Length)
-            StartCoroutine(RevealStar(transitionTime));
+            StartCoroutine(RevealStar());
         else
             interact.FinishInteraction();
     }
 
-    IEnumerator RevealStar(float time)
+    IEnumerator RevealStar()
     {
         vCam.SetActive(true);
 
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(transitionTime);
 
-        //Up start material's intensity
+        //Get intensity of material
         Material mat = stars[currentStars].GetComponent<Renderer>().materials[1];
         Color eColor = mat.GetColor("_EmissionColor");
         float intensity = 0;
 
-        while(intensity < 1)
+        while(intensity < .5f)
          {
             intensity += Time.deltaTime / intensityTime;
 
@@ -42,7 +44,9 @@ public class StarManager : MonoBehaviour
             yield return null;
         }
 
-        //Play particle
+        audioSource.Play();
+
+        yield return new WaitForSeconds(soundTime);
 
         currentStars++;
         vCam.SetActive(false);

@@ -10,13 +10,12 @@ public class Interact : MonoBehaviour
 
     [Space, SerializeField] List<Transform> interactables;
     GameObject interactingWith;
-    GameObject cinematic;
+    GameObject vCam;
+    Transform playerPos;
 
     [Space, SerializeField] StarManager starManager;
     [SerializeField] FadeManager fadeManager;
     PlayerMovement playerMove;
-
-    [Space, SerializeField] GameObject vCam;
 
     int index;
 
@@ -79,8 +78,15 @@ public class Interact : MonoBehaviour
         playerMove.AllowMovement(false);
         canInteract = false;
 
-        cinematic = interactingWith.GetComponentInChildren<PlayableDirector>().gameObject;
+        InteractContents iContents = interactingWith.GetComponent<InteractContents>();
+
+        GameObject cinematic = iContents.cinematic;
         fadeManager.StartFade(cinematic, true);
+
+        vCam = iContents.vCam;
+        playerPos = iContents.playerPos;
+
+        StartCoroutine(ChangePos(fadeManager.fadeTime));
     }
 
     public void StopIntercation()
@@ -103,5 +109,15 @@ public class Interact : MonoBehaviour
 
         vCam.SetActive(false);
         index = 0;
+    }
+
+    IEnumerator ChangePos(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        transform.position = playerPos.position;
+        transform.rotation = playerPos.rotation;
+
+        StopCoroutine(nameof(ChangePos));
     }
 }
