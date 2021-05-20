@@ -279,7 +279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f561501ec295d428abf8de1956ee69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   nameText: {fileID: 8014364241394515350}
   dialogueText: {fileID: 8014364241072318551}
   goodResponseText: {fileID: 8014364241199838217}

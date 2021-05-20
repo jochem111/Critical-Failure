@@ -72,7 +72,7 @@ public class PoemMinigame : MonoBehaviour
 
     public void ExitPoemMinigame()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonDown("Cancel") && poem.activeSelf)
         {
             Debug.Log("ExitPoemMinigame");
             poem.SetActive(false);

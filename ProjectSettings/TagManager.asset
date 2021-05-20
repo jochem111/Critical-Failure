@@ -10,6 +10,9 @@ TagManager:
   - PoemMinigameNPC
   - Poem
   - FadeManager
+  - Dirt
+  - Shoe
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
@@ -17,7 +20,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
+  - Dirt
   - 
   - 
   - 

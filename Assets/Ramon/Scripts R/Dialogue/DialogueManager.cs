@@ -5,8 +5,6 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    public PlayerMovement player;
-
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI goodResponseText;
@@ -143,8 +141,6 @@ public class DialogueManager : MonoBehaviour
         dialogueBox.SetActive(false);
 
         //Insert getting kicked out of the bar.
-
-        player.canMove = true;
 
         Debug.Log("Bad End of Conversation");
     }
