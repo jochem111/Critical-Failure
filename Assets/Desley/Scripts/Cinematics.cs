@@ -8,11 +8,12 @@ public class Cinematics : MonoBehaviour
 {
     [SerializeField] PlayerMovement playerMove;
     [SerializeField] CinemachineDollyCart dollyCart;
-    [SerializeField] GameObject lookat;
     [SerializeField] GameObject mainMenu, settingsMenu;
 
-    [Space, SerializeField] float originalCartSpeed;
+    float originalCartSpeed;
+
     public float introTime;
+    public float resumeTime;
 
     void Start()
     {
@@ -33,7 +34,15 @@ public class Cinematics : MonoBehaviour
     public void ResumeCinematic() 
     { 
         dollyCart.m_Speed = originalCartSpeed;
-        lookat.GetComponent<MoveLookat>().enabled = true;
+
+        StartCoroutine(EndCinematic(resumeTime));
+    }
+
+    IEnumerator EndCinematic(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        DisableCinematic();
     }
 
     public void DisableCinematic()

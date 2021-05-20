@@ -8,12 +8,15 @@ public class Interact : MonoBehaviour
     public bool canInteract;
     [SerializeField] float maxInteractDistance;
 
-    [Space, SerializeField] List<Transform> interactables;
+    [SerializeField] List<Transform> interactables;
+    [SerializeField] Transform door;
+
     GameObject interactingWith;
     GameObject vCam;
     Transform playerPos;
 
     [Space, SerializeField] StarManager starManager;
+    [SerializeField] TavernManager tavernManager;
     [SerializeField] FadeManager fadeManager;
     PlayerMovement playerMove;
 
@@ -69,6 +72,15 @@ public class Interact : MonoBehaviour
             interactingWith = closestObject;
 
             StartInteraction();
+        }
+        else
+        {
+            //No interaction found / Find distance to door
+            float distance = Vector3.Distance(transform.position, door.position);
+            if(distance <= maxInteractDistance) 
+            {
+                tavernManager.RotateDoor(0);
+            }
         }
     }
 

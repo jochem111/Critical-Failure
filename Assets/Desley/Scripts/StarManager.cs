@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class StarManager : MonoBehaviour
 {
+    [SerializeField] MeshRenderer[] playerRenderer;
     [SerializeField] FadeManager fadeManager;
     [SerializeField] AudioSource audioSource;
     [SerializeField] GameObject vCam;
     [SerializeField] Interact interact;
 
     [Space, SerializeField] GameObject[] stars;
+    [SerializeField] GameObject[] stars2;
     int currentStars;
 
     [Space, SerializeField] float transitionTime;
@@ -27,6 +29,8 @@ public class StarManager : MonoBehaviour
 
     IEnumerator RevealStar()
     {
+        PlayerVisibility(false);
+
         vCam.SetActive(true);
 
         yield return new WaitForSeconds(transitionTime);
@@ -36,6 +40,7 @@ public class StarManager : MonoBehaviour
         Color eColor = mat.GetColor("_EmissionColor");
         float intensity = 0;
 
+        //Up intensity of tavern1 star
         while(intensity < .5f)
          {
             intensity += Time.deltaTime / intensityTime;
@@ -44,6 +49,11 @@ public class StarManager : MonoBehaviour
             yield return null;
         }
 
+        //Up intensity of tavern2 star
+        mat = stars2[currentStars].GetComponent<Renderer>().materials[1];
+        eColor = mat.GetColor("_EmissionColor");
+        mat.SetColor("_EmissionColor", new Vector4(intensity, intensity, 0, 0));
+
         audioSource.Play();
 
         yield return new WaitForSeconds(soundTime);
@@ -51,8 +61,18 @@ public class StarManager : MonoBehaviour
         currentStars++;
         vCam.SetActive(false);
 
+        PlayerVisibility(true);
+
         interact.FinishInteraction();
 
         StopCoroutine(nameof(RevealStar));
+    }
+
+    void PlayerVisibility(bool active)
+    {
+        foreach (MeshRenderer mRenderer in playerRenderer)
+        {
+            mRenderer.enabled = active;
+        }
     }
 }
