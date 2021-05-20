@@ -132,4 +132,9 @@ public class Interact : MonoBehaviour
 
         StopCoroutine(nameof(ChangePos));
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        tavernManager.UpdateTaverns();
+    }
 }
