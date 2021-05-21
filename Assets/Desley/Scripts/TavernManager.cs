@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class TavernManager : MonoBehaviour
 {
+    [SerializeField] Interact playerInteract;
     [SerializeField] GameObject tavern1Trigger, tavern2Trigger;
 
     [Space, SerializeField] Transform door;
     [SerializeField] float originalY;
 
-    bool inTavern1 = true;
+    bool inTavern1;
+
+    //Customer shit
+    [SerializeField] GameObject[] customers;
+    [SerializeField] GameObject[] tavern1Customers, tavern2Customers;
+    GameObject extraCustomer = null;
+    int roundIndex;
+
+    //Clock shit
+    [Space, SerializeField] Transform hPointer1, hPointer2;
 
     public void RotateDoor(float rotation)
     {
@@ -25,8 +35,31 @@ public class TavernManager : MonoBehaviour
         tavern1Trigger.SetActive(!inTavern1);
         tavern2Trigger.SetActive(inTavern1);
 
-        //Activate new customers
+        //Deactivate all customers in other tavern
+        if (!inTavern1)
+            foreach(GameObject obj in tavern1Customers) { obj.SetActive(false); }
+        else
+            foreach(GameObject obj in tavern2Customers) { obj.SetActive(false); }
 
-        //Change time on clock
+        //Activate needed customers in other tavern
+        if(roundIndex < customers.Length)
+        {
+            customers[roundIndex].SetActive(true);
+            customers[roundIndex + 1].SetActive(true);
+        }
+
+        //GetInteractables in interact script
+        playerInteract.GetInteractables();
+
+        roundIndex += 2;
+
+        //Update the clock
+        hPointer1.rotation = Quaternion.Euler(hPointer1.rotation.x - 30, 180, 90);
+        hPointer2.rotation = Quaternion.Euler(hPointer2.rotation.x - 30, 180, 90);
+    }
+
+    public void AddExtraCustomer(GameObject customer)
+    {
+        extraCustomer = customer;
     }
 }

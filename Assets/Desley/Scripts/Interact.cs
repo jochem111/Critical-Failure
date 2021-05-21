@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Playables;
 
 public class Interact : MonoBehaviour
 {
@@ -31,7 +30,7 @@ public class Interact : MonoBehaviour
 
     public void GetInteractables()
     {
-        foreach(Transform obj in interactables) { interactables.Remove(obj); }
+        foreach(Transform obj in interactables.ToArray()) { interactables.Remove(obj); }
 
         foreach(GameObject obj in GameObject.FindGameObjectsWithTag("Interactable"))
         {
