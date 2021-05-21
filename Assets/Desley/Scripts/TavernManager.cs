@@ -20,6 +20,8 @@ public class TavernManager : MonoBehaviour
 
     //Clock shit
     [Space, SerializeField] Transform hPointer1, hPointer2;
+    [SerializeField] float[] pointerRotation;
+    int pointerIndex;
 
     public void RotateDoor(float rotation)
     {
@@ -46,16 +48,21 @@ public class TavernManager : MonoBehaviour
         {
             customers[roundIndex].SetActive(true);
             customers[roundIndex + 1].SetActive(true);
+
+            roundIndex += 2;
         }
 
         //GetInteractables in interact script
         playerInteract.GetInteractables();
 
-        roundIndex += 2;
-
         //Update the clock
-        hPointer1.rotation = Quaternion.Euler(hPointer1.rotation.x - 30, 180, 90);
-        hPointer2.rotation = Quaternion.Euler(hPointer2.rotation.x - 30, 180, 90);
+        if(pointerIndex < pointerRotation.Length)
+        {
+            hPointer1.rotation = Quaternion.Euler(pointerRotation[pointerIndex], 0, -90);
+            hPointer2.rotation = Quaternion.Euler(pointerRotation[pointerIndex], 180, -90);
+
+            pointerIndex++;
+        }
     }
 
     public void AddExtraCustomer(GameObject customer)
