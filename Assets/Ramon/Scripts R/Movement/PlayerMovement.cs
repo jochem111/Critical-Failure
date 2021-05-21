@@ -22,7 +22,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if(canMove)
+        OnUpdate();
+    }
+
+    public void OnUpdate()
+    {
+        if (canMove)
             MovementInput();
     }
 

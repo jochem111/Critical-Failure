@@ -13,6 +13,11 @@ public class HoldTool : MonoBehaviour
 
     private void Start()
     {
+        OnStart();
+    }
+
+    public void OnStart()
+    {
         handIsEmpty = true;
     }
 

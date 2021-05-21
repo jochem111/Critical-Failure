@@ -15,6 +15,11 @@ public class Shoe : MonoBehaviour
 
     private void Start()
     {
+        OnStart();
+    }
+
+    public void OnStart()
+    {
         cleanlinessDefault = cleanliness;
     }
 
