@@ -6,8 +6,6 @@ public class RotateObject : MonoBehaviour
 {
     public HoldTool tool;
 
-    private Vector3 setAngularVelocity;
-
     private Quaternion defaultRotation;
 
     public int mouseClick;
@@ -15,6 +13,11 @@ public class RotateObject : MonoBehaviour
     private bool dragging;
 
     private void Start()
+    {
+        OnStart();
+    }
+
+    public void OnStart()
     {
         dragging = false;
         defaultRotation = transform.rotation;
@@ -30,10 +33,15 @@ public class RotateObject : MonoBehaviour
 
     private void Update()
     {
+        OnUpdate();
+    }
+
+    public void OnUpdate()
+    {
         if (Input.GetMouseButtonUp(mouseClick))
         {
             dragging = false;
-            
+
         }
 
         if (dragging)

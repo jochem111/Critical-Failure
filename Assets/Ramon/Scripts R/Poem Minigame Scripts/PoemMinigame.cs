@@ -30,6 +30,11 @@ public class PoemMinigame : MonoBehaviour
 
     void Update()
     {
+        OnUpdate();
+    }
+
+    public void OnUpdate()
+    {
         ExitPoemMinigame();
 
         ListAnswers();

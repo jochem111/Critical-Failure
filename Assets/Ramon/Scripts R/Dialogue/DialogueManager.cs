@@ -24,6 +24,11 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
+        OnStart();
+    }
+
+    public void OnStart()
+    {
         goodSentences = new Queue<string>();
         meanSentences = new Queue<string>();
         suddenSentences = new Queue<string>();

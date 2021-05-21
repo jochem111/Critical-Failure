@@ -8,6 +8,11 @@ public class Selectable : MonoBehaviour
 
     private void Start()
     {
+        OnStart();
+    }
+
+    public void OnStart()
+    {
         selected = false;
     }
 }

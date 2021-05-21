@@ -32,11 +32,21 @@ public class ScreenChange : MonoBehaviour
 
     private void Start()
     {
+        OnStart();
+    }
+
+    public void OnStart()
+    {
         shoes.text = successCounter.ToString();
         outOf.text = successesNeededToWin.ToString();
     }
 
     private void Update()
+    {
+        OnUpdate();
+    }
+
+    public void OnUpdate()
     {
         EscapeScreen();
     }

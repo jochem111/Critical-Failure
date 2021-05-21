@@ -13,7 +13,14 @@ public class Dirt : MonoBehaviour
     public int cleanAmount;
     public int minimumDirtAmount;
 
+    public int mouseButton;
+
     private void Start()
+    {
+        OnStart();
+    }
+
+    public void OnStart()
     {
         gameManager = GameObject.Find("Game Manager");
         dirtAmountDefault = dirtAmount;

@@ -21,6 +21,11 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     private void Start()
     {
+        OnStart();
+    }
+
+    public void OnStart()
+    {
         inSlot = false;
         inCorrectSlot = false;
     }

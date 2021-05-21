@@ -21,6 +21,11 @@ public class MakeDirty : MonoBehaviour
 
     private void Start()
     {
+        OnStart();
+    }
+
+    public void OnStart()
+    {
         SpawnObjects(dirtCount);
     }
 
