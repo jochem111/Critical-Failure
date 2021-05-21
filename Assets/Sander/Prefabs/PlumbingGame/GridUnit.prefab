@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 879263052701471214}
   - component: {fileID: 8807094020332875755}
   - component: {fileID: 7737481739972839622}
+  - component: {fileID: 463242591397074029}
   m_Layer: 0
   m_Name: GridUnit
-  m_TagString: Untagged
+  m_TagString: Plumbing_GridUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +97,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &463242591397074029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508665545508067169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102e71b2ad21d034884e7dc19a72ca61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pipeSpawnPoint: {fileID: 8432531420683661530}
 --- !u!1 &8432531420683661530
 GameObject:
   m_ObjectHideFlags: 0
