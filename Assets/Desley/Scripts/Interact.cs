@@ -30,8 +30,10 @@ public class Interact : MonoBehaviour
 
     public void GetInteractables()
     {
+        //Remove all interactables
         foreach(Transform obj in interactables.ToArray()) { interactables.Remove(obj); }
 
+        //Find every interactable that is currently active
         foreach(GameObject obj in GameObject.FindGameObjectsWithTag("Interactable"))
         {
             if (!interactables.Contains(obj.transform))
@@ -47,7 +49,7 @@ public class Interact : MonoBehaviour
             CheckForDistance();
 
         if (Input.GetButtonDown("Jump"))
-            StopIntercation();
+            StopInteraction();
     }
 
     void CheckForDistance()
@@ -55,6 +57,7 @@ public class Interact : MonoBehaviour
         float closestDistance = Mathf.Infinity;
         GameObject closestObject = null;
 
+        //Find closest interaction
         foreach(Transform obj in interactables)
         {
             float distance = Vector3.Distance(transform.position, obj.position);
@@ -66,6 +69,7 @@ public class Interact : MonoBehaviour
             }
         }
 
+        //If interaction is close enough
         if(closestDistance <= maxInteractDistance)
         {
             interactingWith = closestObject;
@@ -89,6 +93,7 @@ public class Interact : MonoBehaviour
         playerMove.AllowMovement(false);
         canInteract = false;
 
+        //Reference the contents of the interaction
         InteractContents iContents = interactingWith.GetComponent<InteractContents>();
 
         GameObject cinematic = iContents.cinematic;
@@ -100,16 +105,14 @@ public class Interact : MonoBehaviour
         StartCoroutine(ChangePos(fadeManager.fadeTime));
     }
 
-    public void StopIntercation()
+    public void StopInteraction()
     {
         index++;
-        if (index == 2)
-        {
-            starManager.AddStar();
-            return;
-        }
 
-        fadeManager.StartFade(vCam, true);
+        if(index == 1)
+            fadeManager.StartFade(vCam, true);
+        else
+            starManager.AddStar();
     }
 
     public void FinishInteraction()

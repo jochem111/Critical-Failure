@@ -13,13 +13,14 @@ public class TavernManager : MonoBehaviour
     bool inTavern1;
 
     //Customer shit
-    [SerializeField] GameObject[] customers;
+    [Space, SerializeField] GameObject[] customers;
     [SerializeField] GameObject[] tavern1Customers, tavern2Customers;
     GameObject extraCustomer = null;
     int roundIndex;
 
     //Clock shit
-    [Space, SerializeField] Transform hPointer1, hPointer2;
+    [Space, SerializeField] Transform hPointer1;
+    [SerializeField] Transform hPointer2;
     [SerializeField] float[] pointerRotation;
     int pointerIndex;
 
@@ -30,10 +31,13 @@ public class TavernManager : MonoBehaviour
 
     public void UpdateTaverns()
     {
+        //Close door
         RotateDoor(originalY);
-
+        
+        //Update location bool
         inTavern1 = !inTavern1;
 
+        //Update the tavern triggers
         tavern1Trigger.SetActive(!inTavern1);
         tavern2Trigger.SetActive(inTavern1);
 
@@ -50,6 +54,13 @@ public class TavernManager : MonoBehaviour
             customers[roundIndex + 1].SetActive(true);
 
             roundIndex += 2;
+
+            if (extraCustomer)
+            {
+                extraCustomer.SetActive(true);
+
+                extraCustomer = null;
+            }
         }
 
         //GetInteractables in interact script

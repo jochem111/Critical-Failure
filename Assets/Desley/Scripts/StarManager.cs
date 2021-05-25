@@ -29,7 +29,8 @@ public class StarManager : MonoBehaviour
 
     IEnumerator RevealStar()
     {
-        PlayerVisibility(false);
+        //Turn off player meshRenderer
+        PlayerVisible(false);
 
         vCam.SetActive(true);
 
@@ -54,6 +55,7 @@ public class StarManager : MonoBehaviour
         eColor = mat.GetColor("_EmissionColor");
         mat.SetColor("_EmissionColor", new Vector4(intensity, intensity, 0, 0));
 
+        //Sound effect
         audioSource.Play();
 
         yield return new WaitForSeconds(soundTime);
@@ -61,14 +63,15 @@ public class StarManager : MonoBehaviour
         currentStars++;
         vCam.SetActive(false);
 
-        PlayerVisibility(true);
+        //Make player visible again
+        PlayerVisible(true);
 
         interact.FinishInteraction();
 
         StopCoroutine(nameof(RevealStar));
     }
 
-    void PlayerVisibility(bool active)
+    void PlayerVisible(bool active)
     {
         foreach (MeshRenderer mRenderer in playerRenderer)
         {
