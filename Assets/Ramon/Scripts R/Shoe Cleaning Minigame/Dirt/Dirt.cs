@@ -12,8 +12,10 @@ public class Dirt : MonoBehaviour
     public int dirtAmount;
     public int cleanAmount;
     public int minimumDirtAmount;
+    public int noMouseMovement;
 
-    public int mouseButton;
+    public float cleanTime;
+    public float oncePerSecond;
 
     private void Start()
     {
@@ -41,11 +43,23 @@ public class Dirt : MonoBehaviour
             isWet = true;
             GetComponent<Renderer>().material.color = Color.blue;
         }
+    }
 
+    public void OnMouseDrag()
+    {
         if (gameManager.GetComponent<HoldTool>().secondTool.activeSelf && isWet == true)
         {
-            dirtAmount -= cleanAmount;
-            CheckDirt();
+            if(Input.GetAxis("Mouse X") != noMouseMovement || Input.GetAxis("Mouse Y") != noMouseMovement)
+            {
+                if (Time.time >= oncePerSecond)
+                {
+                    oncePerSecond = Time.time + cleanTime;
+
+                    Debug.Log("Once Every Second 1");
+                    dirtAmount -= cleanAmount;
+                    CheckDirt();
+                }
+            }
         }
     }
 }

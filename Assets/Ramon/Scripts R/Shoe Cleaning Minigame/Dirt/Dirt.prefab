@@ -109,5 +109,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isWet: 0
+  dirtAmountDefault: 0
   dirtAmount: 10
-  cleanAmount: 2
+  cleanAmount: 4
+  minimumDirtAmount: 0
+  noMouseMovement: 0
+  cleanTime: 1
+  oncePerSecond: 0

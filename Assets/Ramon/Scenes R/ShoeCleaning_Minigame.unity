@@ -1359,7 +1359,7 @@ MonoBehaviour:
   nextScreen: {fileID: 764404912}
   shoes: {fileID: 475316638}
   outOf: {fileID: 973380683}
-  increasedDifficulty: 1
+  increasedDifficulty: 0
   difficultyIncrease: 0
   difficultyExtraDirt: 0
   successesNeededToWin: 3
@@ -4873,7 +4873,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089295240}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.76, y: 0, z: -0.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1751971298}
@@ -4895,7 +4895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tool: {fileID: 366837134}
   mouseClick: 0
-  rotationSpeed: 1000
+  rotationSpeed: 600
 --- !u!114 &2089295247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4915,6 +4915,8 @@ MonoBehaviour:
   dirtCount: 0
   cleanAmount: 1
   successCounterIncrease: 1
+  cleanTime: 1
+  oncePerSecond: 0
 --- !u!1 &2129665113
 GameObject:
   m_ObjectHideFlags: 0

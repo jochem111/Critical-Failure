@@ -13,6 +13,9 @@ public class Shoe : MonoBehaviour
     public int cleanAmount;
     public int successCounterIncrease;
 
+    public float cleanTime;
+    public float oncePerSecond;
+
     private void Start()
     {
         OnStart();
@@ -23,14 +26,20 @@ public class Shoe : MonoBehaviour
         cleanlinessDefault = cleanliness;
     }
 
-    private void OnMouseDown()
+    private void OnMouseDrag()
     {
         if (gameManager.GetComponent<HoldTool>().thirdTool.activeSelf)
         {
             if (dirtCount <= minimumCleanliness)
             {
-                cleanliness -= cleanAmount;
-                CheckCleanliness();
+                if (Time.time >= oncePerSecond)
+                {
+                    oncePerSecond = Time.time + cleanTime;
+
+                    Debug.Log("Once Every Second 2");
+                    cleanliness -= cleanAmount;
+                    CheckCleanliness();
+                }
             }
         }
     }
