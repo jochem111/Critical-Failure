@@ -15,8 +15,9 @@ public class GridUnit : MonoBehaviour
 
     public void PlacePipe(Pipe pipe)
     {
-        if (pipe.amount > 0)
+        if (pipe.amount > 0 && myPipe == null)
         {
+            pipe.amount--;
             myPipe =  Instantiate(pipe.pipePrefab, pipeSpawnPoint.transform);
             myPipe.GetComponent<PipeScript>().myGridUnit = this;
         }

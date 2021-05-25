@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class PlumbingUI : MonoBehaviour
 {
-    PlumbingManager gameManager;
-
     public GameObject plumbingGameUi;
     public GameObject timer;
     public GameObject tutorialUi;
@@ -18,11 +16,10 @@ public class PlumbingUI : MonoBehaviour
 
     public void TurnOnUi()
     {
-        gameManager = FindObjectOfType<PlumbingManager>();
-
+        //add pipe cards on runtime?
         for (int i = 0; i < pipeAmountTexts.Length; i++)
         {
-            pipeAmountTexts[i].text = gameManager.pipes[i].amount.ToString();
+            pipeAmountTexts[i].text = Manager.manager.plumbingManager.pipesToPlace[i].amount.ToString();
         }
 
         UpdatedSelectedOutline(0);

@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class EndPipeScript : MonoBehaviour
 {
-    public bool hasWaterInPipe = false;
+    public void Fill()
+    {
+        Manager.manager.plumbingManager.WinMinigame();
+    }
 }

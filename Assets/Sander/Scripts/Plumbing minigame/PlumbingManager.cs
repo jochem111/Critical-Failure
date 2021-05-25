@@ -4,31 +4,29 @@ using UnityEngine;
 
 public class PlumbingManager : MonoBehaviour
 {
-    PlumbingUI uiManager;
     public bool gameIsRunning = false;
+
     public int puzzleId = 0;
 
     [Tooltip("H = horizontal | V = vertical | U = up | D = down | R = right | L = left")]
-    public Pipe[] pipes;
-    public PipeScript endPipe;
-    public PipeScript startPipe;
+    public Pipe[] pipesToPlace;
+    public PlumbingTap startPipe;
 
+    public List<PipeScript> pipesWithWater = new List<PipeScript>();
+    
     public int currentSelectedPipeIndex = 0;
     int mouseScrollNormalized;
 
 
     private void Start()
     {
-        uiManager = FindObjectOfType<PlumbingUI>();
-
         StartGame();
     }
 
     void StartGame()
     {
-        uiManager.TurnOnUi();
-        // turn on correct prefab
-        // set startPipe/endPipe var
+        //  Manager.manager.plumbingUI.TurnOnUi();
+        
     }
 
     private void Update()
@@ -43,14 +41,15 @@ public class PlumbingManager : MonoBehaviour
 
                 if (hit.transform.tag == "Plumbing_GridUnit")
                 {
+                    GridUnit gridUnit = hit.transform.GetComponent<GridUnit>();
+
                     if (Input.GetButtonDown("Fire1"))
                     {
-                        hit.transform.GetComponent<GridUnit>().PlacePipe(pipes[currentSelectedPipeIndex]);
+                        gridUnit.PlacePipe(pipesToPlace[currentSelectedPipeIndex]);
                     }
                     else if (Input.GetButtonDown("Fire2"))
                     {
-                        hit.transform.GetComponent<GridUnit>().RemovePipe();
-                        startPipe.ConnectToOtherPipes();
+                        gridUnit.RemovePipe();
                     }
 
                 }
@@ -69,28 +68,35 @@ public class PlumbingManager : MonoBehaviour
                 mouseScrollNormalized = Mathf.FloorToInt(Input.GetAxis("Mouse ScrollWheel") * 10);
                 currentSelectedPipeIndex -= mouseScrollNormalized;
 
-                if (currentSelectedPipeIndex >= pipes.Length)
+                if (currentSelectedPipeIndex >= pipesToPlace.Length)
                 {
                     currentSelectedPipeIndex = 0;
                 }
                 else if (currentSelectedPipeIndex < 0)
                 {
-                    currentSelectedPipeIndex = pipes.Length - 1;
+                    currentSelectedPipeIndex = pipesToPlace.Length - 1;
                 }
 
-                uiManager.UpdatedSelectedOutline(currentSelectedPipeIndex);
+                Manager.manager.plumbingUI.UpdatedSelectedOutline(currentSelectedPipeIndex);
             }
-
-            if (endPipe.hasWaterInPipe)
-            {
-                WinMinigame();
-            } 
         }
     }
 
-    void WinMinigame()
+    public void UpdateWaterInPipes()
     {
+        foreach (var pipe in pipesWithWater)
+        {
+            pipe.hasWaterInPipe = false;
+        }
+        pipesWithWater.Clear();
+        startPipe.Fill();
+        
+    }
+
+    public void WinMinigame()
+    {
+        print("wow win");
         gameIsRunning = false;
-        uiManager.winScreen.SetActive(true); 
+        Manager.manager.plumbingUI.winScreen.SetActive(true); 
     }
 }

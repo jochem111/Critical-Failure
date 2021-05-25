@@ -15,6 +15,7 @@ TagManager:
   - SpawnPoint
   - Plumbing_GridUnit
   - Plumbing_PipePiece
+  - Plumbing_PipeEnd
   layers:
   - Default
   - TransparentFX

@@ -142,11 +142,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580298692c941ad4c84628a157edbe33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayOutPoints:
+  - {fileID: 8694529865580734091}
+  - {fileID: 5356036934476162735}
+  raycastLenght: 1
   hasWaterInPipe: 0
   myGridUnit: {fileID: 0}
-  rayOutPoint_1: {fileID: 8694529865580734091}
-  rayOutPoint_2: {fileID: 5356036934476162735}
-  raycastLenght: 1
 --- !u!1 &2421659460778898705
 GameObject:
   m_ObjectHideFlags: 0
