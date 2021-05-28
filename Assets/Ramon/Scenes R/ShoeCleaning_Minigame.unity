@@ -1262,7 +1262,6 @@ GameObject:
   - component: {fileID: 366837132}
   - component: {fileID: 366837134}
   - component: {fileID: 366837135}
-  - component: {fileID: 366837136}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1303,7 +1302,7 @@ MonoBehaviour:
   index: 0
   dirtCount: 8
   listCount: 0
-  one: 0
+  one: 1
 --- !u!4 &366837133
 Transform:
   m_ObjectHideFlags: 0
@@ -1369,19 +1368,6 @@ MonoBehaviour:
   successCounter: 0
   waitTime: 5
   returnToScene: 
---- !u!114 &366837136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366837131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233ed00f86604ab48ba5a6f80c8eed13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 910202870}
 --- !u!1 &375188015
 GameObject:
   m_ObjectHideFlags: 0
@@ -7489,7 +7475,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   system: {fileID: 910202868}
-  particleColor: {r: 0.9898451, g: 1, b: 0.24905658, a: 0}
 --- !u!1 &917607809
 GameObject:
   m_ObjectHideFlags: 0
@@ -9751,6 +9736,7 @@ MonoBehaviour:
   dirtCount: 0
   cleanAmount: 2
   successCounterIncrease: 1
+  mouseButton: 0
   cleanTime: 1
   oncePerSecond: 0
   isCleaned: 0
