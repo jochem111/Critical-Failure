@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class DrinkGameManager : MonoBehaviour
 {
-    DrinkUi uiManager;
     [HideInInspector]public DrinkMug mugScript;
     MugSpawner mugSpawner;
-    public GameObject gameViewCamera;
+    public GameObject gameVCam;
 
     [HideInInspector]public bool gameIsRunning = false;
 
@@ -27,17 +26,14 @@ public class DrinkGameManager : MonoBehaviour
 
     private void Awake()
     {
-        uiManager = FindObjectOfType<DrinkUi>();
         mugSpawner = FindObjectOfType<MugSpawner>();
     }
 
     public void OpenMinigame()
     {
+        Manager.manager.fadeManager.StartFade(gameVCam, true, Manager.manager.drinkUi.drinkGameUi);
         currentScore = 0;
         currentAmountDroppedMugs = 0;
-        uiManager.TurnOnUi();
-        //turn off player(cam)
-        gameViewCamera.SetActive(true);
     }
 
     public void CloseMinigame()
@@ -51,7 +47,7 @@ public class DrinkGameManager : MonoBehaviour
     {
         //start the timer
         gameIsRunning = true;
-        uiManager.tutorialUi.SetActive(false);
+        Manager.manager.drinkUi.tutorialUi.SetActive(false);
         RequestDrink();
     }
 
@@ -61,7 +57,7 @@ public class DrinkGameManager : MonoBehaviour
         {
             int requestID = Random.Range(1, drinkTypes.Length);
             currentRequestedDrinkIndexes[i] = requestID;
-            uiManager.UpdateRequest(i, drinkTypes[requestID]);
+            Manager.manager.drinkUi.UpdateRequest(i, drinkTypes[requestID]);
         }
     }
 
@@ -82,13 +78,13 @@ public class DrinkGameManager : MonoBehaviour
             if (ArraysAreTheSame())
             {
                 currentScore++;
-                uiManager.UpdateScore(currentScore);
+                Manager.manager.drinkUi.UpdateScore(currentScore);
                 //play happy sound
 
                 if (currentScore == maxScore)
                 {
                     //stop timer and add star
-                    uiManager.winScreen.SetActive(true);
+                    Manager.manager.drinkUi.winScreen.SetActive(true);
                     gameIsRunning = false;
                 }
                 else

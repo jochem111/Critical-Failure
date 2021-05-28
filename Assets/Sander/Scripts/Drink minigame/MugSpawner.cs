@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MugSpawner : MonoBehaviour
 {
-    DrinkGameManager gameManager;
     public GameObject drinkMug;
     [HideInInspector] public GameObject currentMug;
 
@@ -17,17 +16,13 @@ public class MugSpawner : MonoBehaviour
 
     public Vector3 screenPoint;
 
-    private void Awake()
-    {
-        gameManager = GameObject.FindObjectOfType<DrinkGameManager>();
-    }
 
     private void OnMouseDown()
     {
-        if (gameManager.gameIsRunning)
+        if (Manager.manager.drinkGameManager.gameIsRunning)
         {
             currentMug = Instantiate(drinkMug, mugSpawnPoint.transform.position, Quaternion.identity);
-            gameManager.mugScript = currentMug.GetComponent<DrinkMug>();
+            Manager.manager.drinkGameManager.mugScript = currentMug.GetComponent<DrinkMug>();
             screenPoint = Camera.main.WorldToScreenPoint(currentMug.transform.position);
             isHoldingMug = true;
         }

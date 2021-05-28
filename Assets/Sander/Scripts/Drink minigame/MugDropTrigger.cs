@@ -7,11 +7,9 @@ public class MugDropTrigger : MonoBehaviour
     public GameObject dropFx;
     public Vector3 offset;
 
-    DrinkGameManager gameManager;
-
     private void Start()
     {
-        gameManager = FindObjectOfType<DrinkGameManager>();
+        Manager.manager.drinkGameManager = FindObjectOfType<DrinkGameManager>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -19,7 +17,7 @@ public class MugDropTrigger : MonoBehaviour
         if (other.tag == "DrinkMug")
         {
             Instantiate(dropFx, other.transform.position - offset, Quaternion.identity);
-            gameManager.currentAmountDroppedMugs++;
+            Manager.manager.drinkGameManager.currentAmountDroppedMugs++;
             Destroy(other.gameObject);
         }
 

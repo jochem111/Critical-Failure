@@ -5,6 +5,8 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+    MinigameStarter.minigameNames minigameToStartName;
+
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI goodResponseText;
@@ -22,12 +24,7 @@ public class DialogueManager : MonoBehaviour
     public float textSpeed;
     public float time;
 
-    void Start()
-    {
-        OnStart();
-    }
-
-    public void OnStart()
+    private void Start()
     {
         goodSentences = new Queue<string>();
         meanSentences = new Queue<string>();
@@ -40,7 +37,8 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("Starting conversation with " + dialogue.name);
 
-        dialogueBox.SetActive(true);
+        minigameToStartName = dialogue.minigameToStartName;
+       // dialogueBox.SetActive(true);
 
         nameText.text = dialogue.name;
 
@@ -81,6 +79,10 @@ public class DialogueManager : MonoBehaviour
         if (goodSentences.Count == 0)
         {
             FinishDialogue();
+            if (minigameToStartName != MinigameStarter.minigameNames.None)
+            {
+                Manager.manager.minigameStarter.StartNamedMinigame(minigameToStartName);
+            }
             return;
         }
 
@@ -153,9 +155,9 @@ public class DialogueManager : MonoBehaviour
     void FinishDialogue()
     {
         dialogueBox.SetActive(false);
-
-        //Make Minigame Available?
-
         Debug.Log("Good End of Conversation");
     }
+
+
+    
 }

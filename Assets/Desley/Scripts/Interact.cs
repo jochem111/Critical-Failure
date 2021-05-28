@@ -97,22 +97,34 @@ public class Interact : MonoBehaviour
         InteractContents iContents = interactingWith.GetComponent<InteractContents>();
 
         GameObject cinematic = iContents.cinematic;
-        fadeManager.StartFade(cinematic, true);
+        GameObject dialogUi = null;
+
+        if (interactingWith.GetComponent<DialogueTrigger>() != null)
+        {
+            Manager.manager.dialogueManager.StartDialogue(interactingWith.GetComponent<DialogueTrigger>().dialogue);
+            dialogUi = Manager.manager.dialogueManager.dialogueBox;
+        }
+
+        fadeManager.StartFade(cinematic, true, dialogUi);
 
         vCam = iContents.vCam;
         playerPos = iContents.playerPos;
 
         StartCoroutine(ChangePos(fadeManager.fadeTime));
+
+
     }
 
-    public void StopInteraction()
+    public void StopInteraction() // puur debug
     {
+        /*
         index++;
 
         if(index == 1)
             fadeManager.StartFade(vCam, true);
         else
             starManager.AddStar();
+            */
     }
 
     public void FinishInteraction()

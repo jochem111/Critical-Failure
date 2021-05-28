@@ -18,15 +18,15 @@ public class PlumbingManager : MonoBehaviour
     int mouseScrollNormalized;
 
 
-    private void Start()
+    public void OpenMinigame()
     {
-        StartGame();
+        //  Manager.manager.plumbingUI.TurnOnUi();
     }
 
     void StartGame()
     {
-        //  Manager.manager.plumbingUI.TurnOnUi();
-        
+        //allow placing pipes and turn on timer
+        gameIsRunning = true;
     }
 
     private void Update()

@@ -11,10 +11,12 @@ public class Manager : MonoBehaviour
     public DrinkGameManager drinkGameManager;
 
     [Header("Ui")]
+    public DialogueManager dialogueManager;
     public PlumbingUI plumbingUI;
     public DrinkUi drinkUi;
 
     [Header("Scene")]
+    public MinigameStarter minigameStarter;
     public TavernManager tavernManager;
     public StarManager starManager;
     public FadeManager fadeManager;

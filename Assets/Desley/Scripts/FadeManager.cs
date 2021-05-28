@@ -8,16 +8,18 @@ public class FadeManager : MonoBehaviour
 {
     [SerializeField] Image blackImage;
     public float fadeTime;
+    private GameObject currentUi;
 
     void Start()
     {
         StartCoroutine(FadeFromBlack(fadeTime));
     }
 
-    public void StartFade(GameObject cam, bool active) 
+    public void StartFade(GameObject cam, bool active, GameObject ui) 
     {
         StopAllCoroutines();
 
+        currentUi = ui;
         Color alpha = blackImage.color;
         alpha.a = 0;
         blackImage.color = alpha;
@@ -41,12 +43,17 @@ public class FadeManager : MonoBehaviour
         Color alpha = blackImage.color;
 
         while (blackImage.color.a > 0)
-         {
+        {
             alpha.a -= Time.deltaTime / time;
             blackImage.color = alpha;
             yield return null;
-         }
+        }
 
+        if (currentUi != null)
+        {
+            currentUi.SetActive(true);
+            currentUi = null;
+        }
         StopCoroutine(nameof(FadeFromBlack));
     }
 
@@ -55,11 +62,11 @@ public class FadeManager : MonoBehaviour
         Color alpha = blackImage.color;
 
         while (blackImage.color.a < 1)
-         {
+        {
             alpha.a += Time.deltaTime / time;
             blackImage.color = alpha;
             yield return null;
-         }
+        }
 
         if (cam)
         {

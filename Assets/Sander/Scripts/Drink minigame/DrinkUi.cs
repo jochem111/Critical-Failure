@@ -5,8 +5,6 @@ using TMPro;
 
 public class DrinkUi : MonoBehaviour
 {
-    DrinkGameManager gameManager;
-
     public GameObject drinkGameUi;
     public GameObject timer;
     public GameObject tutorialUi;
@@ -15,17 +13,11 @@ public class DrinkUi : MonoBehaviour
     public TMP_Text[] requestTexts;
 
 
-    private void Awake()
+    private void Start()
     {
-        gameManager = gameObject.GetComponent<DrinkGameManager>();
-        scoreText.text = "0 / " + gameManager.maxScore.ToString();
+       // scoreText.text = "0 / " + Manager.manager.drinkGameManager.maxScore.ToString();
     }
 
-    public void TurnOnUi()
-    {
-        drinkGameUi.SetActive(true);
-        
-    }
 
     public void TurnOffUi()
     {
@@ -39,7 +31,7 @@ public class DrinkUi : MonoBehaviour
 
     public void UpdateScore(int score)
     {
-        scoreText.text = score.ToString() + " / " + gameManager.maxScore.ToString();
+        scoreText.text = score.ToString() + " / " + Manager.manager.drinkGameManager.maxScore.ToString();
     }
 
 }
