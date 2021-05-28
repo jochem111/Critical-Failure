@@ -8,8 +8,10 @@ using UnityEngine.SceneManagement;
 public class ScreenChange : MonoBehaviour
 {
     public Shoe shoe;
+    public RotateObject shoeRotation;
     public Dirt dirt;
     public MakeDirty spawnDirt;
+    public ShoeCleaningParticles particles;
 
     public GameObject gameScreen;
     public GameObject winScreen;
@@ -53,16 +55,7 @@ public class ScreenChange : MonoBehaviour
 
     public void ChangeScreen()
     {
-        shoes.text = successCounter.ToString();
-
-        if (successesNeededToWin <= successCounter)
-        {
-            WinScreen();
-        }
-        else
-        {
-            NextScreen();
-        }
+        StartCoroutine(IChangeScreen(waitTime));
     }
 
     public void WinScreen()
@@ -92,6 +85,26 @@ public class ScreenChange : MonoBehaviour
     {
         escapeScreen.SetActive(false);
         gameScreen.SetActive(true);
+    }
+
+    public IEnumerator IChangeScreen(int time)
+    {
+        shoe.isCleaned = true;
+        shoes.text = successCounter.ToString();
+        particles.TriggerParticles();
+
+        Debug.Log("Pause Start");
+        yield return new WaitForSeconds(time);
+        Debug.Log("Pause End");
+
+        if (successesNeededToWin <= successCounter)
+        {
+            WinScreen();
+        }
+        else
+        {
+            NextScreen();
+        }
     }
 
     IEnumerator IWinScreen(int time)
@@ -127,6 +140,8 @@ public class ScreenChange : MonoBehaviour
             spawnDirt.dirtCount += difficultyExtraDirt;
         }
 
+        shoeRotation.ResetPosition();
+
         gameScreen.SetActive(false);
         nextScreen.SetActive(true);
     }
@@ -137,6 +152,7 @@ public class ScreenChange : MonoBehaviour
 
         shoe.cleanliness = shoe.cleanlinessDefault;
         spawnDirt.SpawnObjects(spawnDirt.dirtCount);
+        shoe.isCleaned = false;
 
         gameScreen.SetActive(true);
     }

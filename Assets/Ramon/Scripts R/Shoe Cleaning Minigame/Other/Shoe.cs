@@ -12,9 +12,12 @@ public class Shoe : MonoBehaviour
     public int dirtCount;
     public int cleanAmount;
     public int successCounterIncrease;
+    public int mouseButton;
 
     public float cleanTime;
     public float oncePerSecond;
+
+    public bool isCleaned;
 
     private void Start()
     {
@@ -24,11 +27,12 @@ public class Shoe : MonoBehaviour
     public void OnStart()
     {
         cleanlinessDefault = cleanliness;
+        isCleaned = false;
     }
 
-    private void OnMouseDrag()
+    private void OnMouseOver()
     {
-        if (gameManager.GetComponent<HoldTool>().thirdTool.activeSelf)
+        if (gameManager.GetComponent<HoldTool>().thirdTool.activeSelf && Input.GetMouseButton(mouseButton))
         {
             if (dirtCount <= minimumCleanliness)
             {
@@ -36,7 +40,6 @@ public class Shoe : MonoBehaviour
                 {
                     oncePerSecond = Time.time + cleanTime;
 
-                    Debug.Log("Once Every Second 2");
                     cleanliness -= cleanAmount;
                     CheckCleanliness();
                 }
@@ -46,10 +49,13 @@ public class Shoe : MonoBehaviour
 
     public void CheckCleanliness()
     {
-        if (cleanliness <= minimumCleanliness)
+        if (isCleaned == false)
         {
-            gameManager.GetComponent<ScreenChange>().successCounter += successCounterIncrease;
-            gameManager.GetComponent<ScreenChange>().ChangeScreen();
+            if (cleanliness <= minimumCleanliness)
+            {
+                gameManager.GetComponent<ScreenChange>().successCounter += successCounterIncrease;
+                gameManager.GetComponent<ScreenChange>().ChangeScreen();
+            }
         }
     }
 }

@@ -6,6 +6,9 @@ public class Dirt : MonoBehaviour
 {
     private GameObject gameManager;
 
+    public Color dirtColor;
+    public Color lowerTransparencyBy;
+
     public bool isWet;
 
     public int dirtAmountDefault;
@@ -13,6 +16,7 @@ public class Dirt : MonoBehaviour
     public int cleanAmount;
     public int minimumDirtAmount;
     public int noMouseMovement;
+    public int mouseButton;
 
     public float cleanTime;
     public float oncePerSecond;
@@ -45,21 +49,28 @@ public class Dirt : MonoBehaviour
         }
     }
 
-    public void OnMouseDrag()
+    public void OnMouseOver()
     {
-        if (gameManager.GetComponent<HoldTool>().secondTool.activeSelf && isWet == true)
+        if (gameManager.GetComponent<HoldTool>().secondTool.activeSelf && isWet == true && Input.GetMouseButton(mouseButton))
         {
-            if(Input.GetAxis("Mouse X") != noMouseMovement || Input.GetAxis("Mouse Y") != noMouseMovement)
+            if (Input.GetAxis("Mouse X") != noMouseMovement || Input.GetAxis("Mouse Y") != noMouseMovement)
             {
                 if (Time.time >= oncePerSecond)
                 {
+                    MakeTransparent();
+
                     oncePerSecond = Time.time + cleanTime;
 
-                    Debug.Log("Once Every Second 1");
                     dirtAmount -= cleanAmount;
                     CheckDirt();
                 }
             }
         }
+    }
+
+    public void MakeTransparent()
+    {
+        dirtColor.a -= lowerTransparencyBy.a;
+        GetComponent<Renderer>().material.color = new Color(GetComponent<Renderer>().material.color.r, GetComponent<Renderer>().material.color.g, GetComponent<Renderer>().material.color.b, dirtColor.a);
     }
 }
