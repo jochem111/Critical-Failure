@@ -19,7 +19,6 @@ public class Interact : MonoBehaviour
     [SerializeField] FadeManager fadeManager;
     PlayerMovement playerMove;
 
-    int index;
 
     void Start()
     {
@@ -134,7 +133,6 @@ public class Interact : MonoBehaviour
         canInteract = true;
 
         vCam.SetActive(false);
-        index = 0;
     }
 
     IEnumerator ChangePos(float time)

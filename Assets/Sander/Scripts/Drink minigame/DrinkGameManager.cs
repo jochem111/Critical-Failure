@@ -6,6 +6,7 @@ public class DrinkGameManager : MonoBehaviour
 {
     [HideInInspector]public DrinkMug mugScript;
     MugSpawner mugSpawner;
+    public Transform droppedMugSpawnPoint;
     public GameObject gameVCam;
 
     [HideInInspector]public bool gameIsRunning = false;
@@ -32,15 +33,16 @@ public class DrinkGameManager : MonoBehaviour
     public void OpenMinigame()
     {
         Manager.manager.fadeManager.StartFade(gameVCam, true, Manager.manager.drinkUi.drinkGameUi);
+        Manager.manager.drinkUi.SetScoreTextToZeroOutOfMax();
         currentScore = 0;
         currentAmountDroppedMugs = 0;
     }
 
-    public void CloseMinigame()
+    public void CloseMinigame(bool didWin)
     {
         // spawn the dropped mugs
-        // check if the player has won 
-        // stop the game stuff and turn back to the player
+        Manager.manager.drinkUi.drinkGameUi.SetActive(false);
+        Manager.manager.starManager.AddStar();
     }
 
     public void StartGame()
@@ -49,6 +51,20 @@ public class DrinkGameManager : MonoBehaviour
         gameIsRunning = true;
         Manager.manager.drinkUi.tutorialUi.SetActive(false);
         RequestDrink();
+    }
+
+    public void WinMinigame()
+    {
+        //stop timer
+        Manager.manager.drinkUi.winScreen.SetActive(true);
+        gameIsRunning = false;
+    }
+
+    public void FailMinigame()
+    {
+        // timer already stopped cuz this gets called on time out?
+        CloseMinigame(false);
+        // starmanger.cuckplayer
     }
 
     public void RequestDrink()
@@ -83,9 +99,7 @@ public class DrinkGameManager : MonoBehaviour
 
                 if (currentScore == maxScore)
                 {
-                    //stop timer and add star
-                    Manager.manager.drinkUi.winScreen.SetActive(true);
-                    gameIsRunning = false;
+                    WinMinigame();
                 }
                 else
                 {

@@ -12,13 +12,6 @@ public class DrinkUi : MonoBehaviour
     public TMP_Text scoreText;
     public TMP_Text[] requestTexts;
 
-
-    private void Start()
-    {
-       // scoreText.text = "0 / " + Manager.manager.drinkGameManager.maxScore.ToString();
-    }
-
-
     public void TurnOffUi()
     {
         drinkGameUi.SetActive(false);
@@ -34,4 +27,8 @@ public class DrinkUi : MonoBehaviour
         scoreText.text = score.ToString() + " / " + Manager.manager.drinkGameManager.maxScore.ToString();
     }
 
+    public void SetScoreTextToZeroOutOfMax()
+    {
+        scoreText.text = "0 / " + Manager.manager.drinkGameManager.maxScore.ToString();
+    }
 }
