@@ -44,7 +44,7 @@ public class MinigameStarter : MonoBehaviour
 
     void StartWriteMinigame()
     {
-        print("-!- Open Write minigame -!-");
+        Manager.manager.poemMinigame.OpenMinigame();
     }
 
     void StartPlumbingMinigame()

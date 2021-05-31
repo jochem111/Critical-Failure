@@ -42,7 +42,11 @@ public class DrinkGameManager : MonoBehaviour
     {
         // spawn the dropped mugs
         Manager.manager.drinkUi.drinkGameUi.SetActive(false);
-        Manager.manager.starManager.AddStar();
+        if (didWin)
+        {
+            Manager.manager.starManager.AddStar();
+        }
+        Manager.manager.starManager.FailStar();
     }
 
     public void StartGame()
@@ -64,7 +68,6 @@ public class DrinkGameManager : MonoBehaviour
     {
         // timer already stopped cuz this gets called on time out?
         CloseMinigame(false);
-        // starmanger.cuckplayer
     }
 
     public void RequestDrink()

@@ -9,6 +9,7 @@ public class Manager : MonoBehaviour
     [Header ("Minigame Managers")]
     public PlumbingManager plumbingManager;
     public DrinkGameManager drinkGameManager;
+    public PoemMinigame poemMinigame;
 
     [Header("Ui")]
     public DialogueManager dialogueManager;

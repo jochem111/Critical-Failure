@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class ScreenChange : MonoBehaviour
 {
@@ -30,7 +29,7 @@ public class ScreenChange : MonoBehaviour
     public int successCounter;
     public int waitTime;
 
-    public string returnToScene;
+
 
     private void Start()
     {
@@ -116,7 +115,7 @@ public class ScreenChange : MonoBehaviour
         winScreen.SetActive(false);
         gameScreen.SetActive(true);
 
-        SceneManager.LoadScene(returnToScene);
+        Manager.manager.starManager.AddStar();
     }
 
     IEnumerator IFailScreen(int time)
@@ -128,7 +127,7 @@ public class ScreenChange : MonoBehaviour
         failScreen.SetActive(false);
         gameScreen.SetActive(true);
 
-        SceneManager.LoadScene(returnToScene);
+        Manager.manager.starManager.FailStar();
     }
 
     public void NextScreen()

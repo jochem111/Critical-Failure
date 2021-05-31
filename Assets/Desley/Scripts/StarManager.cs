@@ -27,6 +27,11 @@ public class StarManager : MonoBehaviour
             interact.FinishInteraction();
     }
 
+    public void FailStar()
+    {
+        //get cucked lmao
+    }
+
     IEnumerator RevealStar()
     {
         //Turn off player meshRenderer

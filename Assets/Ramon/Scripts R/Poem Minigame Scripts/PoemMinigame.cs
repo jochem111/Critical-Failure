@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class PoemMinigame : MonoBehaviour
 {
+    public GameObject gameVCam;
+    public GameObject poemUiHolder;
+
     public GameObject poem;
     public GameObject exit;
     public GameObject win;
@@ -23,10 +25,9 @@ public class PoemMinigame : MonoBehaviour
     public float answers;
     public float correctAnswers;
     public float answersRequired;
-    public float pauseLength;
+    [Tooltip("In Seconds")] public float pauseLength;
     public float youNeeded;
 
-    public string returnToScene;
 
     void Update()
     {
@@ -40,13 +41,19 @@ public class PoemMinigame : MonoBehaviour
         ListAnswers();
     }
 
+    public void OpenMinigame()
+    {
+        poem.SetActive(true);
+        Manager.manager.fadeManager.StartFade(gameVCam, true, poemUiHolder);
+    }
+
     public void CheckAnswers()
     {
         checkAnswers.SetActive(false);
         areYouSure.SetActive(true);
     }
 
-    public void CheckAnswersYes()
+    public void CheckAnswersYes() // make sure that the player cant move their answer from this point on. Maybe we also want it so the player cant open the Exit menu from this point as they will get a leave button anyway
     {
         ListCorrectAnswers();
         areYouSure.SetActive(false);
@@ -70,7 +77,7 @@ public class PoemMinigame : MonoBehaviour
         correctAnswersList.text = correctAnswers.ToString();
     }
 
-    public void ListAnswers()
+    public void ListAnswers() //should only be called when a answer is put in a word slot
     {
         answersList.text = answers.ToString();
     }
@@ -89,8 +96,10 @@ public class PoemMinigame : MonoBehaviour
     {
         Debug.Log("YesExitButton");
         exit.SetActive(false);
-        poem.SetActive(true);
-        SceneManager.LoadScene(returnToScene);
+        //poem.SetActive(true);
+
+        poemUiHolder.SetActive(false);
+        Manager.manager.starManager.FailStar();
     }
 
     public void NoExitButton()
@@ -103,13 +112,19 @@ public class PoemMinigame : MonoBehaviour
     public void MinigameWon()
     {
         Debug.Log("MinigameWon");
-        SceneManager.LoadScene(returnToScene);
+
+        win.SetActive(false);
+        poemUiHolder.SetActive(false);
+        Manager.manager.starManager.AddStar();
     }
 
     public void MinigameLost()
     {
         Debug.Log("MinigameLost");
-        SceneManager.LoadScene(returnToScene);
+
+        lose.SetActive(false);
+        poemUiHolder.SetActive(false);
+        Manager.manager.starManager.FailStar();
     }
 
     IEnumerator Pause(float time)
@@ -118,7 +133,7 @@ public class PoemMinigame : MonoBehaviour
         yield return new WaitForSeconds(time);
         Debug.Log("Pause End");
 
-        poem.SetActive(false);
+        //poem.SetActive(false); i turned this of so that we can lower the wait time and as such we can let the player leave quicker while still giving the chance to look at their answers
         if (correctAnswers >= answersRequired)
         {
             win.SetActive(true);
