@@ -41,6 +41,7 @@ public class DrinkGameManager : MonoBehaviour
     public void CloseMinigame(bool didWin)
     {
         // spawn the dropped mugs
+        Manager.manager.drinkUi.winScreen.SetActive(false);
         Manager.manager.drinkUi.drinkGameUi.SetActive(false);
         if (didWin)
         {
