@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44281408, g: 0.4919678, b: 0.5717388, a: 1}
+  m_IndirectSpecularColor: {r: 0.45113552, g: 0.50092167, b: 0.57392704, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -488,6 +488,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1242206464}
   - component: {fileID: 1242206463}
+  - component: {fileID: 1242206465}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -506,7 +507,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.81463027, b: 0.5330188, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -517,9 +518,9 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_Bias: 6.4
+    m_NormalBias: 3
+    m_NearPlane: 3.84
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -564,13 +565,26 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242206462}
-  m_LocalRotation: {x: 0.83424014, y: -0.13046017, z: 0.22353394, w: 0.48688412}
+  m_LocalRotation: {x: 0.91127235, y: -0.215076, z: -0.12552331, w: 0.32797703}
   m_LocalPosition: {x: -7.374033, y: -5.4159355, z: -22.364202}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 119.462006, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 147.06, y: -1773.852, z: 34.414993}
+--- !u!114 &1242206465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242206462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UsePipelineSettings: 1
 --- !u!1001 &1705685611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -592,7 +606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1587623100575155092, guid: 0a6e8a8b618a5794380127bef2a256ec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.661
+      value: -6.723
       objectReference: {fileID: 0}
     - target: {fileID: 1587623100575155092, guid: 0a6e8a8b618a5794380127bef2a256ec, type: 3}
       propertyPath: m_LocalRotation.w
