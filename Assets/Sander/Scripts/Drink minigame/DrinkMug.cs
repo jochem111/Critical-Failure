@@ -8,11 +8,13 @@ public class DrinkMug : MonoBehaviour
     public float mugFillTimeInSeconds;
     public int[] currentHeldDrinkIndexes;
 
-    int mugIndexToFill = 0;
+    public int mugIndexToFill = 0;
     public bool mugIsFull;
     bool didFill = false;
      public bool isBeingHeld = false;
      public bool canBeHeld = false;
+
+    private IEnumerator enumerator;
 
     private void Start()
     {
@@ -25,7 +27,8 @@ public class DrinkMug : MonoBehaviour
         {
             if (!mugIsFull)
             {
-                StartCoroutine(FillMug(other.GetComponent<TapScript>())); 
+                enumerator = FillMug(other.GetComponent<TapScript>());
+                StartCoroutine(enumerator);
             }
         }
     }
@@ -37,14 +40,15 @@ public class DrinkMug : MonoBehaviour
         {
             if (!didFill)
             {
-                other.GetComponent<TapScript>().fillFX.SetActive(false); // i used getComp because i felt like stashing the script would not gain much
-                StopAllCoroutines();  //Used StopAll because stop didnt work
-                print("FillMug stopped!");
+                other.GetComponent<TapScript>().fillFX.SetActive(false);
+
+                StopCoroutine(enumerator);
             }
             else
             {
                 didFill = false;
             }
+            other.GetComponent<TapScript>().CoolDownStart();
         }
     } 
 
@@ -96,6 +100,7 @@ public class DrinkMug : MonoBehaviour
             mugIsFull = true;
         }
         print("FillMug done!!");
+
     }
 
 

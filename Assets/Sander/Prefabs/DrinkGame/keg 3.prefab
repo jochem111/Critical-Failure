@@ -26,6 +26,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fillFX: {fileID: 7962363378652311343}
+  collisonCoolDownTime: 1
   drinkId: 3
 --- !u!1 &7949038116134839886
 GameObject:
