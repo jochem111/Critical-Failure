@@ -8,4 +8,6 @@ public class InteractContents : MonoBehaviour
     public GameObject cinematic;
     public GameObject vCam;
     public Transform playerPos;
+
+    [Space] public Animator animator;
 }

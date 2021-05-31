@@ -11,6 +11,7 @@ public class Interact : MonoBehaviour
     [SerializeField] Transform door;
 
     GameObject interactingWith;
+    InteractContents iContents;
     GameObject vCam;
     Transform playerPos;
 
@@ -90,7 +91,7 @@ public class Interact : MonoBehaviour
         canInteract = false;
 
         //Reference the contents of the interaction
-        InteractContents iContents = interactingWith.GetComponent<InteractContents>();
+        iContents = interactingWith.GetComponent<InteractContents>();
 
         GameObject cinematic = iContents.cinematic;
         GameObject dialogUi = null;
@@ -108,7 +109,7 @@ public class Interact : MonoBehaviour
 
         StartCoroutine(ChangePos(Manager.manager.fadeManager.fadeTime));
 
-
+        iContents.animator.SetBool("Talking", true);
     }
 
     public void StopInteraction() // puur debug
@@ -130,6 +131,8 @@ public class Interact : MonoBehaviour
         canInteract = true;
 
         vCam.SetActive(false);
+
+        iContents.animator.SetBool("Talking", false);
     }
 
     IEnumerator ChangePos(float time)

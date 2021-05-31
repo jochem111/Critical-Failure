@@ -1008,6 +1008,7 @@ MonoBehaviour:
   cinematic: {fileID: 306932710}
   vCam: {fileID: 514870326}
   playerPos: {fileID: 930417026}
+  animator: {fileID: 0}
 --- !u!136 &128872477
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2781,6 +2782,7 @@ MonoBehaviour:
   cinematic: {fileID: 1969706765}
   vCam: {fileID: 514870326}
   playerPos: {fileID: 755195632}
+  animator: {fileID: 0}
 --- !u!136 &470569504
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4160,6 +4162,7 @@ MonoBehaviour:
   cinematic: {fileID: 25228849}
   vCam: {fileID: 514870326}
   playerPos: {fileID: 1544594865}
+  animator: {fileID: 0}
 --- !u!136 &689547461
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4279,6 +4282,7 @@ MonoBehaviour:
   cinematic: {fileID: 913210766}
   vCam: {fileID: 514870326}
   playerPos: {fileID: 287463918}
+  animator: {fileID: 0}
 --- !u!136 &692622159
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6128,10 +6132,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1554483436}
     m_Modifications:
-    - target: {fileID: 50360231, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 690463255, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: vCam
       value: 
@@ -6140,10 +6140,6 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[0].value
       value: 
       objectReference: {fileID: 26018614}
-    - target: {fileID: 1504935594, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1470413045870058139, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: m_Name
       value: MaleBartenderAnims (1)
@@ -7090,26 +7086,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1470413045870058139, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
   m_PrefabInstance: {fileID: 1222706653}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1434516264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1434516263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08070ef2b02a84540a891bf47626efad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1434516267}
-  randomMin: 20
-  randomMax: 40
---- !u!95 &1434516267 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1776279787570362241, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
-  m_PrefabInstance: {fileID: 1222706653}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1457122122
 GameObject:
   m_ObjectHideFlags: 0
@@ -7191,6 +7167,7 @@ MonoBehaviour:
   cinematic: {fileID: 437137512}
   vCam: {fileID: 514870326}
   playerPos: {fileID: 537870327}
+  animator: {fileID: 0}
 --- !u!136 &1458060607
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8192,11 +8169,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3945575057212395635, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00000047683716
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3945575057212395635, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0000038146973
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3945575057212395635, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -8244,11 +8221,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797808446592598277, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00000047683716
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7797808446592598277, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0000038146973
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7797808446592598277, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -9431,6 +9408,7 @@ MonoBehaviour:
   cinematic: {fileID: 1670088727}
   vCam: {fileID: 514870326}
   playerPos: {fileID: 1457122123}
+  animator: {fileID: 0}
 --- !u!1 &1964005885 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7182462196082099589, guid: e10d10962fc89ef45a6004403484ecbd, type: 3}
@@ -9556,6 +9534,7 @@ MonoBehaviour:
   cinematic: {fileID: 1924545676}
   vCam: {fileID: 514870326}
   playerPos: {fileID: 979265526}
+  animator: {fileID: 0}
 --- !u!136 &1993757653
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9747,7 +9726,6 @@ MonoBehaviour:
   - {fileID: 178861969}
   - {fileID: 2113228359}
   - {fileID: 41751298}
-  fadeManager: {fileID: 418580796}
   audioSource: {fileID: 2049124288}
   vCam: {fileID: 1248018381}
   interact: {fileID: 958766183}
@@ -10073,6 +10051,7 @@ MonoBehaviour:
   cinematic: {fileID: 1533444998}
   vCam: {fileID: 514870326}
   playerPos: {fileID: 996681264}
+  animator: {fileID: 0}
 --- !u!136 &2094781852
 CapsuleCollider:
   m_ObjectHideFlags: 0
