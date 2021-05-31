@@ -1084,7 +1084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 333, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &191432973
@@ -1195,7 +1195,6 @@ GameObject:
   - component: {fileID: 192526543}
   - component: {fileID: 192526545}
   - component: {fileID: 192526546}
-  - component: {fileID: 192526547}
   m_Layer: 5
   m_Name: Word (4)
   m_TagString: Untagged
@@ -1351,18 +1350,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &192526547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192526541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &261505529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,7 +1683,6 @@ GameObject:
   - component: {fileID: 320367522}
   - component: {fileID: 320367524}
   - component: {fileID: 320367525}
-  - component: {fileID: 320367526}
   m_Layer: 5
   m_Name: Word (6)
   m_TagString: Untagged
@@ -1852,18 +1838,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &320367526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320367520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &329887659
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,7 +2076,6 @@ GameObject:
   - component: {fileID: 335110586}
   - component: {fileID: 335110588}
   - component: {fileID: 335110589}
-  - component: {fileID: 335110590}
   m_Layer: 5
   m_Name: Word (5)
   m_TagString: Untagged
@@ -2258,18 +2231,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &335110590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 335110584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &391338278
 GameObject:
   m_ObjectHideFlags: 0
@@ -4227,7 +4188,6 @@ GameObject:
   - component: {fileID: 923481310}
   - component: {fileID: 923481312}
   - component: {fileID: 923481313}
-  - component: {fileID: 923481314}
   m_Layer: 5
   m_Name: Word
   m_TagString: Untagged
@@ -4383,18 +4343,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &923481314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 923481308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1009666859
 GameObject:
   m_ObjectHideFlags: 0
@@ -4408,7 +4356,6 @@ GameObject:
   - component: {fileID: 1009666861}
   - component: {fileID: 1009666863}
   - component: {fileID: 1009666864}
-  - component: {fileID: 1009666865}
   m_Layer: 5
   m_Name: Word (11)
   m_TagString: Untagged
@@ -4564,18 +4511,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1009666865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009666859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1022116779
 GameObject:
   m_ObjectHideFlags: 0
@@ -5100,7 +5035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 333, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1141353527
@@ -5207,7 +5142,6 @@ GameObject:
   - component: {fileID: 1176584993}
   - component: {fileID: 1176584995}
   - component: {fileID: 1176584996}
-  - component: {fileID: 1176584997}
   m_Layer: 5
   m_Name: Word (13)
   m_TagString: Untagged
@@ -5363,18 +5297,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1176584997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176584991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1322419778
 GameObject:
   m_ObjectHideFlags: 0
@@ -5821,6 +5743,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7ba8b11eb7e89848afe79ab254e72c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameVCam: {fileID: 0}
+  poemUiHolder: {fileID: 0}
   poem: {fileID: 1328954505}
   exit: {fileID: 1574795070}
   win: {fileID: 1137787730}
@@ -5848,9 +5772,8 @@ MonoBehaviour:
   answers: 0
   correctAnswers: 0
   answersRequired: 8
-  pauseLength: 5
+  pauseLength: 0.5
   youNeeded: 0
-  returnToScene: Test_Ramon
 --- !u!4 &1380880084
 Transform:
   m_ObjectHideFlags: 0
@@ -6012,7 +5935,6 @@ GameObject:
   - component: {fileID: 1418542465}
   - component: {fileID: 1418542467}
   - component: {fileID: 1418542468}
-  - component: {fileID: 1418542469}
   m_Layer: 5
   m_Name: Word (7)
   m_TagString: Untagged
@@ -6168,18 +6090,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1418542469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1418542463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1454343071
 GameObject:
   m_ObjectHideFlags: 0
@@ -6758,7 +6668,6 @@ GameObject:
   - component: {fileID: 1504245545}
   - component: {fileID: 1504245547}
   - component: {fileID: 1504245548}
-  - component: {fileID: 1504245549}
   m_Layer: 5
   m_Name: Word (8)
   m_TagString: Untagged
@@ -6914,18 +6823,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1504245549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1504245543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1504902953
 GameObject:
   m_ObjectHideFlags: 0
@@ -6939,7 +6836,6 @@ GameObject:
   - component: {fileID: 1504902955}
   - component: {fileID: 1504902957}
   - component: {fileID: 1504902958}
-  - component: {fileID: 1504902959}
   m_Layer: 5
   m_Name: Word (12)
   m_TagString: Untagged
@@ -7095,18 +6991,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1504902959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1504902953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1527800311
 GameObject:
   m_ObjectHideFlags: 0
@@ -7936,7 +7820,6 @@ GameObject:
   - component: {fileID: 1792832620}
   - component: {fileID: 1792832622}
   - component: {fileID: 1792832623}
-  - component: {fileID: 1792832624}
   m_Layer: 5
   m_Name: Word (2)
   m_TagString: Untagged
@@ -8092,18 +7975,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1792832624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792832618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1795803615
 GameObject:
   m_ObjectHideFlags: 0
@@ -8117,7 +7988,6 @@ GameObject:
   - component: {fileID: 1795803617}
   - component: {fileID: 1795803619}
   - component: {fileID: 1795803620}
-  - component: {fileID: 1795803621}
   m_Layer: 5
   m_Name: Word (10)
   m_TagString: Untagged
@@ -8273,18 +8143,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1795803621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795803615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1803607015
 GameObject:
   m_ObjectHideFlags: 0
@@ -8507,7 +8365,6 @@ GameObject:
   - component: {fileID: 1862585700}
   - component: {fileID: 1862585702}
   - component: {fileID: 1862585703}
-  - component: {fileID: 1862585704}
   m_Layer: 5
   m_Name: Word (9)
   m_TagString: Untagged
@@ -8663,18 +8520,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1862585704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862585698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1875520762
 GameObject:
   m_ObjectHideFlags: 0
@@ -8688,7 +8533,6 @@ GameObject:
   - component: {fileID: 1875520764}
   - component: {fileID: 1875520766}
   - component: {fileID: 1875520767}
-  - component: {fileID: 1875520768}
   m_Layer: 5
   m_Name: Word (1)
   m_TagString: Untagged
@@ -8844,18 +8688,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1875520768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1875520762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1916628248
 GameObject:
   m_ObjectHideFlags: 0
@@ -8960,7 +8792,6 @@ GameObject:
   - component: {fileID: 1945221489}
   - component: {fileID: 1945221491}
   - component: {fileID: 1945221492}
-  - component: {fileID: 1945221493}
   m_Layer: 5
   m_Name: Word (3)
   m_TagString: Untagged
@@ -9116,18 +8947,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1945221493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945221487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2ece933e544b647944c4c2b4a9b1ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1988399442
 GameObject:
   m_ObjectHideFlags: 0

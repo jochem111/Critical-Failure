@@ -98,6 +98,5 @@ public class DrinkMug : MonoBehaviour
         print("FillMug done!!");
     }
 
-    
 
 }
