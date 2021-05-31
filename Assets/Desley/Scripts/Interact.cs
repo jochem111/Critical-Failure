@@ -14,9 +14,6 @@ public class Interact : MonoBehaviour
     GameObject vCam;
     Transform playerPos;
 
-    [Space, SerializeField] StarManager starManager;
-    [SerializeField] TavernManager tavernManager;
-    [SerializeField] FadeManager fadeManager;
     PlayerMovement playerMove;
 
 
@@ -81,7 +78,7 @@ public class Interact : MonoBehaviour
             float distance = Vector3.Distance(transform.position, door.position);
             if(distance <= maxInteractDistance) 
             {
-                tavernManager.RotateDoor(0);
+                Manager.manager.tavernManager.RotateDoor(0);
             }
         }
     }
@@ -104,12 +101,12 @@ public class Interact : MonoBehaviour
             dialogUi = Manager.manager.dialogueManager.dialogueBox;
         }
 
-        fadeManager.StartFade(cinematic, true, dialogUi);
+        Manager.manager.fadeManager.StartFade(cinematic, true, dialogUi);
 
         vCam = iContents.vCam;
         playerPos = iContents.playerPos;
 
-        StartCoroutine(ChangePos(fadeManager.fadeTime));
+        StartCoroutine(ChangePos(Manager.manager.fadeManager.fadeTime));
 
 
     }
@@ -147,6 +144,6 @@ public class Interact : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        tavernManager.UpdateTaverns();
+        Manager.manager.tavernManager.UpdateTaverns();
     }
 }

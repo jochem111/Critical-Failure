@@ -5,7 +5,6 @@ using UnityEngine;
 public class StarManager : MonoBehaviour
 {
     [SerializeField] MeshRenderer[] playerRenderer;
-    [SerializeField] FadeManager fadeManager;
     [SerializeField] AudioSource audioSource;
     [SerializeField] GameObject vCam;
     [SerializeField] Interact interact;
