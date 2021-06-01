@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Shoe : MonoBehaviour
 {
-    public GameObject gameManager;
-
     public int cleanlinessDefault;
     public int cleanliness;
     public int minimumCleanliness;
@@ -32,7 +30,7 @@ public class Shoe : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (gameManager.GetComponent<HoldTool>().thirdTool.activeSelf && Input.GetMouseButton(mouseButton))
+        if (Manager.manager.shoeManager.GetComponent<HoldTool>().thirdTool.activeSelf && Input.GetMouseButton(mouseButton))
         {
             if (dirtCount <= minimumCleanliness)
             {
@@ -53,8 +51,8 @@ public class Shoe : MonoBehaviour
         {
             if (cleanliness <= minimumCleanliness)
             {
-                gameManager.GetComponent<ScreenChange>().successCounter += successCounterIncrease;
-                gameManager.GetComponent<ScreenChange>().ChangeScreen();
+                Manager.manager.shoeManager.GetComponent<ScreenChange>().successCounter += successCounterIncrease;
+                Manager.manager.shoeManager.GetComponent<ScreenChange>().ChangeScreen();
             }
         }
     }

@@ -10,6 +10,7 @@ public class Manager : MonoBehaviour
     public PlumbingManager plumbingManager;
     public DrinkGameManager drinkGameManager;
     public PoemMinigame poemMinigame;
+    public ScreenChange shoeManager;
 
     [Header("Ui")]
     public ButtonManager buttonManager;
