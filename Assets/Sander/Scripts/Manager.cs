@@ -21,6 +21,7 @@ public class Manager : MonoBehaviour
     public TavernManager tavernManager;
     public StarManager starManager;
     public FadeManager fadeManager;
+    public Interact interact;
 
     private void Start()
     {

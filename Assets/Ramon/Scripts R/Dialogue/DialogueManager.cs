@@ -79,10 +79,10 @@ public class DialogueManager : MonoBehaviour
         if (goodSentences.Count == 0)
         {
             FinishDialogue();
-            if (minigameToStartName != MinigameStarter.minigameNames.None)
+            /* if (minigameToStartName != MinigameStarter.minigameNames.None)
             {
+            } */
                 Manager.manager.minigameStarter.StartNamedMinigame(minigameToStartName);
-            }
             return;
         }
 
@@ -155,6 +155,7 @@ public class DialogueManager : MonoBehaviour
     void FinishDialogue()
     {
         dialogueBox.SetActive(false);
+        Manager.manager.interact.FinishInteraction();
         Debug.Log("Good End of Conversation");
     }
 

@@ -1811,6 +1811,7 @@ MonoBehaviour:
   tavernManager: {fileID: 1875902908}
   starManager: {fileID: 2049124286}
   fadeManager: {fileID: 418580796}
+  interact: {fileID: 958766183}
 --- !u!4 &179412435
 Transform:
   m_ObjectHideFlags: 0
@@ -3669,7 +3670,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427482798}
-  m_LocalRotation: {x: 0.2896205, y: 0.30518362, z: -0.098004095, w: 0.90187484}
+  m_LocalRotation: {x: 0.2896205, y: 0.30518362, z: -0.09800408, w: 0.90187484}
   m_LocalPosition: {x: -7.582703, y: 3.525379, z: -0.3099842}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10221,7 +10222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2796944611417721044, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.13549325
+      value: 0.13549326
       objectReference: {fileID: 0}
     - target: {fileID: 2796944611417721044, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalRotation.y
@@ -10229,7 +10230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2796944611417721044, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.274092
+      value: -0.27409196
       objectReference: {fileID: 0}
     - target: {fileID: 3726044906535253281, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: door
@@ -12755,6 +12756,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 617375893}
     m_Modifications:
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.minigameToStartName
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodResponses.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.meanResponses.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodResponses.Array.data[2]
+      value: good 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.meanResponses.Array.data[2]
+      value: mean 2
+      objectReference: {fileID: 0}
     - target: {fileID: 690463255, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: vCam
       value: 
