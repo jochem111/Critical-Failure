@@ -8,10 +8,13 @@ public class FadeManager : MonoBehaviour
 {
     [SerializeField] Image blackImage;
     public float fadeTime;
+    float inBetweenTime;
     private GameObject currentUi;
 
     void Start()
     {
+        inBetweenTime = fadeTime + .5f;
+
         StartCoroutine(FadeFromBlack(fadeTime));
     }
 
@@ -31,7 +34,7 @@ public class FadeManager : MonoBehaviour
     {
         StartCoroutine(FadeToBlack(time, cam, active));
 
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(inBetweenTime);
 
         StartCoroutine(FadeFromBlack(time));
 
@@ -54,6 +57,7 @@ public class FadeManager : MonoBehaviour
             currentUi.SetActive(true);
             currentUi = null;
         }
+
         StopCoroutine(nameof(FadeFromBlack));
     }
 

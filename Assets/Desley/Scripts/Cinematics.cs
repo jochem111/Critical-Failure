@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Cinemachine;
+using System.Collections;
+using UnityEngine;
 
 public class Cinematics : MonoBehaviour
 {
@@ -14,25 +13,52 @@ public class Cinematics : MonoBehaviour
     public float introTime;
     public float resumeTime;
 
+    bool skipped;
+
     void Start()
     {
         playerMove.AllowMovement(false);
 
         originalCartSpeed = dollyCart.m_Speed;
 
-        StartCoroutine(PauseCinematic(introTime));
+        StartCoroutine(DisableSkip());
+        StartCoroutine(WaitForPauseTime(introTime));
     }
 
-    IEnumerator PauseCinematic(float time)
+    IEnumerator DisableSkip()
+    {
+        yield return new WaitForSeconds(introTime - 1);
+
+        Manager.manager.interact.canSkip = false;
+    }
+
+    IEnumerator WaitForPauseTime(float time)
     {
         yield return new WaitForSeconds(time);
 
+        if (!skipped)
+        {
+            Manager.manager.interact.canSkip = false;
+            Manager.manager.interact.index++;
+
+            PauseCinematic();
+        }
+    }
+
+    public void PauseCinematic() 
+    { 
         dollyCart.m_Speed = 0;
+
+        skipped = true;
+
+        StopCoroutine(nameof(WaitForPauseTime));
     }
 
     public void ResumeCinematic() 
     { 
         dollyCart.m_Speed = originalCartSpeed;
+
+        Manager.manager.interact.canSkip = true;
 
         StartCoroutine(EndCinematic(resumeTime));
     }

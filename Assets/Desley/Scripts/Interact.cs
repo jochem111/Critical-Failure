@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Interact : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class Interact : MonoBehaviour
     [SerializeField] List<Transform> interactables;
     [SerializeField] Transform door;
 
+    [Space, SerializeField] Cinematics cinematic;
+    FadeManager fadeManager;
+
     GameObject interactingWith;
     InteractContents iContents;
     GameObject vCam;
@@ -17,10 +21,17 @@ public class Interact : MonoBehaviour
 
     PlayerMovement playerMove;
 
+    [Space, SerializeField] CinemachineDollyCart dollyCart;
+    [SerializeField] float dollyCartPos;
+    public float index;
+    public bool canSkip = true;
+    bool cinematicEnded;
 
     void Start()
     {
         playerMove = GetComponent<PlayerMovement>();
+
+        fadeManager = Manager.manager.fadeManager;
 
         GetInteractables();
     }
@@ -45,8 +56,36 @@ public class Interact : MonoBehaviour
         if (Input.GetButtonDown("Interact") && canInteract)
             CheckForDistance();
 
-        if (Input.GetButtonDown("Jump"))
-            StopInteraction();
+        if (Input.GetButtonDown("Jump") && canSkip && index < 2)
+            SkipCinematic();
+    }
+
+    void SkipCinematic()
+    {
+        index++;
+        canSkip = false;
+
+        fadeManager.StartFade(null, true, null);
+
+        StartCoroutine(ChangeCinematic(fadeManager.fadeTime));
+    }
+
+    IEnumerator ChangeCinematic(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        if(index == 1)
+        {
+            cinematic.PauseCinematic();
+
+            dollyCart.m_Position = dollyCartPos;
+
+            Manager.manager.buttonManager.FadeMainMenu();
+        }
+        else
+        {
+            cinematic.DisableCinematic();
+        };
     }
 
     void CheckForDistance()
@@ -110,18 +149,6 @@ public class Interact : MonoBehaviour
         StartCoroutine(ChangePos(Manager.manager.fadeManager.fadeTime));
 
         iContents.animator.SetBool("Talking", true);
-    }
-
-    public void StopInteraction() // puur debug
-    {
-        /*
-        index++;
-
-        if(index == 1)
-            fadeManager.StartFade(vCam, true);
-        else
-            starManager.AddStar();
-            */
     }
 
     public void FinishInteraction()

@@ -12,6 +12,7 @@ public class Manager : MonoBehaviour
     public PoemMinigame poemMinigame;
 
     [Header("Ui")]
+    public ButtonManager buttonManager;
     public DialogueManager dialogueManager;
     public PlumbingUI plumbingUI;
     public DrinkUi drinkUi;

@@ -59,6 +59,11 @@ public class ButtonManager : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
 
+        FadeMainMenu();
+    }
+
+    public void FadeMainMenu()
+    {
         StartCoroutine(FadeIn(fadeTime, mainCanvasGroup));
 
         mainCanvasGroup.blocksRaycasts = true;
