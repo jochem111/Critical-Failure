@@ -41,10 +41,11 @@ public class PoemMinigame : MonoBehaviour
         ListAnswers();
     }
 
-    public void OpenMinigame()
+    public void OpenMinigame() // add overload for the right poem prefab so you can chance which one to open with that
     {
         poem.SetActive(true);
         Manager.manager.fadeManager.StartFade(gameVCam, true, poemUiHolder);
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void CheckAnswers()
@@ -77,7 +78,7 @@ public class PoemMinigame : MonoBehaviour
         correctAnswersList.text = correctAnswers.ToString();
     }
 
-    public void ListAnswers() //should only be called when a answer is put in a word slot
+    public void ListAnswers() //should only be called when a answer is put in a word slot. You could use Manager.manager.poemMinigame.ListAnswers whenever you drag an item into a slot
     {
         answersList.text = answers.ToString();
     }
