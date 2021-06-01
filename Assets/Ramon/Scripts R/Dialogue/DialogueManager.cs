@@ -82,16 +82,26 @@ public class DialogueManager : MonoBehaviour
             /* if (minigameToStartName != MinigameStarter.minigameNames.None)
             {
             } */
-                Manager.manager.minigameStarter.StartNamedMinigame(minigameToStartName);
+            Manager.manager.minigameStarter.StartNamedMinigame(minigameToStartName);
             return;
         }
 
         string gSentence = goodSentences.Dequeue();
         dialogueText.text = gSentence;
+
+        if (goodResponses.Count == 0)
+        {
+            responses.SetActive(false);
+            StopAllCoroutines();
+            StartCoroutine(EndConversationAfterTime(time));
+            return;
+        }
+
         string gResponse = goodResponses.Dequeue();
         goodResponseText.text = gResponse;
         string mResponse = meanResponses.Dequeue();
         meanResponseText.text = mResponse;
+
         StopAllCoroutines();
         StartCoroutine(TypeSentence(gSentence));
 
@@ -105,7 +115,7 @@ public class DialogueManager : MonoBehaviour
         responses.SetActive(false);
         StopAllCoroutines();
         StartCoroutine(TypeSentence(mSentence));
-        StartCoroutine(EndConversationAfterTime(time));
+        StartCoroutine(BadEndConversationAfterTime(time));
 
         Debug.Log("Mean Sentence Displayed");
     }
@@ -117,7 +127,7 @@ public class DialogueManager : MonoBehaviour
         responses.SetActive(false);
         StopAllCoroutines();
         StartCoroutine(TypeSentence(eSentence));
-        StartCoroutine(EndConversationAfterTime(time));
+        StartCoroutine(AbbruptlyEndConversationAfterTime(time));
 
         Debug.Log("Sudden Sentence Displayed");
     }
@@ -134,16 +144,43 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Sentence Typed");
     }
 
-    IEnumerator EndConversationAfterTime(float time)
+    IEnumerator AbbruptlyEndConversationAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
 
-        EndDialogue();
+        AbbruptlyEndDailogue();
 
         Debug.Log("Ending Conversation");
     }
 
-    public void EndDialogue()
+    IEnumerator BadEndConversationAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        BadEndDialogue();
+
+        Debug.Log("Ending Conversation");
+    }
+
+    IEnumerator EndConversationAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        FinishDialogue();
+
+        Debug.Log("Ending Conversation");
+    }
+
+    public void AbbruptlyEndDailogue()
+    {
+        dialogueBox.SetActive(false);
+
+        Manager.manager.interact.FinishInteraction();
+
+        Debug.Log("Sudden End of Conversation");
+    }
+
+    public void BadEndDialogue()
     {
         dialogueBox.SetActive(false);
 
@@ -158,7 +195,4 @@ public class DialogueManager : MonoBehaviour
         Manager.manager.interact.FinishInteraction();
         Debug.Log("Good End of Conversation");
     }
-
-
-    
 }
