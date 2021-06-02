@@ -36,6 +36,7 @@ public class DrinkGameManager : MonoBehaviour
         Manager.manager.drinkUi.SetScoreTextToZeroOutOfMax();
         currentScore = 0;
         currentAmountDroppedMugs = 0;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void CloseMinigame(bool didWin)

@@ -14,6 +14,11 @@ public class PlumbingUI : MonoBehaviour
     public Outline[] pipeSelectedOutlines;
 
 
+    private void Start()
+    {
+        TurnOnUi();
+    }
+
     public void TurnOnUi()
     {
         //add pipe cards on runtime?
