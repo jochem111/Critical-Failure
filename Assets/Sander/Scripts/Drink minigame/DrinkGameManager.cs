@@ -32,6 +32,7 @@ public class DrinkGameManager : MonoBehaviour
 
     public void OpenMinigame()
     {
+        Manager.manager.drinkUi.tutorialUi.SetActive(true);
         Manager.manager.fadeManager.StartFade(gameVCam, true, Manager.manager.drinkUi.drinkGameUi);
         Manager.manager.drinkUi.SetScoreTextToZeroOutOfMax();
         currentScore = 0;

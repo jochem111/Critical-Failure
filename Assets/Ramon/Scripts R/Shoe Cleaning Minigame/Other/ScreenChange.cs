@@ -6,20 +6,23 @@ using TMPro;
 
 public class ScreenChange : MonoBehaviour
 {
+    public GameObject gameVCam;         // Camera for the game view
+
     public Shoe shoe;
     public RotateObject shoeRotation;
     public Dirt dirt;
     public MakeDirty spawnDirt;
     public ShoeCleaningParticles particles;
 
+    public GameObject minigameHolder;       // Added so i can make sure that all the UI is off when the minigame is not being played
     public GameObject gameScreen;
     public GameObject winScreen;
     public GameObject escapeScreen;
     public GameObject failScreen;
     public GameObject nextScreen;
 
-    public TextMeshProUGUI shoes;
-    public TextMeshProUGUI outOf;
+    public TextMeshProUGUI shoes;       // The UI that shows how many shoes have been cleaned? (currentScoreUI?)
+    public TextMeshProUGUI outOf;       // The UI that shows how many shoes need to be cleanded? (maxScoreUI?)
 
     public bool increasedDifficulty;
 
@@ -30,16 +33,13 @@ public class ScreenChange : MonoBehaviour
     public int waitTime;
 
 
-
-    private void Start()
-    {
-        OnStart();
-    }
-
-    public void OnStart()
+    public void OnStart()       // Gets called when the MinigameStarter is needs to start this minigame
     {
         shoes.text = successCounter.ToString();
         outOf.text = successesNeededToWin.ToString();
+
+        minigameHolder.SetActive(true);
+        gameScreen.SetActive(true);
     }
 
     private void Update()
@@ -106,14 +106,14 @@ public class ScreenChange : MonoBehaviour
         }
     }
 
-    IEnumerator IWinScreen(int time)
+    IEnumerator IWinScreen(int time)        //could have been one function for IWin-/IFail- Screen with an overload for the correct screen and a bool to see if it was a win or fail
     {
         Debug.Log("Pause Start");
         yield return new WaitForSeconds(time);
         Debug.Log("Pause End");
 
         winScreen.SetActive(false);
-        gameScreen.SetActive(true);
+        minigameHolder.SetActive(false);        //gameScreen.SetActive(true); -> minigameHolder.SetActive(false); as when the minigame gets opened the OnStart fucntion makes sure that the "gameScreen" is on and this makes sure that ALL the UI is off after the minigame is done
 
         Manager.manager.starManager.AddStar();
     }
@@ -125,7 +125,7 @@ public class ScreenChange : MonoBehaviour
         Debug.Log("Pause End");
 
         failScreen.SetActive(false);
-        gameScreen.SetActive(true);
+        minigameHolder.SetActive(false);
 
         Manager.manager.starManager.FailStar();
     }

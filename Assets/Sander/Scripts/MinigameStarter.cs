@@ -39,7 +39,7 @@ public class MinigameStarter : MonoBehaviour
 
     void StartShoeMinigame()
     {
-        print("-!- Open Shoe minigame -!-");
+        Manager.manager.shoeManager.OnStart();
     }
 
     void StartWriteMinigame()

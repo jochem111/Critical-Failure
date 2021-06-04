@@ -184,7 +184,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueBox.SetActive(false);
 
-        //Insert getting kicked out of the bar.
+        Manager.manager.interact.FinishInteraction();
 
         Debug.Log("Bad End of Conversation");
     }
