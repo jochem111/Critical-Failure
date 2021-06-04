@@ -20,6 +20,6 @@ public class SetToolPosition : MonoBehaviour
     {
         Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
         Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint);
-        transform.position = cursorPosition;
+        transform.position = cursorPosition; 
     }
 }

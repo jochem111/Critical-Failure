@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class RotateObject : MonoBehaviour
 {
-    public HoldTool tool;
-
     private Quaternion defaultRotation;
 
     public int mouseClick;
@@ -25,7 +23,7 @@ public class RotateObject : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (tool.handIsEmpty == true)
+        if (Manager.manager.holdTool.handIsEmpty == true)
         {
             dragging = true;
         }

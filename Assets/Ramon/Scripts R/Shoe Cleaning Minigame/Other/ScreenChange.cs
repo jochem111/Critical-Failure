@@ -21,8 +21,8 @@ public class ScreenChange : MonoBehaviour
     public GameObject failScreen;
     public GameObject nextScreen;
 
-    public TextMeshProUGUI shoes;       // The UI that shows how many shoes have been cleaned? (currentScoreUI?)
-    public TextMeshProUGUI outOf;       // The UI that shows how many shoes need to be cleanded? (maxScoreUI?)
+    public TextMeshProUGUI shoes;       
+    public TextMeshProUGUI outOf;       
 
     public bool increasedDifficulty;
 
@@ -35,10 +35,14 @@ public class ScreenChange : MonoBehaviour
 
     public void OnStart()       // Gets called when the MinigameStarter is needs to start this minigame
     {
+        // Call a fucntion that resets everything to zero so the game can be played again from the start
+
+        Manager.manager.fadeManager.StartFade(gameVCam, true, minigameHolder);
+        Cursor.lockState = CursorLockMode.None;
+
         shoes.text = successCounter.ToString();
         outOf.text = successesNeededToWin.ToString();
 
-        minigameHolder.SetActive(true);
         gameScreen.SetActive(true);
     }
 
@@ -106,7 +110,7 @@ public class ScreenChange : MonoBehaviour
         }
     }
 
-    IEnumerator IWinScreen(int time)        //could have been one function for IWin-/IFail- Screen with an overload for the correct screen and a bool to see if it was a win or fail
+    IEnumerator IWinScreen(int time)        
     {
         Debug.Log("Pause Start");
         yield return new WaitForSeconds(time);

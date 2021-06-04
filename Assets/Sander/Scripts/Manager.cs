@@ -11,6 +11,7 @@ public class Manager : MonoBehaviour
     public DrinkGameManager drinkGameManager;
     public PoemMinigame poemMinigame;
     public ScreenChange shoeManager;
+    public HoldTool holdTool;
 
     [Header("Ui")]
     public ButtonManager buttonManager;

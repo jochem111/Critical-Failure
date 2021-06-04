@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Dirt : MonoBehaviour
 {
-    private GameObject gameManager;
 
     public Color dirtColor;
     public Color lowerTransparencyBy;
@@ -28,7 +27,6 @@ public class Dirt : MonoBehaviour
 
     public void OnStart()
     {
-        gameManager = GameObject.Find("Game Manager");
         dirtAmountDefault = dirtAmount;
     }
 
@@ -42,7 +40,7 @@ public class Dirt : MonoBehaviour
 
     public void OnMouseDown()
     {
-        if (gameManager.GetComponent<HoldTool>().firstTool.activeSelf)
+        if (Manager.manager.holdTool.firstTool.activeSelf)
         {
             isWet = true;
             GetComponent<Renderer>().material.color = Color.blue;
@@ -51,7 +49,7 @@ public class Dirt : MonoBehaviour
 
     public void OnMouseOver()
     {
-        if (gameManager.GetComponent<HoldTool>().secondTool.activeSelf && isWet == true && Input.GetMouseButton(mouseButton))
+        if (Manager.manager.holdTool.secondTool.activeSelf && isWet == true && Input.GetMouseButton(mouseButton))
         {
             if (Input.GetAxis("Mouse X") != noMouseMovement || Input.GetAxis("Mouse Y") != noMouseMovement)
             {
