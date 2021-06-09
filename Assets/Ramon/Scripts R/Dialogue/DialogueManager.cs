@@ -14,6 +14,9 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject dialogueBox;
     public GameObject responses;
+    public GameObject goodExit;
+    public GameObject badExit;
+    public GameObject suddenExit;
 
     private Queue<string> goodSentences;
     private Queue<string> meanSentences;
@@ -38,7 +41,7 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Starting conversation with " + dialogue.name);
 
         minigameToStartName = dialogue.minigameToStartName;
-       // dialogueBox.SetActive(true);
+        // dialogueBox.SetActive(true);
 
         nameText.text = dialogue.name;
 
@@ -70,6 +73,9 @@ public class DialogueManager : MonoBehaviour
         }
 
         responses.SetActive(true);
+        goodExit.SetActive(false);
+        badExit.SetActive(false);
+        suddenExit.SetActive(false);
 
         DisplayGoodSentence();
     }
@@ -92,8 +98,7 @@ public class DialogueManager : MonoBehaviour
         if (goodResponses.Count == 0)
         {
             responses.SetActive(false);
-            StopAllCoroutines();
-            StartCoroutine(EndConversationAfterTime(time));
+            goodExit.SetActive(true);
             return;
         }
 
@@ -113,11 +118,11 @@ public class DialogueManager : MonoBehaviour
         string mSentence = meanSentences.Dequeue();
         dialogueText.text = mSentence;
         responses.SetActive(false);
+        badExit.SetActive(true);
         StopAllCoroutines();
         StartCoroutine(TypeSentence(mSentence));
-        StartCoroutine(BadEndConversationAfterTime(time));
 
-        Debug.Log("Mean Sentence Displayed");
+        Debug.Log("Bad Sentence Displayed");
     }
 
     public void DisplaySuddenSentence()
@@ -125,9 +130,9 @@ public class DialogueManager : MonoBehaviour
         string eSentence = suddenSentences.Dequeue();
         dialogueText.text = eSentence;
         responses.SetActive(false);
+        suddenExit.SetActive(true);
         StopAllCoroutines();
         StartCoroutine(TypeSentence(eSentence));
-        StartCoroutine(AbbruptlyEndConversationAfterTime(time));
 
         Debug.Log("Sudden Sentence Displayed");
     }
@@ -144,32 +149,7 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Sentence Typed");
     }
 
-    IEnumerator AbbruptlyEndConversationAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        AbbruptlyEndDailogue();
-
-        Debug.Log("Ending Conversation");
-    }
-
-    IEnumerator BadEndConversationAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        BadEndDialogue();
-
-        Debug.Log("Ending Conversation");
-    }
-
-    IEnumerator EndConversationAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        FinishDialogue();
-
-        Debug.Log("Ending Conversation");
-    }
+    //The below 3 voids are called regardless of whether the convo has more or the same amount of sentences as it has responses, so put stuff in there if you want it to happen in both.
 
     public void AbbruptlyEndDailogue()
     {
@@ -189,7 +169,7 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Bad End of Conversation");
     }
 
-    void FinishDialogue()
+    public void FinishDialogue()
     {
         dialogueBox.SetActive(false);
         Manager.manager.interact.FinishInteraction();
