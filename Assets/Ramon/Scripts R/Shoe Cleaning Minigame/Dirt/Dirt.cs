@@ -71,4 +71,9 @@ public class Dirt : MonoBehaviour
         dirtColor.a -= lowerTransparencyBy.a;
         GetComponent<Renderer>().material.color = new Color(GetComponent<Renderer>().material.color.r, GetComponent<Renderer>().material.color.g, GetComponent<Renderer>().material.color.b, dirtColor.a);
     }
+
+    public void ResetDirt()
+    {
+        Destroy(gameObject);
+    }
 }

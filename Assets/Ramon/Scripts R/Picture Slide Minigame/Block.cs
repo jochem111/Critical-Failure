@@ -54,4 +54,9 @@ public class Block : MonoBehaviour
     {
         return coord == startingCoord;
     }
+
+    public void ResetBlock()
+    {
+        Destroy(gameObject);
+    }
 }

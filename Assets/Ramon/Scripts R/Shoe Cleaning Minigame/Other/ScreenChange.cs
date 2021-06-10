@@ -11,8 +11,10 @@ public class ScreenChange : MonoBehaviour
     public Shoe shoe;
     public RotateObject shoeRotation;
     public Dirt dirt;
+    public Dirt[,] dirtList;
     public MakeDirty spawnDirt;
     public ShoeCleaningParticles particles;
+    public HoldTool tools;
 
     public GameObject minigameHolder;       // Added so i can make sure that all the UI is off when the minigame is not being played
     public GameObject gameScreen;
@@ -32,9 +34,12 @@ public class ScreenChange : MonoBehaviour
     public int successCounter;
     public int waitTime;
 
+    private int returnToZero;
+
 
     public void OnStart()       // Gets called when the MinigameStarter is needs to start this minigame
     {
+        ResetGame();
         // Call a fucntion that resets everything to zero so the game can be played again from the start
 
         Manager.manager.fadeManager.StartFade(gameVCam, true, minigameHolder);
@@ -54,6 +59,20 @@ public class ScreenChange : MonoBehaviour
     public void OnUpdate()
     {
         EscapeScreen();
+    }
+
+    public void ResetGame()
+    {
+        shoeRotation.ResetPosition();
+        dirtList = new Dirt[spawnDirt.dirtCount, spawnDirt.dirtCount];
+        successCounter = returnToZero;
+        shoe.cleanliness = shoe.cleanlinessDefault;
+        tools.RemoveTool();
+
+        foreach (Dirt dirtBlock in dirtList)
+        {
+            dirtBlock.ResetDirt();
+        }
     }
 
     public void ChangeScreen()

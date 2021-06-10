@@ -2675,6 +2675,9 @@ MonoBehaviour:
   meanResponseText: {fileID: 152747237}
   dialogueBox: {fileID: 152747242}
   responses: {fileID: 152747241}
+  goodExit: {fileID: 0}
+  badExit: {fileID: 0}
+  suddenExit: {fileID: 0}
   textSpeed: 0.1
   time: 5
 --- !u!114 &179412437
@@ -2736,6 +2739,7 @@ MonoBehaviour:
   dirt: {fileID: 6178881265183036570, guid: ec12242313b27574b81871083136cb21, type: 3}
   spawnDirt: {fileID: 179412441}
   particles: {fileID: 529119612}
+  tools: {fileID: 179412440}
   minigameHolder: {fileID: 529119630}
   gameScreen: {fileID: 529119629}
   winScreen: {fileID: 529119607}

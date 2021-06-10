@@ -18,8 +18,9 @@ public class PictureSlide : MonoBehaviour
     Queue<Block> inputs;
     Block emptyBlock;
     Block[,] blocks;
-    bool blockIsMoving;
     Vector2Int previousShuffleOffset;
+    bool blockIsMoving;
+    public bool hasStartedBefore;
 
     public Camera cam;
 
@@ -36,7 +37,7 @@ public class PictureSlide : MonoBehaviour
 
     public void OnStart()
     {
-        CreateGrid();
+        ResetProgress();
     }
 
     void Update()
@@ -47,6 +48,21 @@ public class PictureSlide : MonoBehaviour
     public void OnUpdate()
     {
         ExitGame();
+    }
+
+    public void ResetProgress()
+    {
+        if (hasStartedBefore)
+        {
+            foreach (Block block in blocks)
+            {
+                block.ResetBlock();
+            }
+
+            state = PuzzleState.Solved;
+        }
+
+        CreateGrid();
     }
 
     public void CreateGrid()
@@ -137,6 +153,7 @@ public class PictureSlide : MonoBehaviour
             {
                 Debug.Log("Puzzlestate = InPlay");
                 state = PuzzleState.InPlay;
+                hasStartedBefore = true;
             }
         }
     }

@@ -863,6 +863,7 @@ MonoBehaviour:
   blockMoveSpeed: 0.3
   shuffleMoveSpeed: 0.05
   cameraZoom: 0.55
+  hasStartedBefore: 0
   cam: {fileID: 692017295}
   exitScreen: {fileID: 1507068248}
   failScreen: {fileID: 732323878}
