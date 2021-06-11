@@ -209,16 +209,19 @@ public class PictureSlide : MonoBehaviour
 
     public void CheckIfFinished()
     {
-        SetActivePuzzle();
-        gameScreen.SetActive(false);
+        if (state != PuzzleState.Shuffling)
+        {
+            SetActivePuzzle();
+            gameScreen.SetActive(false);
 
-        if (state != PuzzleState.Solved)
-        {
-            checkScreenF.SetActive(true);
-        }
-        else
-        {
-            checkScreenW.SetActive(true);
+            if (state != PuzzleState.Solved)
+            {
+                checkScreenF.SetActive(true);
+            }
+            else
+            {
+                checkScreenW.SetActive(true);
+            }
         }
     }
 
