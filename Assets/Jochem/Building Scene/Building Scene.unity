@@ -915,7 +915,7 @@ Transform:
   - {fileID: 285660103}
   - {fileID: 548936680}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &900052085
 GameObject:
@@ -2090,60 +2090,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e10d10962fc89ef45a6004403484ecbd, type: 3}
---- !u!1001 &8237081710124454385
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3797740924770373706, guid: f54aceea08b765a44b9bc0ce6d5cb83d, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797740924770373706, guid: f54aceea08b765a44b9bc0ce6d5cb83d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.490207
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797740924770373706, guid: f54aceea08b765a44b9bc0ce6d5cb83d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.018
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797740924770373706, guid: f54aceea08b765a44b9bc0ce6d5cb83d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.59089357
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797740924770373706, guid: f54aceea08b765a44b9bc0ce6d5cb83d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797740924770373706, guid: f54aceea08b765a44b9bc0ce6d5cb83d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797740924770373706, guid: f54aceea08b765a44b9bc0ce6d5cb83d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797740924770373706, guid: f54aceea08b765a44b9bc0ce6d5cb83d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797740924770373706, guid: f54aceea08b765a44b9bc0ce6d5cb83d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797740924770373706, guid: f54aceea08b765a44b9bc0ce6d5cb83d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3797740924770373706, guid: f54aceea08b765a44b9bc0ce6d5cb83d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4611573401890753264, guid: f54aceea08b765a44b9bc0ce6d5cb83d, type: 3}
-      propertyPath: m_Name
-      value: StopWatchClock
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f54aceea08b765a44b9bc0ce6d5cb83d, type: 3}
