@@ -26,7 +26,7 @@ public class PictureSlide : MonoBehaviour
 
     public GameObject exitScreen;
     public GameObject failScreen;
-    public GameObject checkButton;
+    public GameObject gameScreen;
     public GameObject checkScreenW;
     public GameObject checkScreenF;
 
@@ -210,7 +210,7 @@ public class PictureSlide : MonoBehaviour
     public void CheckIfFinished()
     {
         SetActivePuzzle();
-        checkButton.SetActive(false);
+        gameScreen.SetActive(false);
 
         if (state != PuzzleState.Solved)
         {
@@ -224,10 +224,10 @@ public class PictureSlide : MonoBehaviour
 
     public void ExitGame()
     {
-        if (Input.GetButtonDown("Cancel") && state == PuzzleState.InPlay && checkButton.activeInHierarchy)
+        if (Input.GetButtonDown("Cancel") && state == PuzzleState.InPlay && gameScreen.activeInHierarchy)
         {
             SetActivePuzzle();
-            checkButton.SetActive(false);
+            gameScreen.SetActive(false);
             exitScreen.SetActive(true);
         }
     }
@@ -259,7 +259,7 @@ public class PictureSlide : MonoBehaviour
     public void ExitGameNo()
     {
         SetActivePuzzle();
-        checkButton.SetActive(true);
+        gameScreen.SetActive(true);
         exitScreen.SetActive(false);
         checkScreenF.SetActive(false);
     }
