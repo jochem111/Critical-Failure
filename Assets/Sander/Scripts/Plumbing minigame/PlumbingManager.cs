@@ -6,7 +6,7 @@ public class PlumbingManager : MonoBehaviour
 {
     public bool gameIsRunning = false;
 
-    public int puzzleId = 0;
+    public GameObject[] puzzelPrefabs;
 
     [Tooltip("H = horizontal | V = vertical | U = up | D = down | R = right | L = left")]
     public Pipe[] pipesToPlace;
@@ -18,14 +18,21 @@ public class PlumbingManager : MonoBehaviour
     int mouseScrollNormalized;
 
 
-    public void OpenMinigame()
+    public void OpenMinigame(int puzzelID)
     {
-        //  Manager.manager.plumbingUI.TurnOnUi();
+        Manager.manager.plumbingUI.TurnOnUi();
     }
 
-    void StartGame()
+    public void CloseMinigame()
     {
-        //allow placing pipes and turn on timer
+        gameIsRunning = false;
+        Manager.manager.plumbingUI.TurnOffUi();
+    }
+
+    void StartGame()        // This is called by a button on the TutorialUI
+    {
+        // turn on timer
+        Manager.manager.plumbingUI.tutorialUi.SetActive(false);
         gameIsRunning = true;
     }
 
@@ -90,13 +97,17 @@ public class PlumbingManager : MonoBehaviour
         }
         pipesWithWater.Clear();
         startPipe.Fill();
-        
     }
 
     public void WinMinigame()
     {
-        print("wow win");
-        gameIsRunning = false;
-        Manager.manager.plumbingUI.winScreen.SetActive(true); 
+        CloseMinigame();
+        Manager.manager.starManager.AddStar();
+    }
+
+    public void FailMinigame()
+    {
+        CloseMinigame();
+        Manager.manager.starManager.FailStar();
     }
 }

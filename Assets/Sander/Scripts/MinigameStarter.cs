@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class MinigameStarter : MonoBehaviour
 {
-    public enum minigameNames {None, Drinking, Shoe, Write, Plumbing, Cleaning }
+    public enum MinigameNames {None, Drinking, Shoe, Write, Plumbing, Picture }
 
-    public void StartNamedMinigame(minigameNames MinigameName)
+    public void StartNamedMinigame(MinigameNames MinigameName)
     {
         switch (MinigameName)
         {
 
-            case minigameNames.Drinking:
+            case MinigameNames.Drinking:
                 StartDrinkingMinigame();
                 break;
-            case minigameNames.Shoe:
+            case MinigameNames.Shoe:
                 StartShoeMinigame();
                 break;
-            case minigameNames.Write:
+            case MinigameNames.Write:
                 StartWriteMinigame();
                 break;
-            case minigameNames.Plumbing:
+            case MinigameNames.Plumbing:
                 StartPlumbingMinigame();
                 break;
-            case minigameNames.Cleaning:
-                StartCleaningMinigame();
+            case MinigameNames.Picture:
+                StartPictureMinigame();
                 break;
             default:
                 break;
@@ -35,26 +35,31 @@ public class MinigameStarter : MonoBehaviour
     void StartDrinkingMinigame()
     {
         Manager.manager.drinkGameManager.OpenMinigame();
+        Manager.manager.minigameStopper.currentMinigame = MinigameNames.Drinking;
     }
 
     void StartShoeMinigame()
     {
         Manager.manager.shoeManager.OnStart();
+        Manager.manager.minigameStopper.currentMinigame = MinigameNames.Shoe;
     }
 
     void StartWriteMinigame()
     {
         Manager.manager.poemMinigame.OpenMinigame();
+        Manager.manager.minigameStopper.currentMinigame = MinigameNames.Write;
     }
 
     void StartPlumbingMinigame()
     {
-        Manager.manager.plumbingManager.OpenMinigame();
+        Manager.manager.plumbingManager.OpenMinigame(0); // make sure to update int
+        Manager.manager.minigameStopper.currentMinigame = MinigameNames.Plumbing;
     }
 
-    void StartCleaningMinigame()
+    void StartPictureMinigame()
     {
-        print("-!- Open Cleaning minigame -!-");
+        print("-!- Open picture minigame -!-");
+        Manager.manager.minigameStopper.currentMinigame = MinigameNames.Picture;
     }
 
 }

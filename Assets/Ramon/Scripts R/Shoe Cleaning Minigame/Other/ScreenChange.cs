@@ -40,7 +40,6 @@ public class ScreenChange : MonoBehaviour
     public void OnStart()       // Gets called when the MinigameStarter is needs to start this minigame
     {
         ResetGame();
-        // Call a fucntion that resets everything to zero so the game can be played again from the start
 
         Manager.manager.fadeManager.StartFade(gameVCam, true, minigameHolder);
         Cursor.lockState = CursorLockMode.None;

@@ -41,7 +41,7 @@ public class PoemMinigame : MonoBehaviour
         ListAnswers();
     }
 
-    public void OpenMinigame() // add overload for the right poem prefab so you can chance which one to open with that
+    public void OpenMinigame() // add overload for the right poem prefab so you can change which one to open
     {
         poem.SetActive(true);
         Manager.manager.fadeManager.StartFade(gameVCam, true, poemUiHolder);
@@ -134,7 +134,7 @@ public class PoemMinigame : MonoBehaviour
         yield return new WaitForSeconds(time);
         Debug.Log("Pause End");
 
-        //poem.SetActive(false); i turned this of so that we can lower the wait time and as such we can let the player leave quicker while still giving the chance to look at their answers
+        //poem.SetActive(false); i turned this off so that we can lower the wait time and as such we can let the player leave quicker while still giving the chance to look at their answers
         if (correctAnswers >= answersRequired)
         {
             win.SetActive(true);

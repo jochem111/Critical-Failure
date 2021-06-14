@@ -21,6 +21,7 @@ public class Manager : MonoBehaviour
 
     [Header("Scene")]
     public MinigameStarter minigameStarter;
+    public MinigameStopper minigameStopper;
     public TavernManager tavernManager;
     public StarManager starManager;
     public FadeManager fadeManager;

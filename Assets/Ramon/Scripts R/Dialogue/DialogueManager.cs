@@ -5,7 +5,7 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    MinigameStarter.minigameNames minigameToStartName;
+    MinigameStarter.MinigameNames minigameToStartName;
 
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;

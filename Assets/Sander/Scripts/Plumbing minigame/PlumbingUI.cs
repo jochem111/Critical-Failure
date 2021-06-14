@@ -14,26 +14,25 @@ public class PlumbingUI : MonoBehaviour
     public Outline[] pipeSelectedOutlines;
 
 
-    private void Start()
-    {
-        TurnOnUi();
-    }
-
     public void TurnOnUi()
     {
-        //add pipe cards on runtime?
+        tutorialUi.SetActive(true);
+
         for (int i = 0; i < pipeAmountTexts.Length; i++)
         {
             pipeAmountTexts[i].text = Manager.manager.plumbingManager.pipesToPlace[i].amount.ToString();
         }
 
         UpdatedSelectedOutline(0);
-        plumbingGameUi.SetActive(true);
+        //plumbingGameUi.SetActive(true);  fademanager takes care of this
     }
 
     public void TurnOffUi()
     {
         plumbingGameUi.SetActive(false);
+        tutorialUi.SetActive(false);
+        winScreen.SetActive(false);
+
     } 
 
     public void UpdatedSelectedOutline(int index)
