@@ -10,8 +10,10 @@ public class Timer : MonoBehaviour
     // wacht sec en doe opnieuw
     // na 60 sec de het zelfde voor de min wijzer
 
-    [Header("In seconds")]
-    public float timeRemaining = 60;
+    public Transform clockHand;
+    float handSpeed;
+
+    float timeRemaining = 60;
 
     [HideInInspector]
     public bool timerIsRunning = false;
@@ -20,11 +22,13 @@ public class Timer : MonoBehaviour
 
     private void Start() // for debug only
     {
-        SetTimerState(true);
+        SetTimerState(true, 90);
     }
 
-    public void SetTimerState(bool state) 
+    public void SetTimerState(bool state, float minigameMaxTime) 
     {
+        timeRemaining = minigameMaxTime;
+        handSpeed = 360 / minigameMaxTime;
         timerIsRunning = state;
     }
 
@@ -43,7 +47,7 @@ public class Timer : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
             }
-
+            MoveClockHand();
             DisplayTime(timeRemaining);
         }
         
@@ -55,10 +59,6 @@ public class Timer : MonoBehaviour
         {
             timeToDisplay = 0;
         }
-        else if (timeToDisplay > 0)
-        {
-            timeToDisplay += 1;
-        }
 
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
 
@@ -68,4 +68,10 @@ public class Timer : MonoBehaviour
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
+
+
+    void MoveClockHand()
+    {
+        clockHand.Rotate(0f , handSpeed * Time.deltaTime , 0f);
+    }
 }
