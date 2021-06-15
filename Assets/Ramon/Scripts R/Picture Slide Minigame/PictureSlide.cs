@@ -62,6 +62,7 @@ public class PictureSlide : MonoBehaviour
             state = PuzzleState.Solved;
         }
 
+        gameScreen.SetActive(true);
         CreateGrid();
     }
 
@@ -205,7 +206,7 @@ public class PictureSlide : MonoBehaviour
         emptyBlock.gameObject.SetActive(true);
     }
 
-    //From here on it's just UI stuff.
+    //From here on it's just UI stuff and exiting the game.
 
     public void CheckIfFinished()
     {

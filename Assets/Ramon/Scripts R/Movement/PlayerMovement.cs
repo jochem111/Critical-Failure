@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public float angle;
     public float turnSmoothTime = 0.1f;
     public float turnSmoothVelocity;
+    public float walk;
+    public float idle;
 
     public Vector3 direction;
     public Vector3 moveDirection;
@@ -19,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     public Transform cam;
 
     public bool canMove;
+
+    public Animator anim;
 
     void Update()
     {
@@ -45,6 +49,12 @@ public class PlayerMovement : MonoBehaviour
 
             moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             transform.position += (moveDirection.normalized * movementSpeed * Time.deltaTime);
+
+            anim.SetFloat("Movement", walk);
+        }
+        else
+        {
+            anim.SetFloat("Movement", idle);
         }
     }
 
