@@ -21,17 +21,17 @@ public class StarManager : MonoBehaviour
     public void AddStar()
     {
         if (currentStars < stars.Length)
-            StartCoroutine(RevealStar());
+            StartCoroutine(RevealStar(true));
         else
             interact.FinishInteraction();
     }
 
     public void FailStar()
     {
-        //get cucked lmao
+        StartCoroutine(RevealStar(false));
     }
 
-    IEnumerator RevealStar()
+    IEnumerator RevealStar(bool won)
     {
         //Turn off player meshRenderer
         PlayerVisible(false);
@@ -40,29 +40,32 @@ public class StarManager : MonoBehaviour
 
         yield return new WaitForSeconds(transitionTime);
 
-        //Get intensity of material
-        Material mat = stars[currentStars].GetComponent<Renderer>().materials[1];
-        Color eColor = mat.GetColor("_EmissionColor");
-        float intensity = 0;
+        if (won)
+        {
+            //Get intensity of material
+            Material mat = stars[currentStars].GetComponent<Renderer>().materials[1];
+            Color eColor = mat.GetColor("_EmissionColor");
+            float intensity = 0;
 
-        //Up intensity of tavern1 star
-        while(intensity < .5f)
-         {
-            intensity += Time.deltaTime / intensityTime;
+            //Up intensity of tavern1 star
+            while (intensity < .5f)
+            {
+                intensity += Time.deltaTime / intensityTime;
 
+                mat.SetColor("_EmissionColor", new Vector4(intensity, intensity, 0, 0));
+                yield return null;
+            }
+
+            //Up intensity of tavern2 star
+            mat = stars2[currentStars].GetComponent<Renderer>().materials[1];
+            eColor = mat.GetColor("_EmissionColor");
             mat.SetColor("_EmissionColor", new Vector4(intensity, intensity, 0, 0));
-            yield return null;
+
+            //Sound effect
+            audioSource.Play();
+
+            yield return new WaitForSeconds(soundTime);
         }
-
-        //Up intensity of tavern2 star
-        mat = stars2[currentStars].GetComponent<Renderer>().materials[1];
-        eColor = mat.GetColor("_EmissionColor");
-        mat.SetColor("_EmissionColor", new Vector4(intensity, intensity, 0, 0));
-
-        //Sound effect
-        audioSource.Play();
-
-        yield return new WaitForSeconds(soundTime);
 
         currentStars++;
         vCam.SetActive(false);

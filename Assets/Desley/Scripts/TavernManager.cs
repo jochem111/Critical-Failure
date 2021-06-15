@@ -5,7 +5,9 @@ using UnityEngine;
 public class TavernManager : MonoBehaviour
 {
     [SerializeField] Interact playerInteract;
+
     [SerializeField] GameObject tavern1Trigger, tavern2Trigger;
+    [Space, SerializeField] GameObject tavern2;
 
     [Space, SerializeField] Transform door;
     [SerializeField] float originalY;
@@ -40,6 +42,9 @@ public class TavernManager : MonoBehaviour
         //Update the tavern triggers
         tavern1Trigger.SetActive(!inTavern1);
         tavern2Trigger.SetActive(inTavern1);
+
+        if (!tavern2.activeSelf)
+            tavern2.SetActive(true);
 
         //Deactivate all customers in other tavern
         if (!inTavern1)
