@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StarManager : MonoBehaviour
 {
@@ -68,6 +69,17 @@ public class StarManager : MonoBehaviour
         }
 
         currentStars++;
+
+        //Finish game if all stars are filled
+        if (currentStars == stars.Length)
+        {
+            StartCoroutine(FinishGame());
+            yield break;
+        }
+
+        //Open tavern door
+        Manager.manager.tavernManager.RotateDoor(0);
+
         vCam.SetActive(false);
 
         //Make player visible again
@@ -84,5 +96,16 @@ public class StarManager : MonoBehaviour
         {
             mRenderer.enabled = active;
         }
+    }
+
+    public void StartFinishGame() { StartCoroutine(FinishGame()); }
+
+    IEnumerator FinishGame()
+    {
+        Manager.manager.fadeManager.StartFade(null, false, null);
+
+        yield return new WaitForSeconds(Manager.manager.fadeManager.fadeTime);
+
+        SceneManager.LoadScene(0);
     }
 }

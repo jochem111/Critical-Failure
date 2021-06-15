@@ -24,7 +24,7 @@ public class TavernManager : MonoBehaviour
     [Space, SerializeField] Transform hPointer1;
     [SerializeField] Transform hPointer2;
     [SerializeField] float[] pointerRotation;
-    int pointerIndex;
+    int pointerIndex = -1;
 
     public void RotateDoor(float rotation)
     {
@@ -71,14 +71,16 @@ public class TavernManager : MonoBehaviour
         //GetInteractables in interact script
         playerInteract.GetInteractables();
 
-        //Update the clock
-        if(pointerIndex < pointerRotation.Length)
+        //Update the clock/equal to length? lost the gam
+        if (pointerIndex < pointerRotation.Length - 1)
         {
+            pointerIndex++;
+
             hPointer1.rotation = Quaternion.Euler(pointerRotation[pointerIndex], 0, -90);
             hPointer2.rotation = Quaternion.Euler(pointerRotation[pointerIndex], 180, -90);
-
-            pointerIndex++;
         }
+        else
+            Manager.manager.starManager.StartFinishGame();
     }
 
     public void AddExtraCustomer(GameObject customer)

@@ -9,7 +9,6 @@ public class Interact : MonoBehaviour
     [SerializeField] float maxInteractDistance;
 
     [SerializeField] List<Transform> interactables;
-    [SerializeField] Transform door;
 
     [Space, SerializeField] Cinematics cinematic;
     FadeManager fadeManager;
@@ -29,6 +28,8 @@ public class Interact : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+
         playerMove = GetComponent<PlayerMovement>();
 
         fadeManager = Manager.manager.fadeManager;
@@ -111,15 +112,6 @@ public class Interact : MonoBehaviour
             interactingWith = closestObject;
 
             StartInteraction();
-        }
-        else
-        {
-            //No interaction found / Find distance to door
-            float distance = Vector3.Distance(transform.position, door.position);
-            if(distance <= maxInteractDistance) 
-            {
-                Manager.manager.tavernManager.RotateDoor(0);
-            }
         }
     }
 
