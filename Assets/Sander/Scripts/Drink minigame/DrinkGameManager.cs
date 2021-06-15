@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DrinkGameManager : MonoBehaviour
 {
-    [HideInInspector]public DrinkMug mugScript;
+    [HideInInspector] public DrinkMug mugScript;
     MugSpawner mugSpawner;
     public Transform droppedMugSpawnPoint;
     public GameObject gameVCam;
@@ -22,8 +22,9 @@ public class DrinkGameManager : MonoBehaviour
 
     //this is currently just used for spawning some mugs on the ground after the minigame as a little gag
     [HideInInspector] public int currentAmountDroppedMugs = 0;
-    [HideInInspector] public int maxAmountDroppedMugs = 5; 
+    [HideInInspector] public int maxAmountDroppedMugs = 5;
 
+    public float maxTime = 120f;
 
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class DrinkGameManager : MonoBehaviour
 
     public void OpenMinigame()
     {
+        Manager.manager.timer.SetTimerCamState(true);
         Manager.manager.drinkUi.tutorialUi.SetActive(true);
         Manager.manager.fadeManager.StartFade(gameVCam, true, Manager.manager.drinkUi.drinkGameUi);
         Manager.manager.drinkUi.SetScoreTextToZeroOutOfMax();
@@ -54,7 +56,7 @@ public class DrinkGameManager : MonoBehaviour
 
     public void StartGame()
     {
-        //start the timer
+        Manager.manager.timer.StartTimer(maxTime);
         gameIsRunning = true;
         Manager.manager.drinkUi.tutorialUi.SetActive(false);
         RequestDrink();

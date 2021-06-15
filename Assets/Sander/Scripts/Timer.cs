@@ -5,11 +5,8 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    // wijzer rotatie = 360/60
-    // rotatie sec wijzer + wijzer rot 
-    // wacht sec en doe opnieuw
-    // na 60 sec de het zelfde voor de min wijzer
-
+    public GameObject clockCam;
+    public GameObject timerUi;
     public Transform clockHand;
     float handSpeed;
 
@@ -20,16 +17,23 @@ public class Timer : MonoBehaviour
 
     public TMP_Text timeText;
 
-    private void Start() // for debug only
+
+    public void SetTimerCamState(bool state)
     {
-        SetTimerState(true, 90);
+        clockCam.SetActive(state);
+        timerUi.SetActive(state);
     }
 
-    public void SetTimerState(bool state, float minigameMaxTime) 
+    public void StartTimer(float minigameMaxTime)
     {
         timeRemaining = minigameMaxTime;
         handSpeed = 360 / minigameMaxTime;
-        timerIsRunning = state;
+        timerIsRunning = true;
+    }
+
+    public void SetTimerPauzeState(bool state) 
+    {
+        timerIsRunning = !state;
     }
 
     private void Update()
@@ -67,8 +71,6 @@ public class Timer : MonoBehaviour
 
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
-
-
 
     void MoveClockHand()
     {

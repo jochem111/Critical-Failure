@@ -20,6 +20,8 @@ public class PlumbingManager : MonoBehaviour
 
     public void OpenMinigame(int puzzelID)
     {
+        // turn on prefab
+        Manager.manager.timer.SetTimerCamState(true);
         Manager.manager.plumbingUI.TurnOnUi();
     }
 

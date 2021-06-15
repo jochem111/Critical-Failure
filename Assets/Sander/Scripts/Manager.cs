@@ -6,7 +6,8 @@ public class Manager : MonoBehaviour
 {
     public static Manager manager;
 
-    [Header ("Minigame Managers")]
+    [Header("Minigame Managers")]
+    public Timer timer;
     public PlumbingManager plumbingManager;
     public DrinkGameManager drinkGameManager;
     public PoemMinigame poemMinigame;
