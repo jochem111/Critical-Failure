@@ -11,7 +11,6 @@ public class Interact : MonoBehaviour
     [SerializeField] List<Transform> interactables;
 
     [Space, SerializeField] Cinematics cinematic;
-    FadeManager fadeManager;
 
     GameObject interactingWith;
     InteractContents iContents;
@@ -20,19 +19,11 @@ public class Interact : MonoBehaviour
 
     PlayerMovement playerMove;
 
-    [Space, SerializeField] CinemachineDollyCart dollyCart;
-    [SerializeField] float dollyCartPos;
-    public float index;
-    public bool canSkip = true;
-    bool cinematicEnded;
-
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
 
         playerMove = GetComponent<PlayerMovement>();
-
-        fadeManager = Manager.manager.fadeManager;
 
         GetInteractables();
     }
@@ -56,37 +47,6 @@ public class Interact : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact") && canInteract)
             CheckForDistance();
-
-        if (Input.GetButtonDown("Jump") && canSkip && index < 2)
-            SkipCinematic();
-    }
-
-    void SkipCinematic()
-    {
-        index++;
-        canSkip = false;
-
-        fadeManager.StartFade(null, true, null);
-
-        StartCoroutine(ChangeCinematic(fadeManager.fadeTime));
-    }
-
-    IEnumerator ChangeCinematic(float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        if(index == 1)
-        {
-            cinematic.PauseCinematic();
-
-            dollyCart.m_Position = dollyCartPos;
-
-            Manager.manager.buttonManager.FadeMainMenu();
-        }
-        else
-        {
-            cinematic.DisableCinematic();
-        };
     }
 
     void CheckForDistance()
