@@ -33,7 +33,6 @@ public class DrinkGameManager : MonoBehaviour
 
     public void OpenMinigame()
     {
-        Manager.manager.timer.SetTimerCamState(true);
         Manager.manager.drinkUi.tutorialUi.SetActive(true);
         Manager.manager.fadeManager.StartFade(gameVCam, true, Manager.manager.drinkUi.drinkGameUi);
         Manager.manager.drinkUi.SetScoreTextToZeroOutOfMax();
@@ -51,11 +50,16 @@ public class DrinkGameManager : MonoBehaviour
         {
             Manager.manager.starManager.AddStar();
         }
-        Manager.manager.starManager.FailStar();
+        else
+        {
+            Manager.manager.starManager.FailStar();
+        }
+        
     }
 
     public void StartGame()
     {
+        Manager.manager.timer.SetTimerCamState(true);
         Manager.manager.timer.StartTimer(maxTime);
         gameIsRunning = true;
         Manager.manager.drinkUi.tutorialUi.SetActive(false);
@@ -64,14 +68,14 @@ public class DrinkGameManager : MonoBehaviour
 
     public void WinMinigame()
     {
-        //stop timer
+        Manager.manager.timer.SetTimerPauzeState(true);
+        Manager.manager.timer.SetTimerCamState(false);
         Manager.manager.drinkUi.winScreen.SetActive(true);
         gameIsRunning = false;
     }
 
     public void FailMinigame()
     {
-        // timer already stopped cuz this gets called on time out?
         CloseMinigame(false);
     }
 

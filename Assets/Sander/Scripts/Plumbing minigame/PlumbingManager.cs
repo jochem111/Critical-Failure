@@ -20,21 +20,33 @@ public class PlumbingManager : MonoBehaviour
 
     public void OpenMinigame(int puzzelID)
     {
-        // turn on prefab
-        Manager.manager.timer.SetTimerCamState(true);
+        // turn on right prefab
         Manager.manager.plumbingUI.TurnOnUi();
     }
 
-    public void CloseMinigame()
+    public void CloseMinigame(bool didWin)
     {
-        gameIsRunning = false;
         Manager.manager.plumbingUI.TurnOffUi();
+        Manager.manager.timer.SetTimerCamState(false);
+        if (didWin)
+        {
+            Manager.manager.starManager.AddStar();
+        }
+        else
+        {
+            Manager.manager.starManager.FailStar();
+        }
+        foreach (PipeScript item in pipesWithWater)
+        {
+            item.RemoveSelf();
+        }
     }
 
-    void StartGame()        // This is called by a button on the TutorialUI
+    public void StartGame()        // This is called by a button on the TutorialUI
     {
-        // turn on timer
+        Manager.manager.timer.StartTimer(69);
         Manager.manager.plumbingUI.tutorialUi.SetActive(false);
+        Manager.manager.timer.SetTimerCamState(true);
         gameIsRunning = true;
     }
 
@@ -103,13 +115,14 @@ public class PlumbingManager : MonoBehaviour
 
     public void WinMinigame()
     {
-        CloseMinigame();
-        Manager.manager.starManager.AddStar();
+        gameIsRunning = false;
+        Manager.manager.timer.SetTimerPauzeState(true);
+        Manager.manager.plumbingUI.winScreen.SetActive(true);
     }
 
     public void FailMinigame()
     {
-        CloseMinigame();
-        Manager.manager.starManager.FailStar();
+        gameIsRunning = false;
+        Manager.manager.plumbingUI.failScreen.SetActive(true);
     }
 }

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PipeScript : PlumbingTap
 {
-    public bool hasWaterInPipe = false;
+    public int pipeIndex;
+    [HideInInspector]public bool hasWaterInPipe = false;
     [HideInInspector]public GridUnit myGridUnit;
 
     private void Start()
@@ -14,7 +15,6 @@ public class PipeScript : PlumbingTap
 
     public void RemoveSelf()
     {
-        Manager.manager.plumbingManager.UpdateWaterInPipes();
         myGridUnit.RemovePipe();
     }
 

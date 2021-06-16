@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class PlumbingUI : MonoBehaviour
 {
     public GameObject plumbingGameUi;
-    public GameObject timer;
     public GameObject tutorialUi;
     public GameObject winScreen;
+    public GameObject failScreen;
     public TMP_Text[] pipeAmountTexts;
     public Outline[] pipeSelectedOutlines;
 
@@ -18,13 +18,9 @@ public class PlumbingUI : MonoBehaviour
     {
         tutorialUi.SetActive(true);
 
-        for (int i = 0; i < pipeAmountTexts.Length; i++)
-        {
-            pipeAmountTexts[i].text = Manager.manager.plumbingManager.pipesToPlace[i].amount.ToString();
-        }
+        UpdatePipeAmountTexts();
 
         UpdatedSelectedOutline(0);
-        //plumbingGameUi.SetActive(true);  fademanager takes care of this
     }
 
     public void TurnOffUi()
@@ -32,8 +28,17 @@ public class PlumbingUI : MonoBehaviour
         plumbingGameUi.SetActive(false);
         tutorialUi.SetActive(false);
         winScreen.SetActive(false);
+        failScreen.SetActive(false);
 
     } 
+
+    public void UpdatePipeAmountTexts()
+    {
+        for (int i = 0; i < pipeAmountTexts.Length; i++)
+        {
+            pipeAmountTexts[i].text = Manager.manager.plumbingManager.pipesToPlace[i].amount.ToString();
+        }
+    }
 
     public void UpdatedSelectedOutline(int index)
     {
