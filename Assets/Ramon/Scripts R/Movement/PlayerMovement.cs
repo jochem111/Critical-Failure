@@ -50,11 +50,11 @@ public class PlayerMovement : MonoBehaviour
             moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             transform.position += (moveDirection.normalized * movementSpeed * Time.deltaTime);
 
-            anim.SetFloat("Movement", walk);
+            SetPlayerAnimation(walk);
         }
         else
         {
-            anim.SetFloat("Movement", idle);
+            SetPlayerAnimation(idle);
         }
     }
 
@@ -62,5 +62,11 @@ public class PlayerMovement : MonoBehaviour
     {
         canMove = index;
         GetComponentInChildren<CinemachineFreeLook>().enabled = index;
+        SetPlayerAnimation(idle);
+    }
+
+    public void SetPlayerAnimation(float animation)
+    {
+        anim.SetFloat("Movement", animation);
     }
 }
