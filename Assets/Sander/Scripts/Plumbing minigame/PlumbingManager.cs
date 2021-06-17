@@ -10,7 +10,7 @@ public class PlumbingManager : MonoBehaviour
 
     [Tooltip("H = horizontal | V = vertical | U = up | D = down | R = right | L = left")]
     public Pipe[] pipesToPlace;
-    public PlumbingTap startPipe;
+    PlumbingTap startPipe;
 
     public List<PipeScript> pipesWithWater = new List<PipeScript>();
     
@@ -20,7 +20,12 @@ public class PlumbingManager : MonoBehaviour
 
     public void OpenMinigame(int puzzelID)
     {
-        // turn on right prefab
+        foreach (GameObject puzzel in puzzelPrefabs)
+        {
+            puzzel.SetActive(false);
+        }
+        puzzelPrefabs[puzzelID].SetActive(true);
+        startPipe = puzzelPrefabs[puzzelID].GetComponentInChildren<PlumbingTap>();
         Manager.manager.plumbingUI.TurnOnUi();
     }
 
@@ -44,7 +49,7 @@ public class PlumbingManager : MonoBehaviour
 
     public void StartGame()        // This is called by a button on the TutorialUI
     {
-        Manager.manager.timer.StartTimer(69);
+        Manager.manager.timer.StartTimer(startPipe.MinigameTime);
         Manager.manager.plumbingUI.tutorialUi.SetActive(false);
         Manager.manager.timer.SetTimerCamState(true);
         gameIsRunning = true;
