@@ -24,7 +24,7 @@ public class TavernManager : MonoBehaviour
     [Space, SerializeField] Transform hPointer1;
     [SerializeField] Transform hPointer2;
     [SerializeField] float[] pointerRotation;
-    int pointerIndex = -1;
+    [HideInInspector]public int pointerIndex = -1;
 
     public void RotateDoor(float rotation)
     {

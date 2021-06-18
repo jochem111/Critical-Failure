@@ -6,8 +6,11 @@ public class MinigameStarter : MonoBehaviour
 {
     public enum MinigameNames {None, Drinking, Shoe, Write, Plumbing, Picture }
 
+    public int currentTimeBlock;
+
     public void StartNamedMinigame(MinigameNames MinigameName)
     {
+        currentTimeBlock = Manager.manager.tavernManager.pointerIndex;
         switch (MinigameName)
         {
 
@@ -52,7 +55,23 @@ public class MinigameStarter : MonoBehaviour
 
     void StartPlumbingMinigame()
     {
-        Manager.manager.plumbingManager.OpenMinigame(0); // make sure to update int
+        switch (currentTimeBlock)
+        {
+            case 1:
+                Manager.manager.plumbingManager.OpenMinigame(0);
+                break;
+            case 2:
+                Manager.manager.plumbingManager.OpenMinigame(1);
+                break;
+            case 4:
+                Manager.manager.plumbingManager.OpenMinigame(2);
+                break;
+            case 5:
+                Manager.manager.plumbingManager.OpenMinigame(3);
+                break;
+            default:
+                break;
+        }
         Manager.manager.minigameStopper.currentMinigame = MinigameNames.Plumbing;
     }
 
