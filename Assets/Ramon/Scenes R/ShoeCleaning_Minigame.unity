@@ -321,16 +321,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &306216174 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2025307926297145989, guid: 40a3200e695d5fb49a8d83cf63953681, type: 3}
-  m_PrefabInstance: {fileID: 2025307925999324779}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &338482459 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2025307926332562288, guid: 40a3200e695d5fb49a8d83cf63953681, type: 3}
-  m_PrefabInstance: {fileID: 2025307925999324779}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &366837131
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,13 +400,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 462f4c8874d1e5f4ca7d52be7113a93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstTool: {fileID: 338482459}
-  secondTool: {fileID: 306216174}
-  thirdTool: {fileID: 2129665113}
+  firstTool: {fileID: 822585492}
+  secondTool: {fileID: 903770511}
+  thirdTool: {fileID: 659996933}
   toolList:
-  - {fileID: 338482459}
-  - {fileID: 306216174}
-  - {fileID: 2129665113}
+  - {fileID: 822585492}
+  - {fileID: 903770511}
+  - {fileID: 659996933}
   handIsEmpty: 0
 --- !u!114 &366837135
 MonoBehaviour:
@@ -533,6 +523,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &659996933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5679186063085054950, guid: 40a3200e695d5fb49a8d83cf63953681, type: 3}
+  m_PrefabInstance: {fileID: 2025307925999324779}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &738129579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2025307926671390912, guid: 40a3200e695d5fb49a8d83cf63953681, type: 3}
@@ -548,9 +543,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2025307926712216283, guid: 40a3200e695d5fb49a8d83cf63953681, type: 3}
   m_PrefabInstance: {fileID: 2025307925999324779}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &822585492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5153280547862639153, guid: 40a3200e695d5fb49a8d83cf63953681, type: 3}
+  m_PrefabInstance: {fileID: 2025307925999324779}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &870639653 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2025307926807045710, guid: 40a3200e695d5fb49a8d83cf63953681, type: 3}
+  m_PrefabInstance: {fileID: 2025307925999324779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &903770511 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3128346897073407326, guid: 40a3200e695d5fb49a8d83cf63953681, type: 3}
   m_PrefabInstance: {fileID: 2025307925999324779}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &910202870 stripped
@@ -629,6 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5c86d8484c17e4fbbd7f70b701d799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: {fileID: 0}
   plumbingManager: {fileID: 0}
   drinkGameManager: {fileID: 0}
   poemMinigame: {fileID: 0}
@@ -639,6 +645,7 @@ MonoBehaviour:
   plumbingUI: {fileID: 0}
   drinkUi: {fileID: 0}
   minigameStarter: {fileID: 0}
+  minigameStopper: {fileID: 0}
   tavernManager: {fileID: 0}
   starManager: {fileID: 0}
   fadeManager: {fileID: 0}
@@ -930,11 +937,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49b7938e46ad93f4c82d43bba1a7527c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2129665113 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2025307928097526322, guid: 40a3200e695d5fb49a8d83cf63953681, type: 3}
-  m_PrefabInstance: {fileID: 2025307925999324779}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2025307925999324779
 PrefabInstance:
   m_ObjectHideFlags: 0
