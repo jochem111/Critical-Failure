@@ -16,6 +16,8 @@ public class PoemMinigame : MonoBehaviour
     public GameObject checkAnswers;
     public GameObject areYouSure;
 
+    public GameObject feather;
+
     public TextMeshProUGUI answersList;
     public TextMeshProUGUI correctAnswersList;
     public TextMeshProUGUI youNeededMore;
@@ -44,6 +46,7 @@ public class PoemMinigame : MonoBehaviour
     public void OpenMinigame() // add overload for the right poem prefab so you can change which one to open
     {
         poem.SetActive(true);
+        feather.SetActive(true);
         Manager.manager.fadeManager.StartFade(gameVCam, true, poemUiHolder);
         Cursor.lockState = CursorLockMode.None;
     }
@@ -116,6 +119,8 @@ public class PoemMinigame : MonoBehaviour
 
         win.SetActive(false);
         poemUiHolder.SetActive(false);
+        feather.SetActive(false);
+        Cursor.visible = true;
         Manager.manager.starManager.AddStar();
     }
 
@@ -125,6 +130,8 @@ public class PoemMinigame : MonoBehaviour
 
         lose.SetActive(false);
         poemUiHolder.SetActive(false);
+        feather.SetActive(false);
+        Cursor.visible = true;
         Manager.manager.starManager.FailStar();
     }
 
