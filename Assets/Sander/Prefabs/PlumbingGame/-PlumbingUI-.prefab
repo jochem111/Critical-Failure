@@ -1501,6 +1501,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035361540345528048}
     m_Modifications:
+    - target: {fileID: 8872351962639098865, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872351962639098865, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872351962639098865, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872351962639098865, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872351962639098865, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872351962639098866, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2fda1db484db33e4aa8b85899156fd00, type: 3}
     - target: {fileID: 8872351963230118168, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
       propertyPath: m_Name
       value: Pipe Panel (1)
@@ -1603,6 +1627,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035361540345528048}
     m_Modifications:
+    - target: {fileID: 8872351962639098865, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872351962639098865, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872351962639098865, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872351962639098866, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 733551926c946e34aa6e4ef91294426c, type: 3}
     - target: {fileID: 8872351963230118168, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
       propertyPath: m_Name
       value: Pipe Panel (4)
@@ -1705,6 +1745,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035361540345528048}
     m_Modifications:
+    - target: {fileID: 8872351962639098865, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872351962639098865, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872351962639098865, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872351962639098866, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 733551926c946e34aa6e4ef91294426c, type: 3}
     - target: {fileID: 8872351963230118168, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
       propertyPath: m_Name
       value: Pipe Panel (5)
@@ -1807,6 +1863,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035361540345528048}
     m_Modifications:
+    - target: {fileID: 8872351962639098866, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 733551926c946e34aa6e4ef91294426c, type: 3}
     - target: {fileID: 8872351963230118168, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
       propertyPath: m_Name
       value: Pipe Panel (2)
@@ -1909,6 +1969,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035361540345528048}
     m_Modifications:
+    - target: {fileID: 8872351962639098865, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872351962639098865, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872351962639098865, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872351962639098866, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 733551926c946e34aa6e4ef91294426c, type: 3}
     - target: {fileID: 8872351963230118168, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
       propertyPath: m_Name
       value: Pipe Panel (3)
@@ -2011,6 +2087,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1035361540345528048}
     m_Modifications:
+    - target: {fileID: 8872351962639098866, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2fda1db484db33e4aa8b85899156fd00, type: 3}
     - target: {fileID: 8872351963230118168, guid: a17a9efda47148d478cb3297bdc16398, type: 3}
       propertyPath: m_Name
       value: Pipe Panel
