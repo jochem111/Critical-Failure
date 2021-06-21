@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PictureSlide : MonoBehaviour
 {
+    public GameObject uiHolder;
+    public GameObject gameVCam;
+
     public Texture2D image;
     public int blocksPerLine;
     public int shuffleLength;
@@ -30,13 +33,10 @@ public class PictureSlide : MonoBehaviour
     public GameObject checkScreenW;
     public GameObject checkScreenF;
 
-    void Start()
-    {
-        OnStart();
-    }
 
     public void OnStart()
     {
+        Manager.manager.fadeManager.StartFade(gameVCam, true, uiHolder);
         ResetProgress();
     }
 
@@ -270,6 +270,15 @@ public class PictureSlide : MonoBehaviour
 
     public void SucceedExit()
     {
-        //Exit Game
+        cam.orthographic = false;
+        uiHolder.SetActive(false);
+        Manager.manager.starManager.AddStar();
+    }
+
+    public void FailedExit()
+    {
+        cam.orthographic = false;
+        uiHolder.SetActive(false);
+        Manager.manager.starManager.FailStar();
     }
 }

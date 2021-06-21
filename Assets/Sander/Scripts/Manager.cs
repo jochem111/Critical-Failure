@@ -13,6 +13,7 @@ public class Manager : MonoBehaviour
     public PoemMinigame poemMinigame;
     public ScreenChange shoeManager;
     public HoldTool holdTool;
+    public PictureSlide pictureManager;
 
     [Header("Ui")]
     public ButtonManager buttonManager;

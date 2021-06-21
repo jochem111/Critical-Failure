@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlumbingManager : MonoBehaviour
 {
-    public bool gameIsRunning = false;
+    [HideInInspector] public bool gameIsRunning = false;
+    public GameObject gameVCam;
 
     public GameObject[] puzzelPrefabs;
 
@@ -20,6 +21,8 @@ public class PlumbingManager : MonoBehaviour
 
     public void OpenMinigame(int puzzelID)
     {
+        Manager.manager.fadeManager.StartFade(gameVCam, true, Manager.manager.plumbingUI.plumbingGameUi);
+        Camera.main.orthographic = true;
         foreach (GameObject puzzel in puzzelPrefabs)
         {
             puzzel.SetActive(false);
@@ -31,6 +34,7 @@ public class PlumbingManager : MonoBehaviour
 
     public void CloseMinigame(bool didWin)
     {
+        Camera.main.orthographic = false;
         Manager.manager.plumbingUI.TurnOffUi();
         Manager.manager.timer.SetTimerCamState(false);
         if (didWin)

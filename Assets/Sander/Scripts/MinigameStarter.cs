@@ -77,7 +77,7 @@ public class MinigameStarter : MonoBehaviour
 
     void StartPictureMinigame()
     {
-        print("-!- Open picture minigame -!-");
+        Manager.manager.pictureManager.OnStart();
         Manager.manager.minigameStopper.currentMinigame = MinigameNames.Picture;
     }
 

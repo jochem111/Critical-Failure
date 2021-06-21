@@ -55,7 +55,7 @@ public class MinigameStopper : MonoBehaviour
 
     void FailPictureMinigame()
     {
-        print("-- fail picture game --");
+        Manager.manager.pictureManager.ExitGameYes();
     }
 
 }
