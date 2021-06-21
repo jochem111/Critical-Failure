@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cinematics : MonoBehaviour
 {
+    [SerializeField] GameObject player;
     [SerializeField] PlayerMovement playerMove;
     [SerializeField] CinemachineDollyCart dollyCart;
     [SerializeField] GameObject mainMenu, settingsMenu;
@@ -23,6 +24,14 @@ public class Cinematics : MonoBehaviour
     public bool canSkip = true;
     float index;
 
+    [Space, SerializeField] GameObject insideCinematic;
+
+    [Space, SerializeField] GameObject outsideVcam;
+    [SerializeField] Transform secondCinematicPos;
+    [SerializeField] Transform tavernTeleportPos;
+    [SerializeField] float cinematic2Time;
+    [SerializeField] GameObject vcamReset;
+
     void Start()
     {
         playerMove.AllowMovement(false);
@@ -41,7 +50,7 @@ public class Cinematics : MonoBehaviour
             SkipCinematic();
     }
 
-    //Function to skip the cinematic
+    //Function to skip the first cinematic
     void SkipCinematic()
     {
         index++;
@@ -70,7 +79,7 @@ public class Cinematics : MonoBehaviour
         }
     }
 
-    //Function to disable the ability to skip
+    //Function to disable the ability to skip first cinematic
     IEnumerator DisableSkip(float time)
     {
         yield return new WaitForSeconds(time);
@@ -91,9 +100,9 @@ public class Cinematics : MonoBehaviour
         }
     }
 
-    //Pause/Resume/End the cinematics
-    public void PauseCinematic() 
-    { 
+    //Pause/Resume/End the first cinematic
+    public void PauseCinematic()
+    {
         dollyCart.m_Speed = 0;
 
         showSkipText = false;
@@ -102,8 +111,8 @@ public class Cinematics : MonoBehaviour
         StopCoroutine(nameof(WaitForPauseTime));
     }
 
-    public void ResumeCinematic() 
-    { 
+    public void ResumeCinematic()
+    {
         dollyCart.m_Speed = originalCartSpeed;
 
         showSkipText = true;
@@ -120,11 +129,14 @@ public class Cinematics : MonoBehaviour
     {
         yield return new WaitForSeconds(resumeTime);
 
-        Manager.manager.fadeManager.StartFade(null, false, null);
+        if (index != 2)
+        {
+            Manager.manager.fadeManager.StartFade(null, false, null);
 
-        yield return new WaitForSeconds(Manager.manager.fadeManager.fadeTime);
+            yield return new WaitForSeconds(Manager.manager.fadeManager.fadeTime);
 
-        DisableCinematic();
+            DisableCinematic();
+        }
     }
 
     public void DisableCinematic()
@@ -134,9 +146,10 @@ public class Cinematics : MonoBehaviour
         skipCanvasGroup.gameObject.SetActive(false);
 
         playerMove.AllowMovement(true);
-        gameObject.SetActive(false);
+        insideCinematic.SetActive(false);
     }
 
+    //Make skip text appear
     public void StartSkipFading() { StartCoroutine(SkipFading(skipTime)); }
 
     IEnumerator SkipFading(float time)
@@ -161,7 +174,37 @@ public class Cinematics : MonoBehaviour
             yield return null;
         }
 
-        if(showSkipText)
+        if (showSkipText)
             StartCoroutine(SkipFading(skipTime));
+    }
+
+    //Start second cinematic
+    public void SecondCinematic() 
+    {
+        player.transform.position = secondCinematicPos.position;
+        outsideVcam.SetActive(true);
+        playerMove.CinematicLock(true);
+
+        StartCoroutine(TeleportToTavern());
+    }
+
+    IEnumerator TeleportToTavern()
+    {
+        yield return new WaitForSeconds(cinematic2Time);
+
+        Manager.manager.fadeManager.StartFade(null, false, null);
+
+        yield return new WaitForSeconds(Manager.manager.fadeManager.fadeTime);
+
+        player.transform.position = tavernTeleportPos.position;
+        vcamReset.SetActive(true);
+
+        Manager.manager.tavernManager.RotateDoor(-90);
+        playerMove.canMove = false;
+
+        yield return new WaitForSeconds(.5f);
+
+        playerMove.CinematicLock(false);
+        gameObject.SetActive(false);
     }
 }

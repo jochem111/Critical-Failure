@@ -10,7 +10,7 @@ public class Interact : MonoBehaviour
 
     [SerializeField] List<Transform> interactables;
 
-    [Space, SerializeField] Cinematics cinematic;
+    [Space, SerializeField] Cinematics cinematics;
 
     GameObject interactingWith;
     InteractContents iContents;
@@ -126,6 +126,12 @@ public class Interact : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Manager.manager.tavernManager.UpdateTaverns();
+        if (!other.gameObject.CompareTag("CinematicTrigger"))
+            Manager.manager.tavernManager.UpdateTaverns();
+        else
+        {
+            cinematics.SecondCinematic();
+            other.gameObject.SetActive(false);
+        }
     }
 }

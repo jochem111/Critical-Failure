@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform cam;
 
     public bool canMove;
+    public bool inCinematic;
 
     public Animator anim;
 
@@ -37,8 +38,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void MovementInput()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
+        if (!inCinematic)
+        {
+            horizontal = Input.GetAxisRaw("Horizontal");
+            vertical = Input.GetAxisRaw("Vertical");
+        }
+
         direction = new Vector3(horizontal, 0f, vertical).normalized;
 
         if (direction.magnitude >= 0.1f)
@@ -68,5 +73,15 @@ public class PlayerMovement : MonoBehaviour
     public void SetPlayerAnimation(float animation)
     {
         anim.SetFloat("Movement", animation);
+    }
+
+    public void CinematicLock(bool index)
+    {
+        inCinematic = index;
+
+        if (index)
+            vertical = 1;
+        else
+            canMove = true;
     }
 }

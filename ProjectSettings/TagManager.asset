@@ -16,6 +16,7 @@ TagManager:
   - Plumbing_GridUnit
   - Plumbing_PipePiece
   - Plumbing_PipeEnd
+  - CinematicTrigger
   layers:
   - Default
   - TransparentFX

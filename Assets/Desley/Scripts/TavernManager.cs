@@ -7,7 +7,9 @@ public class TavernManager : MonoBehaviour
     [SerializeField] Interact playerInteract;
 
     [SerializeField] GameObject tavern1Trigger, tavern2Trigger;
+
     [Space, SerializeField] GameObject tavern2;
+    [SerializeField] GameObject tavern2Bartender;
 
     [Space, SerializeField] Transform door;
     [SerializeField] float originalY;
@@ -44,7 +46,10 @@ public class TavernManager : MonoBehaviour
         tavern2Trigger.SetActive(inTavern1);
 
         if (!tavern2.activeSelf)
-            tavern2.SetActive(true);
+        {
+        tavern2.SetActive(true);
+        tavern2Bartender.SetActive(true);
+        }
 
         //Deactivate all customers in other tavern
         if (!inTavern1)
