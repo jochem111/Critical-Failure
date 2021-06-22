@@ -78,7 +78,7 @@ public class StarManager : MonoBehaviour
         }
 
         //Open tavern door
-        Manager.manager.tavernManager.RotateDoor(0);
+        Manager.manager.tavernManager.RotateDoor(true);
 
         vCam.SetActive(false);
 

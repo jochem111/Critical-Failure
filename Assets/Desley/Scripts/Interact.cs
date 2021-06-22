@@ -95,12 +95,12 @@ public class Interact : MonoBehaviour
 
         Manager.manager.fadeManager.StartFade(cinematic, true, dialogUi);
 
-        vCam = iContents.vCam;
         playerPos = iContents.playerPos;
 
         StartCoroutine(ChangePos(Manager.manager.fadeManager.fadeTime));
 
-        iContents.animator.SetBool("Talking", true);
+        if(iContents.animator)
+            iContents.animator.SetBool("Talking", true);
     }
 
     public void FinishInteraction()
@@ -108,8 +108,6 @@ public class Interact : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         playerMove.AllowMovement(true);
         canInteract = true;
-
-        vCam.SetActive(false);
 
         iContents.animator.SetBool("Talking", false);
     }

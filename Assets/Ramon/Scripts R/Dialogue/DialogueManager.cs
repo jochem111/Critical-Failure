@@ -172,7 +172,7 @@ public class DialogueManager : MonoBehaviour
     public void FinishDialogue()
     {
         dialogueBox.SetActive(false);
-        Manager.manager.interact.FinishInteraction();
+        //Manager.manager.interact.FinishInteraction();
         Debug.Log("Good End of Conversation");
     }
 }

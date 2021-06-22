@@ -203,7 +203,7 @@ public class Cinematics : MonoBehaviour
         player.transform.position = tavernTeleportPos.position;
         vcamReset.SetActive(true);
 
-        Manager.manager.tavernManager.RotateDoor(-90);
+        Manager.manager.tavernManager.RotateDoor(false);
         playerMove.canMove = false;
 
         yield return new WaitForSeconds(.5f);

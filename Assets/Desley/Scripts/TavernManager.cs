@@ -12,7 +12,6 @@ public class TavernManager : MonoBehaviour
     [SerializeField] GameObject tavern2Bartender;
 
     [Space, SerializeField] Transform door;
-    [SerializeField] float originalY;
 
     bool inTavern1;
 
@@ -28,15 +27,17 @@ public class TavernManager : MonoBehaviour
     [SerializeField] float[] pointerRotation;
     [HideInInspector]public int pointerIndex = -1;
 
-    public void RotateDoor(float rotation)
+    public void RotateDoor(bool open)
     {
+        float rotation = open ? 0 : -90;
+
         door.rotation = Quaternion.Euler(0, rotation, 0);
     }
 
     public void UpdateTaverns()
     {
         //Close door
-        RotateDoor(originalY);
+        RotateDoor(false);
         
         //Update location bool
         inTavern1 = !inTavern1;
