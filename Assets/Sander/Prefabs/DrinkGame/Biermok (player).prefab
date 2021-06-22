@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1808358542811032219}
   - component: {fileID: 6030771955324372238}
   - component: {fileID: 302789746320956399}
-  - component: {fileID: -8146491689581734565}
+  - component: {fileID: 8189203076762791770}
   m_Layer: 0
   m_Name: Biermok (player)
   m_TagString: DrinkMug
@@ -113,10 +113,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mugFillTimeInSeconds: 1.7
   currentHeldDrinkIndexes: 000000000000000000000000
+  mugIndexToFill: 0
   mugIsFull: 0
   isBeingHeld: 0
   canBeHeld: 0
---- !u!54 &-8146491689581734565
+--- !u!54 &8189203076762791770
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,7 +132,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 120
-  m_CollisionDetection: 1
+  m_CollisionDetection: 3
 --- !u!65 &3166613872943941779
 BoxCollider:
   m_ObjectHideFlags: 0
