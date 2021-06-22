@@ -44,6 +44,7 @@ public class MugSpawner : MonoBehaviour
         {
             currentMug.GetComponent<Rigidbody>().useGravity = true;
             currentMug.GetComponent<DrinkMug>().canBeHeld = true;
+            print("MS grav on");
         }
 
     }

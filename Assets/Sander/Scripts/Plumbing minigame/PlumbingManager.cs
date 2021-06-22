@@ -12,6 +12,7 @@ public class PlumbingManager : MonoBehaviour
     [Tooltip("H = horizontal | V = vertical | U = up | D = down | R = right | L = left")]
     public Pipe[] pipesToPlace;
     PlumbingTap startPipe;
+    PlumbingIdScript puzzelId;
 
     public List<PipeScript> pipesWithWater = new List<PipeScript>();
     
@@ -29,6 +30,7 @@ public class PlumbingManager : MonoBehaviour
         }
         puzzelPrefabs[puzzelID].SetActive(true);
         startPipe = puzzelPrefabs[puzzelID].GetComponentInChildren<PlumbingTap>();
+        puzzelId = puzzelPrefabs[puzzelID].GetComponent<PlumbingIdScript>();
         Manager.manager.plumbingUI.TurnOnUi();
     }
 
@@ -53,7 +55,7 @@ public class PlumbingManager : MonoBehaviour
 
     public void StartGame()        // This is called by a button on the TutorialUI
     {
-        Manager.manager.timer.StartTimer(startPipe.MinigameTime);
+        Manager.manager.timer.StartTimer(puzzelId.MinigameTime);
         Manager.manager.plumbingUI.tutorialUi.SetActive(false);
         Manager.manager.timer.SetTimerCamState(true);
         gameIsRunning = true;
@@ -120,6 +122,14 @@ public class PlumbingManager : MonoBehaviour
         }
         pipesWithWater.Clear();
         startPipe.Fill();
+    }
+
+    void UpdatePipeAmountsForId()
+    {
+        for (int i = 0; i < pipesToPlace.Length; i++)
+        {
+            pipesToPlace[i].amount = puzzelId.PipeAmounts[i];
+        }
     }
 
     public void WinMinigame()

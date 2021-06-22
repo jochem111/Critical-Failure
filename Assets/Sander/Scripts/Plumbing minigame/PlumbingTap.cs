@@ -8,7 +8,6 @@ public class PlumbingTap : MonoBehaviour
     public float raycastLenght = 1f;
     RaycastHit hit;
     PipeScript targetPipeScript;
-    public float MinigameTime;
 
     public void Fill()
     {

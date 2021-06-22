@@ -11,10 +11,12 @@ public class DrinkMug : MonoBehaviour
     public int mugIndexToFill = 0;
     public bool mugIsFull;
     bool didFill = false;
+    bool startedFill = false;
      public bool isBeingHeld = false;
      public bool canBeHeld = false;
 
     private IEnumerator enumerator;
+    TapScript currTap;
 
     private void Start()
     {
@@ -27,22 +29,27 @@ public class DrinkMug : MonoBehaviour
         {
             if (!mugIsFull)
             {
-                enumerator = FillMug(other.GetComponent<TapScript>());
-                StartCoroutine(enumerator);
+                other.GetComponent<TapScript>().CoolDownStart();
+                print("start fill");
+                currTap = other.GetComponent<TapScript>();
+               enumerator = FillMug(other.GetComponent<TapScript>());
+               StartCoroutine(enumerator);
             }
         }
     }
 
     // when the mug is picked up again while not being filled stop filling
-    private void OnTriggerExit(Collider other)
+   /* private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Drink Tap" && !mugIsFull)
         {
             if (!didFill)
             {
                 other.GetComponent<TapScript>().fillFX.SetActive(false);
-
+                print("stopped fill");
+                print(transform.position);
                 StopCoroutine(enumerator);
+              //  GetComponent<Rigidbody>().isKinematic = false;
             }
             else
             {
@@ -50,14 +57,28 @@ public class DrinkMug : MonoBehaviour
             }
             other.GetComponent<TapScript>().CoolDownStart();
         }
-    } 
+    } */
 
     private void OnMouseDown()
     {
         if (canBeHeld)
         {
+            if (!didFill && startedFill)
+            {
+                currTap.fillFX.SetActive(false);
+                print("picekd up stopped fill");
+                print(transform.position);
+                StopCoroutine(enumerator);
+                startedFill = false;
+            }
+            else
+            {
+                didFill = false;
+            } 
+
             isBeingHeld = true;
             gameObject.GetComponent<Rigidbody>().useGravity = false;
+            GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 
@@ -81,11 +102,14 @@ public class DrinkMug : MonoBehaviour
 
     private IEnumerator FillMug(TapScript tapScript)
     {
-        //play sound
+        startedFill = true;
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+        GetComponent<Rigidbody>().isKinematic = true;
+
         spawner.isHoldingMug = false;
         isBeingHeld = false;
         canBeHeld = true;
-        gameObject.transform.position = tapScript.fillFX.transform.position; //this can be replaced with a vec3 but this gives a good position already
+        gameObject.transform.position = tapScript.fillFX.transform.position; 
 
         tapScript.fillFX.SetActive(true);
         yield return new WaitForSeconds(mugFillTimeInSeconds);
@@ -99,8 +123,8 @@ public class DrinkMug : MonoBehaviour
         {
             mugIsFull = true;
         }
+        startedFill = false;
         print("FillMug done!!");
-
     }
 
 
