@@ -181,7 +181,11 @@ public class Cinematics : MonoBehaviour
     //Start second cinematic
     public void SecondCinematic() 
     {
+        playerMove.canMove = false;
+
         player.transform.position = secondCinematicPos.position;
+        player.transform.rotation = secondCinematicPos.rotation;
+
         outsideVcam.SetActive(true);
         playerMove.CinematicLock(true);
 

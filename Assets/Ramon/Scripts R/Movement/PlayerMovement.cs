@@ -78,10 +78,12 @@ public class PlayerMovement : MonoBehaviour
     public void CinematicLock(bool index)
     {
         inCinematic = index;
+        canMove = true;
 
         if (index)
+        {
             vertical = 1;
-        else
-            canMove = true;
+            horizontal = 0;
+        }
     }
 }
