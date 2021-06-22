@@ -12,14 +12,8 @@ public class Dialogue
     public string[] goodSentences;
 
     [TextArea(3, 10)]
-    public string[] meanSentences;
-
-    [TextArea(3, 10)]
     public string[] suddenSentences;
 
     [TextArea(3, 10)]
     public string[] goodResponses;
-
-    [TextArea(3, 10)]
-    public string[] meanResponses;
 }

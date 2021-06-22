@@ -1087,18 +1087,12 @@ MonoBehaviour:
     - first good sentence
     - second good sentence
     - third good sentence
-    meanSentences:
-    - mean sentence
     suddenSentences:
     - sudden sentence
     goodResponses:
     - good 1
     - good 2
     - good 3
-    meanResponses:
-    - mean 1
-    - mean 2
-    - mean 3
 --- !u!1 &640799931
 GameObject:
   m_ObjectHideFlags: 0
@@ -3052,10 +3046,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Conversation System
       objectReference: {fileID: 0}
-    - target: {fileID: 2515123297603834467, guid: 6a59948656cb5bf44b7ad36a1a7e74ce, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a59948656cb5bf44b7ad36a1a7e74ce, type: 3}
 --- !u!1001 &5913816057721437170
@@ -3115,15 +3105,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2796944611417721044, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.09853761
+      value: 0.098537624
       objectReference: {fileID: 0}
     - target: {fileID: 2796944611417721044, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000008561322
+      value: 0.000000008561321
       objectReference: {fileID: 0}
     - target: {fileID: 2796944611417721044, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 8.477379e-10
+      value: -8.477379e-10
       objectReference: {fileID: 0}
     - target: {fileID: 3945575057212395635, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3147,15 +3137,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7797808446592598277, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.09853762
+      value: 0.098537624
       objectReference: {fileID: 0}
     - target: {fileID: 7797808446592598277, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000004280661
+      value: 0.0000000042806607
       objectReference: {fileID: 0}
     - target: {fileID: 7797808446592598277, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 4.238689e-10
+      value: -4.238689e-10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}

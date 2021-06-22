@@ -2291,22 +2291,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 179412436}
-    - target: {fileID: 8014364240200236873, guid: 403719a81997e7a4d902cdfcb5ff82b2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DisplaySuddenSentence
-      objectReference: {fileID: 0}
-    - target: {fileID: 8014364240255245401, guid: 403719a81997e7a4d902cdfcb5ff82b2, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8014364241156054277, guid: 403719a81997e7a4d902cdfcb5ff82b2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 179412436}
-    - target: {fileID: 8014364241156054277, guid: 403719a81997e7a4d902cdfcb5ff82b2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DisplayMeanSentence
-      objectReference: {fileID: 0}
     - target: {fileID: 8014364241816016320, guid: 403719a81997e7a4d902cdfcb5ff82b2, type: 3}
       propertyPath: m_Name
       value: Conversation System
@@ -2359,23 +2343,8 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 179412436}
-    - target: {fileID: 8014364241917149615, guid: 403719a81997e7a4d902cdfcb5ff82b2, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DisplayGoodSentence
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 403719a81997e7a4d902cdfcb5ff82b2, type: 3}
---- !u!114 &152747237 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8014364240496564321, guid: 403719a81997e7a4d902cdfcb5ff82b2, type: 3}
-  m_PrefabInstance: {fileID: 152747236}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &152747238 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8014364241199838217, guid: 403719a81997e7a4d902cdfcb5ff82b2, type: 3}
@@ -2422,11 +2391,6 @@ GameObject:
 --- !u!1 &152747243 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990905795435194674, guid: 403719a81997e7a4d902cdfcb5ff82b2, type: 3}
-  m_PrefabInstance: {fileID: 152747236}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &152747244 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5730088705584365711, guid: 403719a81997e7a4d902cdfcb5ff82b2, type: 3}
   m_PrefabInstance: {fileID: 152747236}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &152747245 stripped
@@ -2752,11 +2716,9 @@ MonoBehaviour:
   nameText: {fileID: 152747240}
   dialogueText: {fileID: 152747239}
   goodResponseText: {fileID: 152747238}
-  meanResponseText: {fileID: 152747237}
   dialogueBox: {fileID: 152747242}
   responses: {fileID: 152747241}
   goodExit: {fileID: 152747245}
-  badExit: {fileID: 152747244}
   suddenExit: {fileID: 152747243}
   textSpeed: 0.1
   time: 5
@@ -23947,7 +23909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3945575057212395635, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.04486348
+      value: 0.044863474
       objectReference: {fileID: 0}
     - target: {fileID: 3945575057212395635, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalRotation.y

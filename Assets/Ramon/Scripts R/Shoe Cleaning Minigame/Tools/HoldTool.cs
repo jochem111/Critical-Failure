@@ -25,6 +25,8 @@ public class HoldTool : MonoBehaviour
     {
         RemoveTool();
 
+        Cursor.visible = false;
+
         handIsEmpty = false;
 
         firstTool.SetActive(true);
@@ -34,6 +36,8 @@ public class HoldTool : MonoBehaviour
     {
         RemoveTool();
 
+        Cursor.visible = false;
+
         handIsEmpty = false;
 
         secondTool.SetActive(true);
@@ -42,6 +46,8 @@ public class HoldTool : MonoBehaviour
     public void SelectThirdTool()
     {
         RemoveTool();
+
+        Cursor.visible = false;
 
         handIsEmpty = false;
 
@@ -54,6 +60,8 @@ public class HoldTool : MonoBehaviour
         {
             tool.SetActive(false);
         }
+
+        Cursor.visible = true;
 
         handIsEmpty = true;
     }
