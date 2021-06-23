@@ -54,6 +54,7 @@ public class DrinkGameManager : MonoBehaviour
         {
             Manager.manager.starManager.FailStar();
         }
+        gameVCam.SetActive(false);
         
     }
 

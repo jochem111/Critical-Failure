@@ -27,7 +27,7 @@ public class DrinkMug : MonoBehaviour
     {
         if (other.tag == "Drink Tap" && !didFill)
         {
-            if (!mugIsFull)
+            if (!mugIsFull && !startedFill)
             {
                 other.GetComponent<TapScript>().CoolDownStart();
                 print("start fill");
@@ -39,16 +39,16 @@ public class DrinkMug : MonoBehaviour
     }
 
     // when the mug is picked up again while not being filled stop filling
-   /* private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Drink Tap" && !mugIsFull)
         {
             if (!didFill)
-            {
-                other.GetComponent<TapScript>().fillFX.SetActive(false);
-                print("stopped fill");
-                print(transform.position);
-                StopCoroutine(enumerator);
+            { 
+              //  other.GetComponent<TapScript>().fillFX.SetActive(false);
+                print("stopped exit fill");
+               // print(transform.position);
+               // StopCoroutine(enumerator);
               //  GetComponent<Rigidbody>().isKinematic = false;
             }
             else
@@ -57,7 +57,7 @@ public class DrinkMug : MonoBehaviour
             }
             other.GetComponent<TapScript>().CoolDownStart();
         }
-    } */
+    } 
 
     private void OnMouseDown()
     {
@@ -65,6 +65,7 @@ public class DrinkMug : MonoBehaviour
         {
             if (!didFill && startedFill)
             {
+                currTap.CoolDownStart();
                 currTap.fillFX.SetActive(false);
                 print("picekd up stopped fill");
                 print(transform.position);
