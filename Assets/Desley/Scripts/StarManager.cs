@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class StarManager : MonoBehaviour
 {
-    [SerializeField] MeshRenderer[] playerRenderer;
+    [SerializeField] SkinnedMeshRenderer playerRenderer;
     [SerializeField] AudioSource audioSource;
     [SerializeField] GameObject vCam;
     [SerializeField] Interact interact;
@@ -92,10 +92,7 @@ public class StarManager : MonoBehaviour
 
     void PlayerVisible(bool active)
     {
-        foreach (MeshRenderer mRenderer in playerRenderer)
-        {
-            mRenderer.enabled = active;
-        }
+        playerRenderer.enabled = active;
     }
 
     public void StartFinishGame() { StartCoroutine(FinishGame()); }

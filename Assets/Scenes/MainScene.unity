@@ -9465,6 +9465,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8028882952955002741, guid: e10d10962fc89ef45a6004403484ecbd, type: 3}
   m_PrefabInstance: {fileID: 671061730}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &676693396 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5779679875038710929, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
+  m_PrefabInstance: {fileID: 1714517374}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &680755177
 GameObject:
   m_ObjectHideFlags: 0
@@ -26407,7 +26412,6 @@ MonoBehaviour:
   tavern2: {fileID: 671061731}
   tavern2Bartender: {fileID: 1434516263}
   door: {fileID: 1427903256}
-  originalY: -90
   customers:
   - {fileID: 1626661568}
   - {fileID: 1434516263}
@@ -28725,10 +28729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36b24df3e77c8e47993c69a3ba3c237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRenderer:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  playerRenderer: {fileID: 676693396}
   audioSource: {fileID: 2049124288}
   vCam: {fileID: 1248018381}
   interact: {fileID: 958766183}
