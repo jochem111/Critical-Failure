@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MinigameStarter : MonoBehaviour
 {
-    public enum MinigameNames {None, Drinking, Shoe, Write, Plumbing, Picture }
+    public enum MinigameNames {None, Drinking, Shoe, Write, Plumbing, Picture, OpenDoor }
 
     public int currentTimeBlock;
 
@@ -32,6 +32,9 @@ public class MinigameStarter : MonoBehaviour
             case MinigameNames.None:
                 Manager.manager.dialogueManager.AbbruptlyEndDailogue();
                 break;
+            case MinigameNames.OpenDoor:
+                Manager.manager.tavernManager.RotateDoor(true);
+                break;
             default:
                 break;
         }
@@ -56,20 +59,20 @@ public class MinigameStarter : MonoBehaviour
         Manager.manager.minigameStopper.currentMinigame = MinigameNames.Write;
     }
 
-    void StartPlumbingMinigame() //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
+    void StartPlumbingMinigame()
     {
         switch (currentTimeBlock)
         {
-            case 1:
+            case 2:
                 Manager.manager.plumbingManager.OpenMinigame(0);
                 break;
-            case 2:
+            case 3:
                 Manager.manager.plumbingManager.OpenMinigame(1);
                 break;
-            case 4:
+            case 5:
                 Manager.manager.plumbingManager.OpenMinigame(2);
                 break;
-            case 5:
+            case 6:
                 Manager.manager.plumbingManager.OpenMinigame(3);
                 break;
             default:
