@@ -51,6 +51,8 @@ public class PlumbingManager : MonoBehaviour
         {
             item.RemoveSelf();
         }
+        gameVCam.SetActive(false);
+        Manager.manager.timer.SetTimerCamState(false);
     }
 
     public void StartGame()        // This is called by a button on the TutorialUI

@@ -48,6 +48,8 @@ public class ScreenChange : MonoBehaviour
         outOf.text = successesNeededToWin.ToString();
 
         gameScreen.SetActive(true);
+        Manager.manager.timer.SetTimerCamState(true);
+        Manager.manager.timer.StartTimer(90);
     }
 
     private void Update()
@@ -88,10 +90,11 @@ public class ScreenChange : MonoBehaviour
 
     public void EscapeScreen()
     {
-        if (Input.GetButtonDown("Cancel") && gameScreen.activeSelf)
+        if (Input.GetButtonDown("Cancel") && gameScreen.activeInHierarchy)
         {
             gameScreen.SetActive(false);
             escapeScreen.SetActive(true);
+            Manager.manager.timer.SetTimerPauzeState(true);
         }
     }
 
@@ -138,6 +141,8 @@ public class ScreenChange : MonoBehaviour
         minigameHolder.SetActive(false);        //gameScreen.SetActive(true); -> minigameHolder.SetActive(false); as when the minigame gets opened the OnStart fucntion makes sure that the "gameScreen" is on and this makes sure that ALL the UI is off after the minigame is done
 
         Manager.manager.starManager.AddStar();
+        Manager.manager.timer.SetTimerCamState(false);
+        gameVCam.SetActive(false);
     }
 
     IEnumerator IFailScreen(int time)
@@ -150,6 +155,8 @@ public class ScreenChange : MonoBehaviour
         minigameHolder.SetActive(false);
 
         Manager.manager.starManager.FailStar();
+        Manager.manager.timer.SetTimerCamState(false);
+        gameVCam.SetActive(false);
     }
 
     public void NextScreen()
