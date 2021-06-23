@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16831943, g: 0.1396237, b: 0.24767917, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10185,7 +10185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8028882952955002741, guid: e10d10962fc89ef45a6004403484ecbd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e10d10962fc89ef45a6004403484ecbd, type: 3}
@@ -27123,8 +27123,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1116259329}
     - target: {fileID: 3856703256216414347, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
+      propertyPath: m_XAxis.m_MaxSpeed
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 3856703256216414347, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
+      propertyPath: m_YAxis.m_MaxSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3856703256216414347, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_YAxis.m_AccelTime
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3856703256216414347, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
+      propertyPath: m_Orbits.Array.data[0].m_Height
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3856703256216414347, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_Orbits.Array.data[0].m_Radius
@@ -27132,11 +27144,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3856703256216414347, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_Orbits.Array.data[1].m_Radius
-      value: 4
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3856703256216414347, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
+      propertyPath: m_Orbits.Array.data[2].m_Height
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3856703256216414347, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_Orbits.Array.data[2].m_Radius
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3868733176116507225, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_Layer
