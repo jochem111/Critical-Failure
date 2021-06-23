@@ -34,6 +34,7 @@ public class MinigameStarter : MonoBehaviour
                 break;
             case MinigameNames.OpenDoor:
                 Manager.manager.tavernManager.RotateDoor(true);
+                Manager.manager.dialogueManager.AbbruptlyEndDailogue();
                 break;
             default:
                 break;
