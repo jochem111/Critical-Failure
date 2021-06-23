@@ -273,6 +273,7 @@ public class PictureSlide : MonoBehaviour
         cam.orthographic = false;
         uiHolder.SetActive(false);
         Manager.manager.starManager.AddStar();
+        gameVCam.SetActive(false);
     }
 
     public void FailedExit()
@@ -280,5 +281,6 @@ public class PictureSlide : MonoBehaviour
         cam.orthographic = false;
         uiHolder.SetActive(false);
         Manager.manager.starManager.FailStar();
+        gameVCam.SetActive(false);
     }
 }

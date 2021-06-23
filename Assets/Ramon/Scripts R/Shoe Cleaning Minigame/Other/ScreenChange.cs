@@ -100,6 +100,7 @@ public class ScreenChange : MonoBehaviour
 
     public void EscapeScreenY()
     {
+        
         escapeScreen.SetActive(false);
         failScreen.SetActive(true);
         StartCoroutine(IFailScreen(waitTime));
@@ -107,6 +108,7 @@ public class ScreenChange : MonoBehaviour
 
     public void EscapeScreenN()
     {
+        Manager.manager.timer.SetTimerPauzeState(false);
         escapeScreen.SetActive(false);
         gameScreen.SetActive(true);
     }

@@ -88,7 +88,7 @@ public class PoemMinigame : MonoBehaviour
 
     public void ExitPoemMinigame()
     {
-        if (Input.GetButtonDown("Cancel") && poem.activeSelf)
+        if (Input.GetButtonDown("Cancel") && poem.activeInHierarchy)
         {
             Debug.Log("ExitPoemMinigame");
             poem.SetActive(false);
@@ -104,6 +104,7 @@ public class PoemMinigame : MonoBehaviour
 
         poemUiHolder.SetActive(false);
         Manager.manager.starManager.FailStar();
+        gameVCam.SetActive(false);
     }
 
     public void NoExitButton()
@@ -122,6 +123,7 @@ public class PoemMinigame : MonoBehaviour
         feather.SetActive(false);
         Cursor.visible = true;
         Manager.manager.starManager.AddStar();
+        gameVCam.SetActive(false);
     }
 
     public void MinigameLost()
@@ -133,6 +135,7 @@ public class PoemMinigame : MonoBehaviour
         feather.SetActive(false);
         Cursor.visible = true;
         Manager.manager.starManager.FailStar();
+        gameVCam.SetActive(false);
     }
 
     IEnumerator Pause(float time)
