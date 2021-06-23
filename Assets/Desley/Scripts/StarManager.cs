@@ -64,9 +64,9 @@ public class StarManager : MonoBehaviour
 
             //Sound effect
             audioSource.Play();
-
-            yield return new WaitForSeconds(soundTime);
         }
+
+        yield return new WaitForSeconds(soundTime);
 
         currentStars++;
 

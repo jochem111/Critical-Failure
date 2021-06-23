@@ -208,6 +208,8 @@ public class Cinematics : MonoBehaviour
 
         yield return new WaitForSeconds(.5f);
 
+        player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
+
         playerMove.CinematicLock(false);
         gameObject.SetActive(false);
     }

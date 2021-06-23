@@ -109,7 +109,8 @@ public class Interact : MonoBehaviour
         playerMove.AllowMovement(true);
         canInteract = true;
 
-        iContents.animator.SetBool("Talking", false);
+        if(iContents.animator)
+            iContents.animator.SetBool("Talking", false);
     }
 
     IEnumerator ChangePos(float time)

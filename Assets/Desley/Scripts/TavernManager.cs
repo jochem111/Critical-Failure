@@ -9,7 +9,7 @@ public class TavernManager : MonoBehaviour
     [SerializeField] GameObject tavern1Trigger, tavern2Trigger;
 
     [Space, SerializeField] GameObject tavern2;
-    [SerializeField] GameObject tavern2Bartender;
+    [SerializeField] GameObject tavern1Bartender, tavern2Bartender;
 
     [Space, SerializeField] Transform door;
 
@@ -51,6 +51,12 @@ public class TavernManager : MonoBehaviour
         tavern2.SetActive(true);
         tavern2Bartender.SetActive(true);
         }
+
+        //Deactivate bartenders after their sequences
+        if (tavern2Bartender.activeSelf && !inTavern1)
+            tavern1Bartender.SetActive(false);
+        else if (!tavern1Bartender.activeSelf && inTavern1)
+            tavern2Bartender.SetActive(false);
 
         //Deactivate all customers in other tavern
         if (!inTavern1)

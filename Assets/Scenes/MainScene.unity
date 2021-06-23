@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16831943, g: 0.1396237, b: 0.24767917, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1265,7 +1265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4173627307896420358, guid: 079bdffe9c3afc944a3cdf492018e196, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4173627307896420358, guid: 079bdffe9c3afc944a3cdf492018e196, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1487,14 +1487,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89053208}
-  m_LocalRotation: {x: 0.09229593, y: 0.7010574, z: -0.09229593, w: 0.7010574}
+  m_LocalRotation: {x: 0.06425799, y: 0.67301935, z: -0.058881592, w: 0.7344718}
   m_LocalPosition: {x: -1.746, y: 1.5, z: 0.904}
   m_LocalScale: {x: 1.3333331, y: 1.3333334, z: 1.3333334}
   m_Children:
   - {fileID: 1895670458}
   m_Father: {fileID: 913210767}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 15, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 85, z: 0}
 --- !u!114 &89053210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5072,7 +5072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4173627307896420358, guid: 079bdffe9c3afc944a3cdf492018e196, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4173627307896420358, guid: 079bdffe9c3afc944a3cdf492018e196, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6110,6 +6110,29 @@ MonoBehaviour:
   cinematic: {fileID: 235550367}
   playerPos: {fileID: 1906671938}
   animator: {fileID: 0}
+--- !u!114 &296851772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296851769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d566e268e11a7b40b95707397001f37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Jerry
+    minigameToStartName: 4
+    goodSentences:
+    - Can a bladder explode?
+    - I need to use the restroom so bad, but it's defect.
+    suddenSentences:
+    - But this is an emergency!
+    goodResponses:
+    - What, why?!
+    - Oh, I get it. Let me see what I can do.
 --- !u!1 &300291376 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5bac1642ba5601042bfa0b1af52fb156, type: 3}
@@ -6678,8 +6701,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 14.61709, y: 0, z: 14.751593}
-  m_Center: {x: -0.27009726, y: 0, z: -0.24435425}
+  m_Size: {x: 14.61709, y: 0, z: 14.751594}
+  m_Center: {x: -0.27009726, y: 0.2, z: -0.24435472}
 --- !u!4 &352885564 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f18662df323dd03408be94bf1534d961, type: 3}
@@ -8221,14 +8244,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429351261}
-  m_LocalRotation: {x: 0.09229593, y: 0.7010574, z: -0.09229593, w: 0.7010574}
+  m_LocalRotation: {x: 0.06425799, y: 0.67301935, z: -0.058881592, w: 0.7344718}
   m_LocalPosition: {x: -1.746, y: 1.5, z: 0.904}
   m_LocalScale: {x: 1.3333331, y: 1.3333334, z: 1.3333334}
   m_Children:
   - {fileID: 1321714245}
   m_Father: {fileID: 1384256845}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 15, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 85, z: 0}
 --- !u!114 &429351263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9746,7 +9769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3433811141720913041, guid: 6a8592f136aba1d4aa1b8fc8c06be7a2, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3433811141720913041, guid: 6a8592f136aba1d4aa1b8fc8c06be7a2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10236,6 +10259,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1209921424223697511, guid: 12df20586d41c604cbe643d097947439, type: 3}
   m_PrefabInstance: {fileID: 906219771}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &579791771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579791769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d566e268e11a7b40b95707397001f37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Barry
+    minigameToStartName: 3
+    goodSentences:
+    - Letters, words, endless possibilities.
+    - Oh, hi. I'm writing a poem, but I'm stuck with words.
+    - You think so? You should help me finish the poem than.
+    suddenSentences:
+    - I'll finish this poem with or without help, you can take my word for it.
+    goodResponses:
+    - I'm sorry?
+    - You're writing a poem? That's awesome!
+    - I've never written one before, but I'll try.
 --- !u!114 &579791773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10546,6 +10594,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 690463253}
+  - {fileID: 1971315167}
   - {fileID: 944189903}
   - {fileID: 579791770}
   - {fileID: 1820732352}
@@ -10798,6 +10847,31 @@ MonoBehaviour:
   cinematic: {fileID: 703117423}
   playerPos: {fileID: 1485292166}
   animator: {fileID: 0}
+--- !u!114 &671051454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671051451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d566e268e11a7b40b95707397001f37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Barry
+    minigameToStartName: 3
+    goodSentences:
+    - Letters, words, endless possibilities.
+    - Oh, hi. I'm writing a poem, but I'm stuck with words.
+    - You think so? You should help me finish the poem than.
+    suddenSentences:
+    - I'll finish this poem with or without help, you can take my word for it.
+    goodResponses:
+    - I'm sorry?
+    - You're writing a poem? That's awesome!
+    - I've never written one before, but I'll try.
 --- !u!1001 &671061730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10887,7 +10961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8028882952955002741, guid: e10d10962fc89ef45a6004403484ecbd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e10d10962fc89ef45a6004403484ecbd, type: 3}
@@ -10958,7 +11032,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 310195230932189796, guid: 170af6078f20ce746b2990bf23dcea2f, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 310195230932189796, guid: 170af6078f20ce746b2990bf23dcea2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12590,7 +12664,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755195631}
   m_LocalRotation: {x: 0, y: -0.92387956, z: 0, w: 0.38268343}
-  m_LocalPosition: {x: 0.587, y: 0, z: 1.229}
+  m_LocalPosition: {x: 0.587, y: 0.07, z: 1.229}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 579791770}
@@ -13304,7 +13378,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1209921424223697511, guid: 12df20586d41c604cbe643d097947439, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1209921424223697511, guid: 12df20586d41c604cbe643d097947439, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13914,7 +13988,7 @@ MonoBehaviour:
   outsideVcam: {fileID: 697939054}
   secondCinematicPos: {fileID: 831419974}
   tavernTeleportPos: {fileID: 1321776224}
-  cinematic2Time: 1
+  cinematic2Time: 2
   vcamReset: {fileID: 1405912313}
 --- !u!4 &830583218
 Transform:
@@ -14112,7 +14186,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 310195230932189796, guid: 170af6078f20ce746b2990bf23dcea2f, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 310195230932189796, guid: 170af6078f20ce746b2990bf23dcea2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15009,7 +15083,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1209921424223697511, guid: 12df20586d41c604cbe643d097947439, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1209921424223697511, guid: 12df20586d41c604cbe643d097947439, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15637,6 +15711,29 @@ MonoBehaviour:
   cinematic: {fileID: 1670088727}
   playerPos: {fileID: 1457122123}
   animator: {fileID: 0}
+--- !u!114 &944189905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944189902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d566e268e11a7b40b95707397001f37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Travis
+    minigameToStartName: 1
+    goodSentences:
+    - I'm so thirsty right now.
+    - I need more than just one drink.
+    suddenSentences:
+    - Come on I really need a drink.
+    goodResponses:
+    - Would you like a drink?
+    - Sure thing.
 --- !u!1 &950611496
 GameObject:
   m_ObjectHideFlags: 0
@@ -18206,6 +18303,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1554483436}
     m_Modifications:
+    - target: {fileID: 407852502, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.name
+      value: Bartender
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.minigameToStartName
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodResponses.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodResponses.Array.data[0]
+      value: Hey again, I'm noticing some customers, have they been helped yet? If
+        not, you know I'm still down for that job offering.
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodResponses.Array.data[1]
+      value: Thank you so much for hiring me, I won't let you down!
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodResponses.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodSentences.Array.data[0]
+      value: Back again missy?
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodSentences.Array.data[1]
+      value: '"Yeah... I think I am going to hire you, otherwise the importance of
+        my job and the difficulty of it, will make it so that I don''t have time
+        for the customers. So welcome aboard of the SS "Mythical Tavern".'
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodSentences.Array.data[2]
+      value: Don't make me regret this, also if you help me out really well... There
+        might be a chance of you earning a star for the tavern, which will benefit
+        me for getting better ratings and most importantly it will grant you a nice
+        little bonus. But first you will have to put in the work! Also I might have
+        some work that needs to be done aswell so check in with me sometimes to find
+        out! anyway, enough talking get to it, and get me those stars!
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.suddenSentences.Array.data[0]
+      value: Going already? I thought you wanted the job.
+      objectReference: {fileID: 0}
     - target: {fileID: 690463255, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: vCam
       value: 
@@ -18216,7 +18365,7 @@ PrefabInstance:
       objectReference: {fileID: 26018614}
     - target: {fileID: 1470413045870058139, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: m_Name
-      value: MaleBartenderAnims (1)
+      value: BartenderS2
       objectReference: {fileID: 0}
     - target: {fileID: 1470413045870058139, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: m_IsActive
@@ -19240,7 +19389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3433811141720913041, guid: 6a8592f136aba1d4aa1b8fc8c06be7a2, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3433811141720913041, guid: 6a8592f136aba1d4aa1b8fc8c06be7a2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21496,6 +21645,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -2.2443624
       objectReference: {fileID: 0}
+    - target: {fileID: 1469564353, guid: e10d10962fc89ef45a6004403484ecbd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4586593564003131986, guid: e10d10962fc89ef45a6004403484ecbd, type: 3}
       propertyPath: m_LocalPosition.y
       value: -3.72
@@ -22200,13 +22353,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457122122}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.708, y: 0.076, z: 1.031}
+  m_LocalRotation: {x: 0, y: 0.92387956, z: 0, w: 0.38268343}
+  m_LocalPosition: {x: -0.708, y: -0.05, z: 1.031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 944189903}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 135, z: 0}
 --- !u!1001 &1460609553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22483,7 +22636,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485292165}
   m_LocalRotation: {x: 0, y: -0.92387956, z: 0, w: 0.38268343}
-  m_LocalPosition: {x: 0.587, y: 0, z: 1.229}
+  m_LocalPosition: {x: 0.587, y: 0.07, z: 1.229}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 671051452}
@@ -23871,6 +24024,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1222706654}
+  - {fileID: 1931214364}
   - {fileID: 1626661569}
   - {fileID: 671051452}
   - {fileID: 296851770}
@@ -23990,6 +24144,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 310195230932189796, guid: 170af6078f20ce746b2990bf23dcea2f, type: 3}
   m_PrefabInstance: {fileID: 845354137}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1569415549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569415547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d566e268e11a7b40b95707397001f37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Lenny
+    minigameToStartName: 5
+    goodSentences:
+    - My picture, my beautiful picture.
+    - No, my son tore up my favourite picture.
+    - You really think so?
+    suddenSentences:
+    - It was such a nice picture.
+    goodResponses:
+    - Is everything alright sir?
+    - We can probably still fix it.
+    - Yeah, here let me have a look.
 --- !u!114 &1569415551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24850,6 +25029,29 @@ MonoBehaviour:
   cinematic: {fileID: 696359230}
   playerPos: {fileID: 1830536240}
   animator: {fileID: 0}
+--- !u!114 &1626661571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626661568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d566e268e11a7b40b95707397001f37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Travis
+    minigameToStartName: 1
+    goodSentences:
+    - I'm so thirsty right now.
+    - I need more than just one drink.
+    suddenSentences:
+    - Come on I really need a drink.
+    goodResponses:
+    - Would you like a drink?
+    - Sure thing.
 --- !u!1001 &1627923489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26768,6 +26970,10 @@ PrefabInstance:
     - target: {fileID: 591684873827944614, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594527261422871328, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 604975241489071945, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_Layer
@@ -29135,7 +29341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5013091896814673612, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.052689087
+      value: 0.052689094
       objectReference: {fileID: 0}
     - target: {fileID: 5013091896814673612, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_LocalRotation.y
@@ -29172,6 +29378,10 @@ PrefabInstance:
     - target: {fileID: 5090387792109611967, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: cock
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090387792109611967, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
+      propertyPath: movementSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5101880550877976059, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_Layer
@@ -30731,7 +30941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8254887005794142215, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_CameraRadius
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8254887005794142215, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_MaximumEffort
@@ -30744,6 +30954,18 @@ PrefabInstance:
     - target: {fileID: 8257269823539532006, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8258133912250490386, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8258133912250490386, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8258133912250490386, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
+      propertyPath: m_Size.z
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8263185655626490363, guid: e33e2abc7f0391640ab92ab17f652c4e, type: 3}
       propertyPath: m_Layer
@@ -32747,6 +32969,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4173627307896420358, guid: 079bdffe9c3afc944a3cdf492018e196, type: 3}
   m_PrefabInstance: {fileID: 62153681}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1820732353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820732351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d566e268e11a7b40b95707397001f37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Jerry
+    minigameToStartName: 4
+    goodSentences:
+    - Can a bladder explode?
+    - I need to use the restroom so bad, but it's defect.
+    suddenSentences:
+    - But this is an emergency!
+    goodResponses:
+    - What, why?!
+    - Oh, I get it. Let me see what I can do.
 --- !u!114 &1820732355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32872,13 +33117,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830536239}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.708, y: 0.076, z: 1.031}
+  m_LocalRotation: {x: 0, y: 0.92387956, z: 0, w: 0.38268343}
+  m_LocalPosition: {x: -0.708, y: -0.05, z: 1.031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1626661569}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 135, z: 0}
 --- !u!1 &1839252166 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5bac1642ba5601042bfa0b1af52fb156, type: 3}
@@ -33760,16 +34005,17 @@ MonoBehaviour:
   tavern1Trigger: {fileID: 148974258}
   tavern2Trigger: {fileID: 1662765361}
   tavern2: {fileID: 671061731}
+  tavern1Bartender: {fileID: 615976645}
   tavern2Bartender: {fileID: 1434516263}
   door: {fileID: 1427903256}
   customers:
   - {fileID: 1626661568}
-  - {fileID: 1434516263}
+  - {fileID: 1899401984}
   - {fileID: 579791769}
   - {fileID: 1820732351}
-  - {fileID: 1899401984}
+  - {fileID: 1931214365}
   - {fileID: 1626661568}
-  - {fileID: 615976645}
+  - {fileID: 1971315168}
   - {fileID: 579791769}
   - {fileID: 296851769}
   - {fileID: 1899401984}
@@ -33780,11 +34026,13 @@ MonoBehaviour:
   - {fileID: 579791769}
   - {fileID: 1820732351}
   - {fileID: 1569415547}
+  - {fileID: 1971315168}
   tavern2Customers:
   - {fileID: 1626661568}
   - {fileID: 671051451}
   - {fileID: 296851769}
   - {fileID: 1899401984}
+  - {fileID: 1931214365}
   hPointer1: {fileID: 859703630}
   hPointer2: {fileID: 1329675659}
   pointerRotation:
@@ -34143,6 +34391,31 @@ MonoBehaviour:
   cinematic: {fileID: 1384256844}
   playerPos: {fileID: 1447912575}
   animator: {fileID: 0}
+--- !u!114 &1899401987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899401984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d566e268e11a7b40b95707397001f37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Lenny
+    minigameToStartName: 5
+    goodSentences:
+    - My picture, my beautiful picture.
+    - No, my son tore up my favourite picture.
+    - You really think so?
+    suddenSentences:
+    - It was such a nice picture.
+    goodResponses:
+    - Is everything alright sir?
+    - We can probably still fix it.
+    - Yeah, here let me have a look.
 --- !u!1 &1906671937
 GameObject:
   m_ObjectHideFlags: 0
@@ -34353,6 +34626,125 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5bac1642ba5601042bfa0b1af52fb156, type: 3}
   m_PrefabInstance: {fileID: 262795859}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1931214363
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1554483436}
+    m_Modifications:
+    - target: {fileID: 407852502, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.name
+      value: Bartender
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.minigameToStartName
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodResponses.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodSentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodResponses.Array.data[0]
+      value: Do you have a shoe cleaning kit?
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodResponses.Array.data[1]
+      value: No, I'll clean them up for you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodSentences.Array.data[0]
+      value: My shoes are getting pretty dirty from all the work.
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodSentences.Array.data[1]
+      value: I have one in the back of the tavern, mind cleaning my shoes?
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.suddenSentences.Array.data[0]
+      value: They're really in need of some cleaning though.
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463255, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: vCam
+      value: 
+      objectReference: {fileID: 1542640145}
+    - target: {fileID: 1481307552, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_SceneBindings.Array.data[0].value
+      value: 
+      objectReference: {fileID: 26018614}
+    - target: {fileID: 1470413045870058139, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_Name
+      value: MaleBartenderAnims (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470413045870058139, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 32.522
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.421
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+--- !u!4 &1931214364 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+  m_PrefabInstance: {fileID: 1931214363}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1931214365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1470413045870058139, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+  m_PrefabInstance: {fileID: 1931214363}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1937417900
 GameObject:
@@ -35288,6 +35680,153 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b7eb85e31cfb18f4081971a5cf1b4063, type: 3}
   m_PrefabInstance: {fileID: 1970906847}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1971315166
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 617375893}
+    m_Modifications:
+    - target: {fileID: 407852502, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407852502, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407852502, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407852502, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.name
+      value: Bartender
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.minigameToStartName
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodResponses.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodSentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.meanResponses.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodResponses.Array.data[0]
+      value: Do you have a shoe cleaning kit?
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodResponses.Array.data[1]
+      value: No, I'll clean them up for you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodResponses.Array.data[2]
+      value: good 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodSentences.Array.data[0]
+      value: My shoes are getting pretty dirty from all the work.
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodSentences.Array.data[1]
+      value: I have one in the back of the tavern, mind cleaning my shoes?
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodSentences.Array.data[3]
+      value: fourth good sentence
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.meanResponses.Array.data[2]
+      value: mean 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.suddenSentences.Array.data[0]
+      value: They're really in need of some cleaning though.
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463255, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: vCam
+      value: 
+      objectReference: {fileID: 1542640145}
+    - target: {fileID: 1481307552, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_SceneBindings.Array.data[0].value
+      value: 
+      objectReference: {fileID: 26018614}
+    - target: {fileID: 1470413045870058139, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_Name
+      value: MaleBartenderAnims
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470413045870058139, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.247
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+--- !u!4 &1971315167 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+  m_PrefabInstance: {fileID: 1971315166}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1971315168 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1470413045870058139, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+  m_PrefabInstance: {fileID: 1971315166}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1976002079
 PrefabInstance:
@@ -36276,29 +36815,61 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 617375893}
     m_Modifications:
+    - target: {fileID: 407852502, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407852502, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407852502, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407852502, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: dialogue.name
       value: Bartender
       objectReference: {fileID: 0}
     - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: dialogue.minigameToStartName
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: dialogue.goodResponses.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: dialogue.goodSentences.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: dialogue.meanResponses.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodResponses.Array.data[0]
+      value: I saw you guys are searching for some waiters, I'm in need of a job
+        so I would like to take the offer.
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: dialogue.goodResponses.Array.data[2]
       value: good 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodSentences.Array.data[0]
+      value: Hello missy, You gon' order something? Because if you are not I would
+        like you to leave or search for a chair to sit on, either way don't bother
+        me.. Can't you see I'm incredibly busy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.goodSentences.Array.data[1]
+      value: You think you can be a waiter just like that? You are disrespecting
+        the craft missy. Now leave me alone I got work to do.
       objectReference: {fileID: 0}
     - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: dialogue.goodSentences.Array.data[3]
@@ -36307,6 +36878,10 @@ PrefabInstance:
     - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: dialogue.meanResponses.Array.data[2]
       value: mean 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 690463254, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: dialogue.suddenSentences.Array.data[0]
+      value: Not interested anymore huh?
       objectReference: {fileID: 0}
     - target: {fileID: 690463255, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: vCam
@@ -36318,7 +36893,11 @@ PrefabInstance:
       objectReference: {fileID: 26018614}
     - target: {fileID: 1470413045870058139, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: m_Name
-      value: MaleBartenderAnims
+      value: BartenderS1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470413045870058139, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2246210392413896737, guid: 8032b27ebef75b244a29bb09cad877e5, type: 3}
       propertyPath: m_RootOrder
