@@ -37,8 +37,11 @@ public class PictureSlide : MonoBehaviour
     public void OnStart()
     {
         Manager.manager.fadeManager.StartFade(gameVCam, true, uiHolder);
+        Invoke("ChangeToOrtographic", Manager.manager.fadeManager.fadeTime);
         ResetProgress();
     }
+
+    void ChangeToOrtographic() { Camera.main.orthographic = true; }
 
     void Update()
     {
