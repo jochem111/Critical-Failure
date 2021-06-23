@@ -29,6 +29,9 @@ public class MinigameStarter : MonoBehaviour
             case MinigameNames.Picture:
                 StartPictureMinigame();
                 break;
+            case MinigameNames.None:
+                Manager.manager.dialogueManager.AbbruptlyEndDailogue();
+                break;
             default:
                 break;
         }
@@ -53,7 +56,7 @@ public class MinigameStarter : MonoBehaviour
         Manager.manager.minigameStopper.currentMinigame = MinigameNames.Write;
     }
 
-    void StartPlumbingMinigame()
+    void StartPlumbingMinigame() //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
     {
         switch (currentTimeBlock)
         {

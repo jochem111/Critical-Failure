@@ -45,8 +45,9 @@ public class DrinkMug : MonoBehaviour
         {
             if (!didFill)
             { 
+            
               //  other.GetComponent<TapScript>().fillFX.SetActive(false);
-                print("stopped exit fill");
+               // print("stopped exit fill");
                // print(transform.position);
                // StopCoroutine(enumerator);
               //  GetComponent<Rigidbody>().isKinematic = false;
