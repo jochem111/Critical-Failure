@@ -27,6 +27,8 @@ public class TavernManager : MonoBehaviour
     [SerializeField] float[] pointerRotation;
     [HideInInspector]public int pointerIndex = -1;
 
+    bool makeInteractable = false;
+
     public void RotateDoor(bool open)
     {
         float rotation = open ? 0 : -90;
@@ -70,6 +72,12 @@ public class TavernManager : MonoBehaviour
             customers[roundIndex].SetActive(true);
             customers[roundIndex + 1].SetActive(true);
 
+            if (makeInteractable)
+            {
+                customers[roundIndex].tag = "Interactable";
+                customers[roundIndex + 1].tag = "Interactable";
+            }
+
             roundIndex += 2;
 
             if (extraCustomer)
@@ -98,5 +106,15 @@ public class TavernManager : MonoBehaviour
     public void AddExtraCustomer(GameObject customer)
     {
         extraCustomer = customer;
+    }
+
+    public void EnableInteractOnCustomers()
+    {
+        customers[0].tag = "Interactable";
+        customers[1].tag = "Interactable";
+
+        makeInteractable = true;
+
+        playerInteract.GetInteractables();
     }
 }

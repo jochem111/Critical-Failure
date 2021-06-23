@@ -23,6 +23,9 @@ public class DialogueManager : MonoBehaviour
     public float textSpeed;
     public float time;
 
+    GameObject customer;
+    bool enableInteractable;
+
     private void Start()
     {
         goodSentences = new Queue<string>();
@@ -30,8 +33,11 @@ public class DialogueManager : MonoBehaviour
         goodResponses = new Queue<string>();
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue, GameObject interactingWith)
     {
+        customer = interactingWith;
+        enableInteractable = dialogue.enableInteract;
+
         Debug.Log("Starting conversation with " + dialogue.name);
 
         minigameToStartName = dialogue.minigameToStartName;
@@ -125,14 +131,21 @@ public class DialogueManager : MonoBehaviour
         dialogueBox.SetActive(false);
 
         Manager.manager.interact.FinishInteraction();
+        Manager.manager.interact.EnableInteractText(customer);
 
         Debug.Log("Sudden End of Conversation");
     }
 
     public void FinishDialogue()
     {
+        if (enableInteractable)
+            Manager.manager.tavernManager.EnableInteractOnCustomers();
+
+        customer.tag = "Untagged";
+        Manager.manager.interact.GetInteractables();
+
         dialogueBox.SetActive(false);
-        //Manager.manager.interact.FinishInteraction();
+
         Debug.Log("Good End of Conversation");
     }
 }

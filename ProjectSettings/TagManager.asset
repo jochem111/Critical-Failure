@@ -17,6 +17,7 @@ TagManager:
   - Plumbing_PipePiece
   - Plumbing_PipeEnd
   - CinematicTrigger
+  - TavernTrigger
   layers:
   - Default
   - TransparentFX

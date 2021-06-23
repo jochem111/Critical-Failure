@@ -16,6 +16,8 @@ public class Interact : MonoBehaviour
     GameObject vCam;
     Transform playerPos;
 
+    [Space] public GameObject interactText;
+
     PlayerMovement playerMove;
 
     void Start()
@@ -80,6 +82,8 @@ public class Interact : MonoBehaviour
         playerMove.AllowMovement(false);
         canInteract = false;
 
+        interactText.SetActive(false);
+
         //Reference the contents of the interaction
         iContents = interactingWith.GetComponent<InteractContents>();
 
@@ -88,7 +92,7 @@ public class Interact : MonoBehaviour
 
         if (interactingWith.GetComponent<DialogueTrigger>() != null)
         {
-            Manager.manager.dialogueManager.StartDialogue(interactingWith.GetComponent<DialogueTrigger>().dialogue);
+            Manager.manager.dialogueManager.StartDialogue(interactingWith.GetComponent<DialogueTrigger>().dialogue, interactingWith);
             dialogUi = Manager.manager.dialogueManager.dialogueBox;
         }
 
@@ -124,12 +128,27 @@ public class Interact : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.CompareTag("CinematicTrigger"))
+        if (other.CompareTag("Interactable") && canInteract)
+            interactText.SetActive(true);
+        else if(other.gameObject.CompareTag("TavernTrigger"))
             Manager.manager.tavernManager.UpdateTaverns();
-        else
+        else if (other.gameObject.CompareTag("CinematicTrigger"))
         {
             cinematics.SecondCinematic();
             other.gameObject.SetActive(false);
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        interactText.SetActive(false);
+    }
+
+    public void EnableInteractText(GameObject customer)
+    {
+        if (customer.CompareTag("Interactable"))
+            interactText.SetActive(true);
+        else
+            interactText.SetActive(false);
     }
 }
