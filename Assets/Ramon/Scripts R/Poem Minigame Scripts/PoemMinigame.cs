@@ -17,6 +17,7 @@ public class PoemMinigame : MonoBehaviour
     public GameObject areYouSure;
 
     public GameObject feather;
+    public HoldFeather holdFeather;
 
     public TextMeshProUGUI answersList;
     public TextMeshProUGUI correctAnswersList;
@@ -49,6 +50,8 @@ public class PoemMinigame : MonoBehaviour
         feather.SetActive(true);
         Manager.manager.fadeManager.StartFade(gameVCam, true, poemUiHolder);
         Cursor.lockState = CursorLockMode.None;
+        holdFeather.PickUpFeather();
+
     }
 
     public void CheckAnswers()
@@ -102,6 +105,7 @@ public class PoemMinigame : MonoBehaviour
         exit.SetActive(false);
         //poem.SetActive(true);
 
+        holdFeather.PutDownFeather();
         poemUiHolder.SetActive(false);
         Manager.manager.starManager.FailStar();
         gameVCam.SetActive(false);
@@ -121,7 +125,7 @@ public class PoemMinigame : MonoBehaviour
         win.SetActive(false);
         poemUiHolder.SetActive(false);
         feather.SetActive(false);
-        Cursor.visible = true;
+        holdFeather.PutDownFeather();
         Manager.manager.starManager.AddStar();
         gameVCam.SetActive(false);
     }
@@ -133,7 +137,7 @@ public class PoemMinigame : MonoBehaviour
         lose.SetActive(false);
         poemUiHolder.SetActive(false);
         feather.SetActive(false);
-        Cursor.visible = true;
+        holdFeather.PutDownFeather();
         Manager.manager.starManager.FailStar();
         gameVCam.SetActive(false);
     }

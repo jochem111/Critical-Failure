@@ -25,7 +25,6 @@ public class PictureSlide : MonoBehaviour
     bool blockIsMoving;
     public bool hasStartedBefore;
 
-    public Camera cam;
 
     public GameObject picturePos;
     public GameObject intendedPicturePos;
@@ -36,10 +35,6 @@ public class PictureSlide : MonoBehaviour
     public GameObject checkScreenW;
     public GameObject checkScreenF;
 
-    private void Start()
-    {
-        ResetProgress();
-    }
 
     public void OnStart()
     {
@@ -101,7 +96,7 @@ public class PictureSlide : MonoBehaviour
             }
         }
 
-        cam.orthographicSize = blocksPerLine * cameraZoom;
+        Camera.main.orthographicSize = blocksPerLine * cameraZoom;
         inputs = new Queue<Block>();
 
         if (state == PuzzleState.Solved)
@@ -165,6 +160,7 @@ public class PictureSlide : MonoBehaviour
                 Debug.Log("Puzzlestate = InPlay");
                 state = PuzzleState.InPlay;
                 hasStartedBefore = true;
+                print(picturePos.transform.position + " || " + intendedPicturePos.transform.position);
                 picturePos.transform.position = intendedPicturePos.transform.position;
             }
         }
@@ -281,7 +277,7 @@ public class PictureSlide : MonoBehaviour
 
     public void SucceedExit()
     {
-        cam.orthographic = false;
+        Camera.main.orthographic = false;
         uiHolder.SetActive(false);
         Manager.manager.starManager.AddStar();
         gameVCam.SetActive(false);
@@ -289,7 +285,7 @@ public class PictureSlide : MonoBehaviour
 
     public void FailedExit()
     {
-        cam.orthographic = false;
+        Camera.main.orthographic = false;
         uiHolder.SetActive(false);
         Manager.manager.starManager.FailStar();
         gameVCam.SetActive(false);
