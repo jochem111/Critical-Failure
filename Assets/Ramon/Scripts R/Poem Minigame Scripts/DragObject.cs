@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
+
 public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private Canvas canvas;
@@ -9,7 +11,7 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
-    public GameObject cross;
+    TextMeshProUGUI text;
 
     [HideInInspector]public PoemMinigame poemMinigame;
 
@@ -24,6 +26,8 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         OnStart();
         poemMinigame = FindObjectOfType<PoemMinigame>();
         canvas = FindObjectOfType<Canvas>();
+
+        text = GetComponentInChildren<TextMeshProUGUI>();
     }
 
     public void OnStart()
@@ -66,14 +70,22 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     {
         Debug.Log("OnEndDrag");
         canvasGroup.blocksRaycasts = true;
+
+        if (!inSlot)
+            inCorrectSlot = false;
     }
 
-    public void WrongAnswer()
+    public void ColorAnswer()
     {
         if (inCorrectSlot == false)
         {
             Debug.Log("WrongAnswer");
-            cross.SetActive(true);
+            text.color = Color.red;
+        }
+        else
+        {
+            Debug.Log("GoodAnswer");
+            text.color = Color.green;
         }
     }
 }

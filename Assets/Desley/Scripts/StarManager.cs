@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class StarManager : MonoBehaviour
 {
     [SerializeField] SkinnedMeshRenderer playerRenderer;
-    [SerializeField] AudioSource audioSource;
+    [SerializeField] PlayerMovement playerMove;
+    [SerializeField] CinemachineFreeLook playerCam;
     [SerializeField] GameObject vCam;
     [SerializeField] Interact interact;
 
@@ -18,6 +20,7 @@ public class StarManager : MonoBehaviour
     [SerializeField] float intensityTime;
     [SerializeField] float soundTime;
 
+    [Space] public GameObject loseScreen;
 
     public void AddStar()
     {
@@ -34,6 +37,8 @@ public class StarManager : MonoBehaviour
 
     IEnumerator RevealStar(bool won)
     {
+        Manager.manager.musicManager.MinigameTrack(false);
+
         //Turn off player meshRenderer
         PlayerVisible(false);
 
@@ -63,7 +68,7 @@ public class StarManager : MonoBehaviour
             mat.SetColor("_EmissionColor", new Vector4(intensity, intensity, 0, 0));
 
             //Sound effect
-            audioSource.Play();
+            Manager.manager.musicManager.StarSound();
 
             currentStars++;
         }
@@ -76,6 +81,8 @@ public class StarManager : MonoBehaviour
             StartCoroutine(FinishGame());
             yield break;
         }
+
+        Manager.manager.musicManager.InTavernTrack(true);
 
         //Open tavern door
         Manager.manager.tavernManager.RotateDoor(true);
@@ -95,10 +102,25 @@ public class StarManager : MonoBehaviour
         playerRenderer.enabled = active;
     }
 
+    public void RevealLossScreen()
+    {
+        playerMove.canMove = false;
+        playerMove.SetPlayerAnimation(0);
+
+        playerCam.enabled = false;
+
+        loseScreen.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     public void StartFinishGame() { StartCoroutine(FinishGame()); }
 
     IEnumerator FinishGame()
     {
+        Manager.manager.musicManager.InTavernTrack(false);
+
+        loseScreen.SetActive(false);
+
         Manager.manager.fadeManager.StartFade(null, false, null);
 
         yield return new WaitForSeconds(Manager.manager.fadeManager.fadeTime);

@@ -28,6 +28,7 @@ public class Manager : MonoBehaviour
     public StarManager starManager;
     public FadeManager fadeManager;
     public Interact interact;
+    public MusicManager musicManager;
 
     private void Start()
     {

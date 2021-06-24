@@ -29,6 +29,8 @@ public class ObjectSlot : MonoBehaviour, IDropHandler
 
                 eventData.pointerDrag.GetComponent<DragObject>().inCorrectSlot = true;
             }
+            else
+                eventData.pointerDrag.GetComponent<DragObject>().inCorrectSlot = false;
 
             eventData.pointerDrag.GetComponent<DragObject>().inSlot = true;
         }

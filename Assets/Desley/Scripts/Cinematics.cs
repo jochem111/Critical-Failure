@@ -7,7 +7,7 @@ public class Cinematics : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] PlayerMovement playerMove;
     [SerializeField] CinemachineDollyCart dollyCart;
-    [SerializeField] GameObject mainMenu, settingsMenu;
+    [SerializeField] GameObject mainMenu;
 
     [Space, SerializeField] CanvasGroup skipCanvasGroup;
     [SerializeField] float skipTime = 1;
@@ -38,7 +38,7 @@ public class Cinematics : MonoBehaviour
 
         originalCartSpeed = dollyCart.m_Speed;
 
-        StartCoroutine(DisableSkip(introTime - 1.5f));
+        StartCoroutine(DisableSkip(introTime - 1.5f, false));
         StartCoroutine(WaitForPauseTime(introTime));
 
         StartSkipFading();
@@ -55,6 +55,9 @@ public class Cinematics : MonoBehaviour
     {
         index++;
         canSkip = false;
+
+        if (index == 2)
+            Manager.manager.musicManager.CinematicTrack(false);
 
         Manager.manager.fadeManager.StartFade(null, true, null);
 
@@ -80,9 +83,12 @@ public class Cinematics : MonoBehaviour
     }
 
     //Function to disable the ability to skip first cinematic
-    IEnumerator DisableSkip(float time)
+    IEnumerator DisableSkip(float time, bool disableMusic)
     {
         yield return new WaitForSeconds(time);
+
+        if (disableMusic)
+            Manager.manager.musicManager.CinematicTrack(false);
 
         canSkip = false;
     }
@@ -120,7 +126,7 @@ public class Cinematics : MonoBehaviour
 
         canSkip = true;
 
-        StartCoroutine(DisableSkip(resumeTime - 1.5f));
+        StartCoroutine(DisableSkip(resumeTime - 1.5f, true));
 
         StartCoroutine(EndFirstCinematic());
     }
@@ -142,7 +148,6 @@ public class Cinematics : MonoBehaviour
     public void DisableCinematic()
     {
         mainMenu.SetActive(false);
-        settingsMenu.SetActive(false);
         skipCanvasGroup.gameObject.SetActive(false);
 
         playerMove.AllowMovement(true);
@@ -209,8 +214,10 @@ public class Cinematics : MonoBehaviour
         yield return new WaitForSeconds(.5f);
 
         player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
-
         playerMove.CinematicLock(false);
+
+        Manager.manager.musicManager.InTavernTrack(true);
+
         gameObject.SetActive(false);
     }
 }

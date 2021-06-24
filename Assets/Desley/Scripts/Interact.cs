@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Interact : MonoBehaviour
 {
@@ -78,6 +79,8 @@ public class Interact : MonoBehaviour
 
     void StartInteraction()
     {
+        Manager.manager.musicManager.InTavernTrack(false);
+
         Cursor.lockState = CursorLockMode.None;
         playerMove.AllowMovement(false);
         canInteract = false;

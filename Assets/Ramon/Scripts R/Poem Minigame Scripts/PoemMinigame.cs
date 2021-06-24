@@ -66,7 +66,7 @@ public class PoemMinigame : MonoBehaviour
         areYouSure.SetActive(false);
         foreach (GameObject dragObject in list)
         {
-            dragObject.GetComponent<DragObject>().WrongAnswer();
+            dragObject.GetComponent<DragObject>().ColorAnswer();
         }
         StartCoroutine(Pause(pauseLength));
         youNeeded = answersRequired - correctAnswers;

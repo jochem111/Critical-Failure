@@ -93,8 +93,8 @@ public class TavernManager : MonoBehaviour
             hPointer1.rotation = Quaternion.Euler(pointerRotation[pointerIndex], 0, -90);
             hPointer2.rotation = Quaternion.Euler(pointerRotation[pointerIndex], 180, -90);
 
-            if(pointerIndex == pointerRotation.Length - 1)
-                Manager.manager.starManager.StartFinishGame();
+            if (pointerIndex == pointerRotation.Length - 1)
+                Manager.manager.starManager.RevealLossScreen();
         }
     }
 

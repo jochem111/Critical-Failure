@@ -5,7 +5,6 @@ using UnityEngine;
 public class ButtonManager : MonoBehaviour
 {
     [SerializeField] CanvasGroup mainCanvasGroup;
-    [SerializeField] CanvasGroup settingsCanvasGroup;
     [SerializeField] Cinematics cinematics;
 
     [Space, SerializeField] float fadeTime;
@@ -20,32 +19,11 @@ public class ButtonManager : MonoBehaviour
         StopAllCoroutines();
 
         StartCoroutine(FadeOut(fadeTime, mainCanvasGroup));
-        StartCoroutine(FadeOut(fadeTime, settingsCanvasGroup));
         cinematics.ResumeCinematic();
 
         mainCanvasGroup.blocksRaycasts = false;
 
         Cursor.lockState = CursorLockMode.Locked;
-    }
-
-    public void Settings()
-    {
-        StopAllCoroutines();
-
-        StartCoroutine(FadeOut(fadeTime, mainCanvasGroup));
-        StartCoroutine(FadeIn(fadeTime, settingsCanvasGroup));
-
-        settingsCanvasGroup.blocksRaycasts = true;
-    }
-
-    public void BackButton()
-    {
-        StopAllCoroutines();
-
-        StartCoroutine(FadeIn(fadeTime, mainCanvasGroup));
-        StartCoroutine(FadeOut(fadeTime, settingsCanvasGroup));
-
-        settingsCanvasGroup.blocksRaycasts = false;
     }
 
     public void QuitGame()

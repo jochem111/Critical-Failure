@@ -133,6 +133,8 @@ public class DialogueManager : MonoBehaviour
         Manager.manager.interact.FinishInteraction();
         Manager.manager.interact.EnableInteractText(customer);
 
+        Manager.manager.musicManager.InTavernTrack(true);
+
         Debug.Log("Sudden End of Conversation");
     }
 
@@ -143,6 +145,13 @@ public class DialogueManager : MonoBehaviour
 
         customer.tag = "Untagged";
         Manager.manager.interact.GetInteractables();
+
+        Debug.Log(minigameToStartName.ToString());
+
+        if (minigameToStartName.ToString() == "None" | minigameToStartName.ToString() == "OpenDoor")
+            Manager.manager.musicManager.InTavernTrack(true);
+        else
+            Manager.manager.musicManager.MinigameTrack(true);
 
         dialogueBox.SetActive(false);
 
