@@ -5,7 +5,7 @@ using UnityEngine;
 public class HoldFeather : MonoBehaviour
 {
     private Vector3 screenPoint;
-    public bool isAllowedToHoldFeather = false;
+    [HideInInspector]public bool isAllowedToHoldFeather = false;
 
     public void PickUpFeather()
     {
