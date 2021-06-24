@@ -24,8 +24,9 @@ public class ScreenChange : MonoBehaviour
     public GameObject nextScreen;
 
     public TextMeshProUGUI shoes;       
-    public TextMeshProUGUI outOf;       
+    public TextMeshProUGUI outOf;
 
+    public bool canBeReset;
     public bool increasedDifficulty;
 
     public int difficultyIncrease;
@@ -39,7 +40,10 @@ public class ScreenChange : MonoBehaviour
 
     public void OnStart()       // Gets called when the MinigameStarter is needs to start this minigame
     {
-        ResetGame();
+        if (canBeReset == true)
+        {
+            ResetGame();
+        }
 
         Manager.manager.fadeManager.StartFade(gameVCam, true, minigameHolder);
         Cursor.lockState = CursorLockMode.None;
@@ -50,6 +54,8 @@ public class ScreenChange : MonoBehaviour
         gameScreen.SetActive(true);
         Manager.manager.timer.SetTimerCamState(true);
         Manager.manager.timer.StartTimer(90);
+
+        canBeReset = true;
     }
 
     private void Update()
