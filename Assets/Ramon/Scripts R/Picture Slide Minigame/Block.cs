@@ -55,6 +55,11 @@ public class Block : MonoBehaviour
         return coord == startingCoord;
     }
 
+    public void SetBlockActive()
+    {
+        gameObject.SetActive(true);
+    }
+
     public void ResetBlock()
     {
         Destroy(gameObject);

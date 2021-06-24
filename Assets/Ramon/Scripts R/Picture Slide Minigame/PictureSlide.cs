@@ -59,16 +59,20 @@ public class PictureSlide : MonoBehaviour
     {
         if (hasStartedBefore)
         {
+            checkScreenW.SetActive(false);
+            gameScreen.SetActive(true);
+
             foreach (Block block in blocks)
             {
-                block.ResetBlock();
+                block.SetBlockActive();
             }
 
-            state = PuzzleState.Solved;
+            StartShuffle();
         }
-
-        gameScreen.SetActive(true);
-        CreateGrid();
+        else
+        {
+            CreateGrid();
+        }
     }
 
     public void CreateGrid()

@@ -80,6 +80,8 @@ public class ScreenChange : MonoBehaviour
         {
             dirtBlock.ResetDirt();
         }
+
+        canBeReset = false;
     }
 
     public void ChangeScreen()
