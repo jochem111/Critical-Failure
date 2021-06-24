@@ -202,6 +202,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 874d1a61ce39bd1499ff6565af69326e, type: 3}
   m_PrefabInstance: {fileID: 47489775}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &94536784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 94536785}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &94536785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94536784}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 616, y: -25.878006, z: 9.111176}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &164620182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -455,10 +485,12 @@ MonoBehaviour:
   blocksPerLine: 7
   shuffleLength: 100
   blockMoveSpeed: 0.3
-  shuffleMoveSpeed: 0.05
+  shuffleMoveSpeed: 0.0001
   cameraZoom: 0.55
   hasStartedBefore: 0
   cam: {fileID: 692017295}
+  picturePos: {fileID: 545578751}
+  intendedPicturePos: {fileID: 782404360}
   exitScreen: {fileID: 1507068248}
   failScreen: {fileID: 732323878}
   gameScreen: {fileID: 38470680}
@@ -709,6 +741,36 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5496911988650969877, guid: 74af987eeb400d446b4753232ba18771, type: 3}
   m_PrefabInstance: {fileID: 5496911988003367731}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &782404360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 782404361}
+  m_Layer: 0
+  m_Name: Intended Picture Pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &782404361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782404360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 445, y: -25.878006, z: 9.111176}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &916070449
 PrefabInstance:
   m_ObjectHideFlags: 0

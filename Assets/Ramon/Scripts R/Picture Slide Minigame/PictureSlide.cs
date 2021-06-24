@@ -27,12 +27,19 @@ public class PictureSlide : MonoBehaviour
 
     public Camera cam;
 
+    public GameObject picturePos;
+    public GameObject intendedPicturePos;
+
     public GameObject exitScreen;
     public GameObject failScreen;
     public GameObject gameScreen;
     public GameObject checkScreenW;
     public GameObject checkScreenF;
 
+    private void Start()
+    {
+        ResetProgress();
+    }
 
     public void OnStart()
     {
@@ -158,6 +165,7 @@ public class PictureSlide : MonoBehaviour
                 Debug.Log("Puzzlestate = InPlay");
                 state = PuzzleState.InPlay;
                 hasStartedBefore = true;
+                picturePos.transform.position = intendedPicturePos.transform.position;
             }
         }
     }
