@@ -64,11 +64,11 @@ public class StarManager : MonoBehaviour
 
             //Sound effect
             audioSource.Play();
+
+            currentStars++;
         }
 
         yield return new WaitForSeconds(soundTime);
-
-        currentStars++;
 
         //Finish game if all stars are filled
         if (currentStars == stars.Length)
