@@ -28,6 +28,7 @@ public class PlumbingManager : MonoBehaviour
         {
             puzzel.SetActive(false);
         }
+        Manager.manager.plumbingUI.winScreen.SetActive(false);
         puzzelPrefabs[puzzelID].SetActive(true);
         startPipe = puzzelPrefabs[puzzelID].GetComponentInChildren<PlumbingTap>();
         puzzelId = puzzelPrefabs[puzzelID].GetComponent<PlumbingIdScript>();
