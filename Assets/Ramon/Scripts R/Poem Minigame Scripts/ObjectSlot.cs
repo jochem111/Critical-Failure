@@ -4,10 +4,15 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 public class ObjectSlot : MonoBehaviour, IDropHandler
 {
-    public PoemMinigame poemMinigame;
+   [HideInInspector]public PoemMinigame poemMinigame;
 
     public float slotNumber;
     public float point;
+
+    private void Start()
+    {
+        poemMinigame = FindObjectOfType<PoemMinigame>();
+    }
 
     public void OnDrop(PointerEventData eventData)
     {

@@ -24,7 +24,6 @@ public class PlumbingManager : MonoBehaviour
     public void OpenMinigame(int puzzelID)
     {
         Manager.manager.fadeManager.StartFade(gameVCam, true, Manager.manager.plumbingUI.plumbingGameUi);
-       // Invoke("ChangeToOrthographic", Manager.manager.fadeManager.fadeTime);
         foreach (GameObject puzzel in puzzelPrefabs)
         {
             puzzel.SetActive(false);
@@ -32,18 +31,12 @@ public class PlumbingManager : MonoBehaviour
         puzzelPrefabs[puzzelID].SetActive(true);
         startPipe = puzzelPrefabs[puzzelID].GetComponentInChildren<PlumbingTap>();
         puzzelId = puzzelPrefabs[puzzelID].GetComponent<PlumbingIdScript>();
+        UpdatePipeAmountsForId();
         Manager.manager.plumbingUI.TurnOnUi();
-    }
-
-    void ChangeToOrthographic()
-    {
-        Camera.main.orthographic = true;
-        Camera.main.orthographicSize = orthoSize;
     }
 
     public void CloseMinigame(bool didWin)
     {
-        Camera.main.orthographic = false;
         gameVCam.SetActive(false);
         print(gameVCam.activeSelf);
         Manager.manager.plumbingUI.TurnOffUi();

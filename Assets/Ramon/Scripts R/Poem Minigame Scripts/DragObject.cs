@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [SerializeField] private Canvas canvas;
+    private Canvas canvas;
 
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
     public GameObject cross;
 
-    public PoemMinigame poemMinigame;
+    [HideInInspector]public PoemMinigame poemMinigame;
 
     public float point;
     public float wordNumber;
@@ -22,6 +22,8 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     private void Start()
     {
         OnStart();
+        poemMinigame = FindObjectOfType<PoemMinigame>();
+        canvas = FindObjectOfType<Canvas>();
     }
 
     public void OnStart()
