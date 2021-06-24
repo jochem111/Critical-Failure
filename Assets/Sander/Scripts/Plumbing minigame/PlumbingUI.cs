@@ -11,7 +11,7 @@ public class PlumbingUI : MonoBehaviour
     public GameObject winScreen;
     public GameObject failScreen;
     public TMP_Text[] pipeAmountTexts;
-    public Outline[] pipeSelectedOutlines;
+    public GameObject[] pipeSelectedOutlines;
 
 
     public void TurnOnUi()
@@ -44,9 +44,9 @@ public class PlumbingUI : MonoBehaviour
     {
         foreach (var item in pipeSelectedOutlines)
         {
-            item.enabled = false;
+            item.SetActive(false);
 
         }
-        pipeSelectedOutlines[index].enabled = true;
+        pipeSelectedOutlines[index].SetActive(true);
     }
 }

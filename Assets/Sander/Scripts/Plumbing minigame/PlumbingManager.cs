@@ -6,6 +6,7 @@ public class PlumbingManager : MonoBehaviour
 {
     [HideInInspector] public bool gameIsRunning = false;
     public GameObject gameVCam;
+    public float orthoSize = 2f;
 
     public GameObject[] puzzelPrefabs;
 
@@ -34,7 +35,11 @@ public class PlumbingManager : MonoBehaviour
         Manager.manager.plumbingUI.TurnOnUi();
     }
 
-    void ChangeToOrthographic() { Camera.main.orthographic = true; }
+    void ChangeToOrthographic()
+    {
+        Camera.main.orthographic = true;
+        Camera.main.orthographicSize = orthoSize;
+    }
 
     public void CloseMinigame(bool didWin)
     {
@@ -54,7 +59,6 @@ public class PlumbingManager : MonoBehaviour
             item.RemoveSelf();
         }
         gameVCam.SetActive(false);
-        Manager.manager.timer.SetTimerCamState(false);
     }
 
     public void StartGame()        // This is called by a button on the TutorialUI
