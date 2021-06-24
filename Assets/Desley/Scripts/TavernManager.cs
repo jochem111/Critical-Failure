@@ -18,7 +18,6 @@ public class TavernManager : MonoBehaviour
     //Customer shit
     [Space, SerializeField] GameObject[] customers;
     [SerializeField] GameObject[] tavern1Customers, tavern2Customers;
-    GameObject extraCustomer = null;
     int roundIndex;
 
     //Clock shit
@@ -81,13 +80,6 @@ public class TavernManager : MonoBehaviour
             }
 
             roundIndex += 2;
-
-            if (extraCustomer)
-            {
-                extraCustomer.SetActive(true);
-
-                extraCustomer = null;
-            }
         }
 
         //GetInteractables in interact script
@@ -104,11 +96,6 @@ public class TavernManager : MonoBehaviour
             if(pointerIndex == pointerRotation.Length - 1)
                 Manager.manager.starManager.StartFinishGame();
         }
-    }
-
-    public void AddExtraCustomer(GameObject customer)
-    {
-        extraCustomer = customer;
     }
 
     public void EnableInteractOnCustomers()

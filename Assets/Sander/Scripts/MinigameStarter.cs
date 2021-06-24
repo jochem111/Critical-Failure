@@ -64,10 +64,10 @@ public class MinigameStarter : MonoBehaviour
     {
         switch (currentTimeBlock)
         {
-            case 2:
+            case 1:
                 Manager.manager.plumbingManager.OpenMinigame(0);
                 break;
-            case 3:
+            case 4:
                 Manager.manager.plumbingManager.OpenMinigame(1);
                 break;
             case 5:
