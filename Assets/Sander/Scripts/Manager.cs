@@ -14,6 +14,7 @@ public class Manager : MonoBehaviour
     public ScreenChange shoeManager;
     public HoldTool holdTool;
     public PictureSlide pictureManager;
+    public PauseGame pauseGame;
 
     [Header("Ui")]
     public ButtonManager buttonManager;

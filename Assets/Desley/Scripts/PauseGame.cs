@@ -13,10 +13,12 @@ public class PauseGame : MonoBehaviour
     [SerializeField] GameObject areUSureMenu;
     [SerializeField] Slider slider;
 
+    public bool canPause = true;
+
 
     void Update()
     {
-        if (Input.GetButtonDown("Cancel") && playerMove.canMove)
+        if (Input.GetButtonDown("Cancel") && canPause && playerMove.canMove)
             OpenPauseMenu();
     }
 
@@ -31,7 +33,9 @@ public class PauseGame : MonoBehaviour
 
         playerCam.enabled = false;
 
-        pauseMenu.SetActive(true); ;
+        pauseMenu.SetActive(true);
+
+        Manager.manager.interact.canInteract = false;
     }
 
     public void ClosePauseMenu()
@@ -42,6 +46,8 @@ public class PauseGame : MonoBehaviour
         pauseMenu.SetActive(false);
 
         Cursor.lockState = CursorLockMode.Locked;
+
+        Manager.manager.interact.canInteract = true;
     }
 
     public void AreUSure()

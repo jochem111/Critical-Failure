@@ -80,6 +80,8 @@ public class PlayerMovement : MonoBehaviour
         inCinematic = index;
         canMove = true;
 
+        Manager.manager.pauseGame.canPause = !index;
+
         if (index)
         {
             vertical = 1;
