@@ -53,7 +53,7 @@ public class ScreenChange : MonoBehaviour
 
         gameScreen.SetActive(true);
         Manager.manager.timer.SetTimerCamState(true);
-        Manager.manager.timer.StartTimer(90);
+        Manager.manager.timer.StartTimer(100);
 
         canBeReset = true;
     }
@@ -153,6 +153,7 @@ public class ScreenChange : MonoBehaviour
         minigameHolder.SetActive(false);        //gameScreen.SetActive(true); -> minigameHolder.SetActive(false); as when the minigame gets opened the OnStart fucntion makes sure that the "gameScreen" is on and this makes sure that ALL the UI is off after the minigame is done
 
         Manager.manager.starManager.AddStar();
+        Manager.manager.timer.SetTimerPauzeState(true);
         Manager.manager.timer.SetTimerCamState(false);
         gameVCam.SetActive(false);
     }
