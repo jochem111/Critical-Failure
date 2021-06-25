@@ -12,6 +12,7 @@ public class Manager : MonoBehaviour
     public DrinkGameManager drinkGameManager;
     public PoemMinigame poemMinigame;
     public ScreenChange shoeManager;
+    public MakeDirty makeDirty;
     public HoldTool holdTool;
     public PictureSlide pictureManager;
     public PauseGame pauseGame;

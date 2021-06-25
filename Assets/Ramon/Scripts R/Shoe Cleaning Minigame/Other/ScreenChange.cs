@@ -131,6 +131,8 @@ public class ScreenChange : MonoBehaviour
         yield return new WaitForSeconds(time);
         Debug.Log("Pause End");
 
+        Manager.manager.holdTool.RemoveTool();
+
         if (successesNeededToWin <= successCounter)
         {
             WinScreen();

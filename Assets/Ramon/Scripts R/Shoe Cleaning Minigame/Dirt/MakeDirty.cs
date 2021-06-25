@@ -48,4 +48,9 @@ public class MakeDirty : MonoBehaviour
             shoe.dirtCount += one;
         }
     }
+
+    public void LowerDirtCount()
+    {
+        shoe.dirtCount -= one;
+    }
 }

@@ -32,10 +32,16 @@ public class Shoe : MonoBehaviour
     {
         if (Manager.manager.shoeManager.GetComponent<HoldTool>().thirdTool.activeSelf && Input.GetMouseButton(mouseButton))
         {
+            Debug.Log("Shoe OnMouseOver 1");
+
             if (dirtCount <= minimumCleanliness)
             {
+                Debug.Log("Shoe OnMouseOver 2");
+
                 if (Time.time >= oncePerSecond)
                 {
+                    Debug.Log("Shoe OnMouseOver 3");
+
                     oncePerSecond = Time.time + cleanTime;
 
                     cleanliness -= cleanAmount;

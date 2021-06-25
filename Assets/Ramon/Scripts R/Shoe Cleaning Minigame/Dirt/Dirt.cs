@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Dirt : MonoBehaviour
 {
-
     public Color dirtColor;
     public Color lowerTransparencyBy;
 
@@ -34,6 +33,7 @@ public class Dirt : MonoBehaviour
     {
         if (dirtAmount <= minimumDirtAmount)
         {
+            Manager.manager.makeDirty.LowerDirtCount();
             Destroy(gameObject);
         }
     }
