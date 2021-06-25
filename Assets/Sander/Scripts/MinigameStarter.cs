@@ -44,7 +44,7 @@ public class MinigameStarter : MonoBehaviour
 
     void StartDrinkingMinigame()
     {
-        Manager.manager.drinkGameManager.OpenMinigame();
+        Manager.manager.drinkGameManager.OpenMinigame(currentTimeBlock, currentTimeBlock * 10);
         Manager.manager.minigameStopper.currentMinigame = MinigameNames.Drinking;
     }
 

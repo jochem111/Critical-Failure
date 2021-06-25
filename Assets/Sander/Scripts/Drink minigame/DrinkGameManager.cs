@@ -24,15 +24,18 @@ public class DrinkGameManager : MonoBehaviour
     [HideInInspector] public int currentAmountDroppedMugs = 0;
     [HideInInspector] public int maxAmountDroppedMugs = 5;
 
-    public float maxTime = 120f;
+    float maxTime = 120f;
 
     private void Awake()
     {
         mugSpawner = FindObjectOfType<MugSpawner>();
     }
 
-    public void OpenMinigame()
+    public void OpenMinigame(int newMaxScore, int newMaxTime)
     {
+        maxScore = newMaxScore + 2;
+        maxTime = newMaxTime + 30;
+
         Manager.manager.drinkUi.tutorialUi.SetActive(true);
         Manager.manager.fadeManager.StartFade(gameVCam, true, Manager.manager.drinkUi.drinkGameUi);
         Manager.manager.drinkUi.SetScoreTextToZeroOutOfMax();
