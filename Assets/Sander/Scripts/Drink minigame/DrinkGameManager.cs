@@ -34,7 +34,7 @@ public class DrinkGameManager : MonoBehaviour
     public void OpenMinigame(int newMaxScore, int newMaxTime)
     {
         maxScore = newMaxScore + 2;
-        maxTime = newMaxTime + 30;
+        maxTime = newMaxTime + 50;
 
         Manager.manager.drinkUi.tutorialUi.SetActive(true);
         Manager.manager.fadeManager.StartFade(gameVCam, true, Manager.manager.drinkUi.drinkGameUi);
