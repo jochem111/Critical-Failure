@@ -28,6 +28,7 @@ public class PictureSlide : MonoBehaviour
 
     public GameObject picturePos;
     public GameObject intendedPicturePos;
+    public Vector3 neededScale;
 
     public GameObject exitScreen;
     public GameObject failScreen;
@@ -166,6 +167,7 @@ public class PictureSlide : MonoBehaviour
                 hasStartedBefore = true;
                 print(picturePos.transform.position + " || " + intendedPicturePos.transform.position);
                 picturePos.transform.position = intendedPicturePos.transform.position;
+                picturePos.transform.localScale = neededScale;
             }
         }
     }
